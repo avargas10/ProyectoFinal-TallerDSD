@@ -1,0 +1,793 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" into library work
+Parsing verilog file "VGA.v" included at line 1.
+Parsing verilog file "vga_sync.v" included at line 1.
+Parsing module <vga_sync>.
+Parsing module <VGA>.
+Parsing verilog file "Divisor_de_frecuencia.v" included at line 2.
+Parsing module <Divisor_de_frecuencia>.
+Parsing verilog file "Divisor_1Hz.v" included at line 3.
+Parsing module <Divisor_1Hz>.
+Parsing verilog file "Divisor_vga_Clk.v" included at line 4.
+Parsing module <Divisor_vga_Clk>.
+Parsing module <Main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 20: Port reset is not connected to this instance
+
+Elaborating module <Main>.
+
+Elaborating module <Divisor_de_frecuencia>.
+WARNING:HDLCompiler:413 - "Divisor_de_frecuencia.v" Line 43: Result of 24-bit expression is truncated to fit in 23-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Assignment to clk_1HZ ignored, since the identifier is never used
+
+Elaborating module <Divisor_vga_Clk>.
+WARNING:HDLCompiler:413 - "Divisor_vga_Clk.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <Divisor_1Hz>.
+WARNING:HDLCompiler:413 - "Divisor_1Hz.v" Line 39: Result of 32-bit expression is truncated to fit in 27-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 21: Assignment to clkPer ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "VGA.v" Line 32: Port reset is not connected to this instance
+
+Elaborating module <VGA>.
+
+Elaborating module <vga_sync>.
+WARNING:HDLCompiler:413 - "vga_sync.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "VGA.v" Line 35: Assignment to gx ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "VGA.v" Line 32: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 20: Input port reset is not connected on this instance
+WARNING:Xst:2972 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 19. All outputs of instance <div> of block <Divisor_de_frecuencia> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 21. All outputs of instance <divPer> of block <Divisor_1Hz> are unconnected in block <Main>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'div', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vgaClk', is tied to GND.
+WARNING:Xst:647 - Input <bDer> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <bIzq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <bCen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <bR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 19: Output port <div_frec> of the instance <div> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 21: Output port <div_frec> of the instance <divPer> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Main> synthesized.
+
+Synthesizing Unit <Divisor_vga_Clk>.
+    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/Divisor_vga_Clk.v".
+    Found 1-bit register for signal <divcounter>.
+    Found 1-bit adder for signal <divcounter[0]_PWR_3_o_add_0_OUT<0>> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Divisor_vga_Clk> synthesized.
+
+Synthesizing Unit <VGA>.
+    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vsync_unit', is tied to GND.
+INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v" line 32: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+    Found 9-bit register for signal <rgb_reg>.
+    Found 10-bit comparator lessequal for signal <n0000> created at line 38
+    Found 10-bit comparator lessequal for signal <n0003> created at line 39
+    Found 10-bit comparator lessequal for signal <n0007> created at line 40
+    Found 10-bit comparator lessequal for signal <n0010> created at line 41
+    Found 10-bit comparator lessequal for signal <n0012> created at line 41
+    Found 10-bit comparator lessequal for signal <n0015> created at line 41
+    Found 10-bit comparator greater for signal <n0022> created at line 46
+    Found 11-bit comparator greater for signal <n0025> created at line 46
+    Found 11-bit comparator greater for signal <n0029> created at line 47
+    Found 11-bit comparator greater for signal <n0032> created at line 47
+    Found 11-bit comparator greater for signal <n0036> created at line 47
+    Found 11-bit comparator greater for signal <n0040> created at line 47
+    Found 32-bit comparator greater for signal <n0045> created at line 48
+    Found 11-bit comparator greater for signal <n0049> created at line 49
+    Found 11-bit comparator greater for signal <n0053> created at line 49
+    Found 32-bit comparator greater for signal <n0057> created at line 50
+    Found 32-bit comparator greater for signal <n0060> created at line 50
+    Found 11-bit comparator greater for signal <n0066> created at line 51
+    Found 11-bit comparator greater for signal <n0069> created at line 51
+    Found 32-bit comparator greater for signal <n0073> created at line 51
+    Found 11-bit comparator greater for signal <n0077> created at line 51
+    Found 11-bit comparator greater for signal <n0088> created at line 55
+    Found 11-bit comparator greater for signal <n0092> created at line 56
+    Found 11-bit comparator greater for signal <n0101> created at line 57
+    Found 11-bit comparator greater for signal <n0105> created at line 57
+    Found 11-bit comparator greater for signal <n0109> created at line 58
+    Found 10-bit comparator greater for signal <n0117> created at line 59
+    Found 11-bit comparator greater for signal <n0120> created at line 59
+    Found 11-bit comparator greater for signal <n0128> created at line 59
+    Found 32-bit comparator greater for signal <n0145> created at line 62
+    Found 32-bit comparator greater for signal <n0148> created at line 62
+    Found 11-bit comparator greater for signal <n0154> created at line 63
+    Found 11-bit comparator greater for signal <n0157> created at line 63
+    Found 11-bit comparator greater for signal <n0189> created at line 69
+    Found 10-bit comparator greater for signal <n0204> created at line 71
+    Found 11-bit comparator greater for signal <n0207> created at line 71
+    Found 32-bit comparator greater for signal <n0232> created at line 74
+    Found 32-bit comparator greater for signal <n0235> created at line 74
+    Found 11-bit comparator greater for signal <n0241> created at line 75
+    Found 11-bit comparator greater for signal <n0244> created at line 75
+    Found 11-bit comparator lessequal for signal <n0272> created at line 81
+    Found 11-bit comparator greater for signal <n0278> created at line 82
+    Found 10-bit comparator greater for signal <n0295> created at line 84
+    Found 11-bit comparator lessequal for signal <n0298> created at line 84
+    Found 32-bit comparator greater for signal <n0322> created at line 87
+    Found 32-bit comparator greater for signal <n0325> created at line 87
+    Found 11-bit comparator greater for signal <n0331> created at line 88
+    Found 11-bit comparator greater for signal <n0334> created at line 88
+    Found 10-bit comparator lessequal for signal <n0363> created at line 93
+    Found 11-bit comparator lessequal for signal <n0366> created at line 93
+    Found 32-bit comparator lessequal for signal <n0391> created at line 96
+    Found 32-bit comparator lessequal for signal <n0394> created at line 96
+    Found 11-bit comparator lessequal for signal <n0400> created at line 97
+    Found 11-bit comparator lessequal for signal <n0403> created at line 97
+    Found 11-bit comparator greater for signal <n0428> created at line 102
+    Found 11-bit comparator lessequal for signal <n0432> created at line 103
+    Found 10-bit comparator greater for signal <n0435> created at line 103
+    Found 11-bit comparator greater for signal <n0438> created at line 103
+    Found 10-bit comparator greater for signal <n0441> created at line 104
+    Found 11-bit comparator greater for signal <n0448> created at line 104
+    Found 11-bit comparator greater for signal <n0452> created at line 104
+    Found 32-bit comparator greater for signal <n0457> created at line 105
+    Found 11-bit comparator greater for signal <n0461> created at line 106
+    Found 11-bit comparator greater for signal <n0465> created at line 106
+    Found 32-bit comparator greater for signal <n0485> created at line 108
+    Found 11-bit comparator greater for signal <n0489> created at line 108
+    Found 11-bit comparator greater for signal <n0502> created at line 112
+    Found 11-bit comparator greater for signal <n0514> created at line 114
+    Found 11-bit comparator greater for signal <n0518> created at line 114
+    Found 11-bit comparator greater for signal <n0615> created at line 128
+    Found 11-bit comparator greater for signal <n0755> created at line 155
+    Found 11-bit comparator greater for signal <n0766> created at line 158
+    Found 11-bit comparator greater for signal <n0770> created at line 158
+    Found 11-bit comparator greater for signal <n0775> created at line 159
+    Found 10-bit comparator greater for signal <n0782> created at line 160
+    Found 11-bit comparator greater for signal <n0785> created at line 160
+    Found 11-bit comparator greater for signal <n0795> created at line 161
+    Found 11-bit comparator greater for signal <n0799> created at line 161
+    Found 32-bit comparator greater for signal <n0804> created at line 162
+    Found 11-bit comparator greater for signal <n0808> created at line 163
+    Found 11-bit comparator greater for signal <n0812> created at line 163
+    Found 32-bit comparator greater for signal <n0832> created at line 165
+    Found 11-bit comparator greater for signal <n0836> created at line 165
+    Found 11-bit comparator greater for signal <n0945> created at line 182
+    Found 11-bit comparator greater for signal <n0952> created at line 183
+    Found 11-bit comparator greater for signal <n0955> created at line 183
+    Found 11-bit comparator greater for signal <n0960> created at line 183
+    Found 11-bit comparator lessequal for signal <n1026> created at line 192
+    Found 11-bit comparator lessequal for signal <n1036> created at line 193
+    WARNING:Xst:2404 -  FFs/Latches <ax<1:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ax<4:7>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ax<7:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<1:1>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<1:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ay<2:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<2:3>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<3:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<3:3>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<3:4>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <bx<4:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <by<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cx<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cx<2:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cx<5:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <cy<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<1:1>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<1:1>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jx<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <jy<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<1:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<2:3>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<3:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <kx<3:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ky<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dx<9:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dx<6:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dx<3:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dy<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dy<1:1>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dy<1:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dy<5:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <dy<5:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<8:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<7:7>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<7:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<7:6>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ex<6:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ey<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ey<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ey<9:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ey<5:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ey<5:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fx<8:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fx<5:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fy<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fy<9:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fy<5:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <fy<5:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<6:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<3:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<8:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<7:7>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<7:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<7:6>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hx<6:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<2:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ix<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ix<8:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ix<5:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <iy<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <iy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <iy<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <iy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <iy<8:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <mx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <my<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <my<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <my<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <my<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <my<8:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<8:4>> (without init value) have a constant value of 0 in block <VGA>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred  89 Comparator(s).
+	inferred 118 Multiplexer(s).
+Unit <VGA> synthesized.
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/vga_sync.v".
+    Found 10-bit register for signal <v_count_reg>.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_6_o_add_4_OUT> created at line 70.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_6_o_add_7_OUT> created at line 83.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 89
+    Found 10-bit comparator lessequal for signal <n0017> created at line 89
+    Found 10-bit comparator lessequal for signal <n0020> created at line 91
+    Found 10-bit comparator lessequal for signal <n0022> created at line 91
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_6_o_LessThan_15_o> created at line 93
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_6_o_LessThan_16_o> created at line 93
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_sync> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 2
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 10-bit register                                       : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 95
+ 10-bit comparator greater                             : 9
+ 10-bit comparator lessequal                           : 11
+ 11-bit comparator greater                             : 51
+ 11-bit comparator lessequal                           : 8
+ 32-bit comparator greater                             : 14
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 118
+ 9-bit 2-to-1 multiplexer                              : 118
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Divisor_vga_Clk>.
+The following registers are absorbed into counter <divcounter_0>: 1 register on signal <divcounter_0>.
+Unit <Divisor_vga_Clk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_sync>.
+The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
+The following registers are absorbed into counter <h_count_reg>: 1 register on signal <h_count_reg>.
+Unit <vga_sync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 1-bit up counter                                      : 1
+ 10-bit up counter                                     : 2
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 95
+ 10-bit comparator greater                             : 9
+ 10-bit comparator lessequal                           : 11
+ 11-bit comparator greater                             : 51
+ 11-bit comparator lessequal                           : 8
+ 32-bit comparator greater                             : 14
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 118
+ 9-bit 2-to-1 multiplexer                              : 118
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+
+Optimizing unit <VGA> ...
+
+Optimizing unit <vga_sync> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 4.
+FlipFlop image/vsync_unit/h_count_reg_0 has been replicated 1 time(s)
+FlipFlop image/vsync_unit/h_count_reg_1 has been replicated 2 time(s)
+FlipFlop image/vsync_unit/h_count_reg_2 has been replicated 2 time(s)
+FlipFlop image/vsync_unit/h_count_reg_3 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/h_count_reg_4 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/h_count_reg_5 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/h_count_reg_6 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/h_count_reg_7 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/h_count_reg_8 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/h_count_reg_9 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_0 has been replicated 1 time(s)
+FlipFlop image/vsync_unit/v_count_reg_1 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/v_count_reg_2 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_3 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_4 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_5 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_6 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/v_count_reg_7 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/v_count_reg_8 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_9 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 474
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 22
+#      LUT3                        : 26
+#      LUT4                        : 100
+#      LUT5                        : 55
+#      LUT6                        : 164
+#      MUXCY                       : 63
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 94
+#      FD                          : 1
+#      FDR                         : 10
+#      FDRE                        : 81
+#      FDS                         : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 9
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              94  out of  18224     0%  
+ Number of Slice LUTs:                  388  out of   9112     4%  
+    Number used as Logic:               388  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    449
+   Number with an unused Flip Flop:     355  out of    449    79%  
+   Number with an unused LUT:            61  out of    449    13%  
+   Number of fully used LUT-FF pairs:    33  out of    449     7%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  21  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+gen_clk                            | BUFGP                  | 1     |
+vgaClk/divcounter_0                | BUFG                   | 93    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.731ns (Maximum Frequency: 129.354MHz)
+   Minimum input arrival time before clock: 3.769ns
+   Maximum output required time after clock: 7.448ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gen_clk'
+  Clock period: 1.913ns (frequency: 522.821MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.913ns (Levels of Logic = 1)
+  Source:            vgaClk/divcounter_0 (FF)
+  Destination:       vgaClk/divcounter_0 (FF)
+  Source Clock:      gen_clk rising
+  Destination Clock: gen_clk rising
+
+  Data Path: vgaClk/divcounter_0 to vgaClk/divcounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  vgaClk/divcounter_0 (vgaClk/divcounter_0)
+     INV:I->O              1   0.206   0.579  vgaClk/Mcount_divcounter_0_xor<0>11_INV_0 (Result)
+     FD:D                      0.102          vgaClk/divcounter_0
+    ----------------------------------------
+    Total                      1.913ns (0.755ns logic, 1.158ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vgaClk/divcounter_0'
+  Clock period: 7.731ns (frequency: 129.354MHz)
+  Total number of paths / destination ports: 42483 / 266
+-------------------------------------------------------------------------
+Delay:               7.731ns (Levels of Logic = 7)
+  Source:            image/vsync_unit/h_count_reg_0 (FF)
+  Destination:       image/rgb_reg_7 (FF)
+  Source Clock:      vgaClk/divcounter_0 rising
+  Destination Clock: vgaClk/divcounter_0 rising
+
+  Data Path: image/vsync_unit/h_count_reg_0 to image/rgb_reg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.447   0.982  image/vsync_unit/h_count_reg_0 (image/vsync_unit/h_count_reg_0)
+     LUT5:I4->O            2   0.205   0.617  image/n02071_SW0 (N35)
+     LUT6:I5->O           13   0.205   0.933  image/n02071 (image/n0207)
+     LUT6:I5->O            3   0.205   0.995  image/BUS_0040_GND_5_o_AND_61_o1 (image/BUS_0040_GND_5_o_AND_61_o)
+     LUT5:I0->O            3   0.203   0.898  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9231 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT923)
+     LUT6:I2->O            1   0.203   0.580  image/Mmux_sw[8]_GND_5_o_mux_980_OUT3117 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT3118)
+     LUT5:I4->O            6   0.205   0.745  image/Mmux_sw[8]_GND_5_o_mux_980_OUT3118 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT311)
+     LUT5:I4->O            1   0.205   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT41 (image/sw[8]_GND_5_o_mux_980_OUT<3>)
+     FDR:D                     0.102          image/rgb_reg_3
+    ----------------------------------------
+    Total                      7.731ns (1.980ns logic, 5.751ns route)
+                                       (25.6% logic, 74.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'vgaClk/divcounter_0'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.769ns (Levels of Logic = 4)
+  Source:            sw<8> (PAD)
+  Destination:       image/rgb_reg_8 (FF)
+  Destination Clock: vgaClk/divcounter_0 rising
+
+  Data Path: sw<8> to image/rgb_reg_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  sw_8_IBUF (sw_8_IBUF)
+     LUT6:I0->O            1   0.203   0.684  image/Mmux_sw[8]_GND_5_o_mux_980_OUT91_SW0 (N113)
+     LUT6:I4->O            1   0.203   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_lut<8> (image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_lut<8>)
+     MUXCY:S->O            1   0.411   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_cy<8> (image/sw[8]_GND_5_o_mux_980_OUT<8>)
+     FDR:D                     0.102          image/rgb_reg_8
+    ----------------------------------------
+    Total                      3.769ns (2.141ns logic, 1.628ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaClk/divcounter_0'
+  Total number of paths / destination ports: 83 / 11
+-------------------------------------------------------------------------
+Offset:              7.448ns (Levels of Logic = 4)
+  Source:            image/vsync_unit/h_count_reg_9 (FF)
+  Destination:       rgb<8> (PAD)
+  Source Clock:      vgaClk/divcounter_0 rising
+
+  Data Path: image/vsync_unit/h_count_reg_9 to rgb<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            23   0.447   1.382  image/vsync_unit/h_count_reg_9 (image/vsync_unit/h_count_reg_9)
+     LUT3:I0->O            1   0.205   0.924  image/vsync_unit/video_on_SW0 (N87)
+     LUT6:I1->O            9   0.203   0.934  image/vsync_unit/video_on (image/video_on)
+     LUT2:I0->O            1   0.203   0.579  image/Mmux_rgb11 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                      7.448ns (3.629ns logic, 3.819ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock gen_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+gen_clk        |    1.913|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vgaClk/divcounter_0
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+vgaClk/divcounter_0|    7.731|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.72 secs
+ 
+--> 
+
+Total memory usage is 269240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  173 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
