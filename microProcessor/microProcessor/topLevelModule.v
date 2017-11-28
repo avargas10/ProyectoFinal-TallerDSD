@@ -25,18 +25,18 @@
 		wire [31:0]  DataAdr,PC;
 		wire MemWrite;					
 		// instantiate processor and memories
-		assign LED=1;
 		Instruction_MEM imem (
 			.a(PC), 
 			.rd(Instr)
 		);
+		
 		ARM uut (
 		.clk(clk), 
 		.reset(reset), 
 		.PC(PC), 
 		.Instr(Instr), 
 		.MemWrite(MemWrite), 
-		.ALUResult(ALUResult), 
+		.ALUResult(DataAdr), 
 		.WriteData(WriteData), 
 		.ReadData(ReadData)
 	);

@@ -29,14 +29,13 @@ module total_test;
 	reg reset;
 
 	// Outputs
-	wire [31:0] WriteData;
-	wire [31:0] DataAdr;
-	wire MemWrite;
-
+	wire [31:0] ReadData;
 	// Instantiate the Unit Under Test (UUT)
 	topLevelModule uut (
 		.clk(clk), 
-		.reset(reset)
+		.reset(reset),
+		.ReadData(ReadData)
+		
 	);
 
 	initial begin
