@@ -1,0 +1,8 @@
+verilog work "principalDecoder.v"
+verilog work "pc_decoder.v"
+verilog work "flipflopEN.v"
+verilog work "decode_alu.v"
+verilog work "conditionals.v"
+verilog work "logicControl.v"
+verilog work "decoder.v"
+verilog work "fullController.v"

@@ -1,0 +1,5 @@
+verilog isim_temp "flipflopEN.v"
+verilog isim_temp "conditionals.v"
+verilog isim_temp "logicControl.v"
+verilog isim_temp "logicControl_test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

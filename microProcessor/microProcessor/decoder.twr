@@ -1,0 +1,225 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml decoder.twx decoder.ncd -o decoder.twr decoder.pcf
+
+Design file:              decoder.ncd
+Physical constraint file: decoder.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Op<0>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+Funct<0>    |    0.256(F)|      SLOW  |    0.830(F)|      SLOW  |decoMain/_n0033<4>|   0.000|
+Funct<5>    |   -0.210(F)|      FAST  |    1.476(F)|      SLOW  |decoMain/_n0033<4>|   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock Op<1>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+Funct<0>    |    0.271(F)|      FAST  |    0.829(F)|      SLOW  |decoMain/_n0033<4>|   0.000|
+Funct<5>    |   -0.154(F)|      FAST  |    1.475(F)|      SLOW  |decoMain/_n0033<4>|   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock Funct<1> to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUControl<0>|         7.017(F)|      SLOW  |         3.923(F)|      FAST  |aluMain/_n0035    |   0.000|
+ALUControl<1>|         6.614(F)|      SLOW  |         3.743(F)|      FAST  |aluMain/_n0035    |   0.000|
+Flagw<0>     |         9.049(F)|      SLOW  |         5.343(F)|      FAST  |aluMain/_n0035    |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock Funct<2> to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUControl<0>|         6.785(F)|      SLOW  |         3.783(F)|      FAST  |aluMain/_n0035    |   0.000|
+ALUControl<1>|         6.382(F)|      SLOW  |         3.603(F)|      FAST  |aluMain/_n0035    |   0.000|
+Flagw<0>     |         8.817(F)|      SLOW  |         5.203(F)|      FAST  |aluMain/_n0035    |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock Funct<3> to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUControl<0>|         7.128(F)|      SLOW  |         4.013(F)|      FAST  |aluMain/_n0035    |   0.000|
+ALUControl<1>|         6.725(F)|      SLOW  |         3.833(F)|      FAST  |aluMain/_n0035    |   0.000|
+Flagw<0>     |         9.160(F)|      SLOW  |         5.433(F)|      FAST  |aluMain/_n0035    |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock Funct<4> to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUControl<0>|         7.283(F)|      SLOW  |         4.125(F)|      FAST  |aluMain/_n0035    |   0.000|
+ALUControl<1>|         6.880(F)|      SLOW  |         3.945(F)|      FAST  |aluMain/_n0035    |   0.000|
+Flagw<0>     |         9.315(F)|      SLOW  |         5.545(F)|      FAST  |aluMain/_n0035    |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock Op<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUSrc      |         7.332(F)|      SLOW  |         4.115(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+Flagw<0>    |         9.647(F)|      SLOW  |         5.586(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+Flagw<1>    |         9.499(F)|      SLOW  |         5.583(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+InmSrc<0>   |         6.980(F)|      SLOW  |         3.918(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+InmSrc<1>   |         6.577(F)|      SLOW  |         3.725(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+MemWR       |         6.791(F)|      SLOW  |         3.875(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+MemtoReg    |         6.566(F)|      SLOW  |         3.666(F)|      FAST  |decoMain/_n0033<1>|   0.000|
+PCS         |         8.793(F)|      SLOW  |         4.989(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegSrc<0>   |         6.577(F)|      SLOW  |         3.725(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegSrc<1>   |         6.980(F)|      SLOW  |         3.918(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegWR       |         6.955(F)|      SLOW  |         3.922(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock Op<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+ALUSrc      |         7.331(F)|      SLOW  |         4.059(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+Flagw<0>    |         9.646(F)|      SLOW  |         5.530(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+Flagw<1>    |         9.498(F)|      SLOW  |         5.527(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+InmSrc<0>   |         6.979(F)|      SLOW  |         3.862(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+InmSrc<1>   |         6.576(F)|      SLOW  |         3.669(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+MemWR       |         6.790(F)|      SLOW  |         3.819(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+MemtoReg    |         7.135(F)|      SLOW  |         4.038(F)|      FAST  |decoMain/_n0033<1>|   0.000|
+PCS         |         8.792(F)|      SLOW  |         4.933(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegSrc<0>   |         6.576(F)|      SLOW  |         3.669(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegSrc<1>   |         6.979(F)|      SLOW  |         3.862(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+RegWR       |         6.954(F)|      SLOW  |         3.866(F)|      FAST  |decoMain/_n0033<4>|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Funct<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Funct<1>       |         |         |    0.495|    0.495|
+Funct<2>       |         |         |    0.267|    0.267|
+Funct<3>       |         |         |    0.606|    0.606|
+Funct<4>       |         |         |    0.761|    0.761|
+Op<0>          |         |         |         |    3.773|
+Op<1>          |         |         |         |    3.773|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Funct<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Funct<1>       |         |         |    0.710|    0.710|
+Funct<2>       |         |         |    0.478|    0.478|
+Funct<3>       |         |         |    0.821|    0.821|
+Funct<4>       |         |         |    0.976|    0.976|
+Op<0>          |         |         |         |    3.773|
+Op<1>          |         |         |         |    3.773|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Funct<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Funct<1>       |         |         |    0.389|    0.389|
+Funct<2>       |         |         |    0.177|    0.177|
+Funct<3>       |         |         |    0.500|    0.500|
+Funct<4>       |         |         |    0.655|    0.655|
+Op<0>          |         |         |         |    3.773|
+Op<1>          |         |         |         |    3.773|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Funct<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Funct<1>       |         |         |    0.236|    0.236|
+Funct<2>       |         |         |    0.065|    0.065|
+Funct<3>       |         |         |    0.347|    0.347|
+Funct<4>       |         |         |    0.502|    0.502|
+Op<0>          |         |         |         |    3.773|
+Op<1>          |         |         |         |    3.773|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Op<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Op<0>          |         |         |    0.484|    0.484|
+Op<1>          |         |         |    1.036|    1.036|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Op<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Op<0>          |         |         |    0.486|    0.486|
+Op<1>          |         |         |    0.854|    0.854|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Funct<0>       |Flagw<0>       |    6.878|
+Funct<0>       |Flagw<1>       |    6.730|
+Funct<1>       |Flagw<0>       |    6.728|
+Funct<2>       |Flagw<0>       |    6.627|
+Funct<3>       |Flagw<0>       |    6.258|
+Funct<4>       |Flagw<0>       |    6.939|
+rd<0>          |PCS            |    6.458|
+rd<1>          |PCS            |    6.678|
+rd<2>          |PCS            |    6.330|
+rd<3>          |PCS            |    6.756|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 27 00:00:34 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 171 MB
+
+
+

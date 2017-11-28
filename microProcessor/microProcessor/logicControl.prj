@@ -1,0 +1,3 @@
+verilog work "flipflopEN.v"
+verilog work "conditionals.v"
+verilog work "logicControl.v"

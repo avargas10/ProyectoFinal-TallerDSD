@@ -1,0 +1,58 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test_isim_beh.exe -prj C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test_beh.prj work.total_test work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/principalDecoder.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/pc_decoder.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/flipflopEN.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/decode_alu.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/conditionals.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/registerFile.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/Mux.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/logicControl.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/InmExtension.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/flip-flop.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/decoder.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ALU.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/adder.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/fullController.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/dataPath.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/Instruction_mem.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/data_mem.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v" into library work
+Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 159792 KB
+Fuse CPU Usage: 296 ms
+Compiling module principalDecoder
+Compiling module decode_alu
+Compiling module pc_decoder
+Compiling module decoder
+Compiling module flipflopEN(WIDTH=2)
+Compiling module conditionals
+Compiling module logicControl
+Compiling module fullController
+Compiling module Mux(WIDTH=32)
+Compiling module flipflop(WIDTH=32)
+Compiling module adder(WIDTH=32)
+Compiling module Mux(WIDTH=4)
+Compiling module registerFile
+Compiling module InmExtension
+Compiling module ALU
+Compiling module dataPath
+Compiling module ARM
+Compiling module Instruction_MEM
+Compiling module data_mem
+Compiling module topLevelModule
+Compiling module total_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 22 Verilog Units
+Built simulation executable C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test_isim_beh.exe
+Fuse Memory Usage: 165264 KB
+Fuse CPU Usage: 484 ms

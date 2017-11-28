@@ -1,0 +1,685 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: fullController.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fullController.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fullController"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : fullController
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\principalDecoder.v" into library work
+Parsing module <principalDecoder>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\pc_decoder.v" into library work
+Parsing module <pc_decoder>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flipflopEN.v" into library work
+Parsing module <flipflopEN>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\decode_alu.v" into library work
+Parsing module <decode_alu>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\conditionals.v" into library work
+Parsing module <conditionals>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\logicControl.v" into library work
+Parsing module <logicControl>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\fullController.v" into library work
+Parsing module <fullController>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fullController>.
+
+Elaborating module <decoder>.
+
+Elaborating module <principalDecoder>.
+
+Elaborating module <decode_alu>.
+
+Elaborating module <pc_decoder>.
+
+Elaborating module <logicControl>.
+
+Elaborating module <flipflopEN(WIDTH=2)>.
+
+Elaborating module <conditionals>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fullController>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\fullController.v".
+WARNING:Xst:647 - Input <Instr<19:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <fullController> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\decoder.v".
+    Summary:
+	no macro.
+Unit <decoder> synthesized.
+
+Synthesizing Unit <principalDecoder>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\principalDecoder.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUSrc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegWR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemWR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <InmSrc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <InmSrc<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegSrc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemtoReg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+	inferred   3 Multiplexer(s).
+Unit <principalDecoder> synthesized.
+
+Synthesizing Unit <decode_alu>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\decode_alu.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUControl<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <NoWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUControl<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <decode_alu> synthesized.
+
+Synthesizing Unit <pc_decoder>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\pc_decoder.v".
+    Summary:
+	no macro.
+Unit <pc_decoder> synthesized.
+
+Synthesizing Unit <logicControl>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\logicControl.v".
+    Summary:
+	no macro.
+Unit <logicControl> synthesized.
+
+Synthesizing Unit <flipflopEN>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flipflopEN.v".
+        WIDTH = 2
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <flipflopEN> synthesized.
+
+Synthesizing Unit <conditionals>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\conditionals.v".
+    Found 1-bit 15-to-1 multiplexer for signal <CondEx> created at line 36.
+    Found 1-bit comparator equal for signal <ge> created at line 35
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <conditionals> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ 2-bit register                                        : 2
+# Latches                                              : 11
+ 1-bit latch                                           : 11
+# Comparators                                          : 1
+ 1-bit comparator equal                                : 1
+# Multiplexers                                         : 5
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 3
+ 2-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch NoWrite hinder the constant cleaning in the block aluMain.
+   You should achieve better results by setting this init to 1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 1
+ 1-bit comparator equal                                : 1
+# Multiplexers                                         : 3
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch NoWrite hinder the constant cleaning in the block decode_alu.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <RegSrc_1> in Unit <principalDecoder> is equivalent to the following FF/Latch, which will be removed : <MemWR> 
+
+Optimizing unit <fullController> ...
+
+Optimizing unit <logicControl> ...
+
+Optimizing unit <conditionals> ...
+
+Optimizing unit <principalDecoder> ...
+
+Optimizing unit <decode_alu> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fullController, actual ratio is 0.
+Latch deco/decoMain/RegSrc_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch deco/decoMain/InmSrc_1 has been replicated 2 time(s) to handle iob=true attribute.
+Latch deco/aluMain/ALUControl_1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fullController.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 27
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 4
+#      LUT4                        : 4
+#      LUT5                        : 4
+#      LUT6                        : 7
+#      VCC                         : 1
+# FlipFlops/Latches                : 18
+#      FDC                         : 4
+#      LD                          : 10
+#      LDC                         : 3
+#      LDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 21
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              10  out of  18224     0%  
+ Number of Slice LUTs:                   26  out of   9112     0%  
+    Number used as Logic:                26  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     27
+   Number with an unused Flip Flop:      17  out of     27    62%  
+   Number with an unused LUT:             1  out of     27     3%  
+   Number of fully used LUT-FF pairs:     9  out of     27    33%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          37
+ Number of bonded IOBs:                  33  out of    232    14%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                       | Clock buffer(FF name)             | Load  |
+---------------------------------------------------+-----------------------------------+-------+
+deco/decoMain/_n0033<4>(deco/decoMain/_n0033<4>1:O)| NONE(*)(deco/decoMain/RegSrc_1)   | 9     |
+deco/decoMain/_n0033<1>(deco/decoMain/_n0033<1>1:O)| NONE(*)(deco/decoMain/MemtoReg)   | 1     |
+deco/decoMain/ALUOp                                | NONE(deco/aluMain/NoWrite)        | 1     |
+deco/aluMain/_n0037(deco/aluMain/out1:O)           | NONE(*)(deco/aluMain/ALUControl_0)| 3     |
+clk                                                | BUFGP                             | 4     |
+---------------------------------------------------+-----------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.666ns (Maximum Frequency: 272.810MHz)
+   Minimum input arrival time before clock: 4.542ns
+   Maximum output required time after clock: 7.075ns
+   Maximum combinational path delay: 7.952ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.666ns (frequency: 272.810MHz)
+  Total number of paths / destination ports: 44 / 4
+-------------------------------------------------------------------------
+Delay:               3.666ns (Levels of Logic = 3)
+  Source:            controller/flagreg1/q_1 (FF)
+  Destination:       controller/flagreg1/q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: controller/flagreg1/q_1 to controller/flagreg1/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   0.912  controller/flagreg1/q_1 (controller/flagreg1/q_1)
+     LUT6:I3->O            2   0.205   0.845  controller/conds/cond<3>1_SW2 (N8)
+     LUT5:I2->O            6   0.205   0.745  controller/conds/cond<3>1 (controller/CondEx)
+     LUT5:I4->O            1   0.205   0.000  controller/flagreg1/q_0_rstpot (controller/flagreg1/q_0_rstpot)
+     FDC:D                     0.102          controller/flagreg1/q_0
+    ----------------------------------------
+    Total                      3.666ns (1.164ns logic, 2.502ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'deco/decoMain/_n0033<4>'
+  Total number of paths / destination ports: 22 / 9
+-------------------------------------------------------------------------
+Offset:              2.495ns (Levels of Logic = 2)
+  Source:            Instr<27> (PAD)
+  Destination:       deco/decoMain/RegWR (LATCH)
+  Destination Clock: deco/decoMain/_n0033<4> falling
+
+  Data Path: Instr<27> to deco/decoMain/RegWR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.031  Instr_27_IBUF (Instr_27_IBUF)
+     LUT3:I0->O            1   0.205   0.000  deco/decoMain/Op[1]_RegWR_Mux_15_o1 (deco/decoMain/Op[1]_RegWR_Mux_15_o)
+     LD:D                      0.037          deco/decoMain/RegWR
+    ----------------------------------------
+    Total                      2.495ns (1.464ns logic, 1.031ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'deco/decoMain/_n0033<1>'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              2.369ns (Levels of Logic = 2)
+  Source:            Instr<27> (PAD)
+  Destination:       deco/decoMain/MemtoReg (LATCH)
+  Destination Clock: deco/decoMain/_n0033<1> falling
+
+  Data Path: Instr<27> to deco/decoMain/MemtoReg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.907  Instr_27_IBUF (Instr_27_IBUF)
+     LUT2:I0->O            2   0.203   0.000  deco/decoMain/_n0056<1>1 (deco/decoMain/_n0056)
+     LD:D                      0.037          deco/decoMain/MemtoReg
+    ----------------------------------------
+    Total                      2.369ns (1.462ns logic, 0.907ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'deco/decoMain/ALUOp'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              3.288ns (Levels of Logic = 2)
+  Source:            Instr<24> (PAD)
+  Destination:       deco/aluMain/NoWrite (LATCH)
+  Destination Clock: deco/decoMain/ALUOp falling
+
+  Data Path: Instr<24> to deco/aluMain/NoWrite
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.962  Instr_24_IBUF (Instr_24_IBUF)
+     LUT4:I0->O            1   0.203   0.579  deco/aluMain/cmd[3]_PWR_14_o_equal_5_o<3>1 (deco/aluMain/cmd[3]_PWR_14_o_equal_5_o)
+     LDE:GE                    0.322          deco/aluMain/NoWrite
+    ----------------------------------------
+    Total                      3.288ns (1.747ns logic, 1.541ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'deco/aluMain/_n0037'
+  Total number of paths / destination ports: 12 / 3
+-------------------------------------------------------------------------
+Offset:              2.424ns (Levels of Logic = 2)
+  Source:            Instr<21> (PAD)
+  Destination:       deco/aluMain/ALUControl_0 (LATCH)
+  Destination Clock: deco/aluMain/_n0037 falling
+
+  Data Path: Instr<21> to deco/aluMain/ALUControl_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.962  Instr_21_IBUF (Instr_21_IBUF)
+     LUT4:I0->O            1   0.203   0.000  deco/aluMain/cmd[3]_GND_14_o_Select_15_o1 (deco/aluMain/cmd[3]_GND_14_o_Select_15_o)
+     LDC:D                     0.037          deco/aluMain/ALUControl_0
+    ----------------------------------------
+    Total                      2.424ns (1.462ns logic, 0.962ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 60 / 8
+-------------------------------------------------------------------------
+Offset:              4.542ns (Levels of Logic = 4)
+  Source:            Instr<29> (PAD)
+  Destination:       controller/flagreg1/q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Instr<29> to controller/flagreg1/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   1.015  Instr_29_IBUF (Instr_29_IBUF)
+     LUT6:I0->O            2   0.203   0.845  controller/conds/cond<3>1_SW2 (N8)
+     LUT5:I2->O            6   0.205   0.745  controller/conds/cond<3>1 (controller/CondEx)
+     LUT5:I4->O            1   0.205   0.000  controller/flagreg1/q_0_rstpot (controller/flagreg1/q_0_rstpot)
+     FDC:D                     0.102          controller/flagreg1/q_0
+    ----------------------------------------
+    Total                      4.542ns (1.937ns logic, 2.605ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'deco/decoMain/_n0033<4>'
+  Total number of paths / destination ports: 9 / 8
+-------------------------------------------------------------------------
+Offset:              4.812ns (Levels of Logic = 2)
+  Source:            deco/decoMain/RegWR (LATCH)
+  Destination:       PCSrc (PAD)
+  Source Clock:      deco/decoMain/_n0033<4> falling
+
+  Data Path: deco/decoMain/RegWR to PCSrc
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.961  deco/decoMain/RegWR (deco/decoMain/RegWR)
+     LUT6:I1->O            1   0.203   0.579  controller/PCSrc (PCSrc_OBUF)
+     OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
+    ----------------------------------------
+    Total                      4.812ns (3.272ns logic, 1.540ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'deco/aluMain/_n0037'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            deco/aluMain/ALUControl_1_1 (LATCH)
+  Destination:       ALUControl<1> (PAD)
+  Source Clock:      deco/aluMain/_n0037 falling
+
+  Data Path: deco/aluMain/ALUControl_1_1 to ALUControl<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  deco/aluMain/ALUControl_1_1 (deco/aluMain/ALUControl_1_1)
+     OBUF:I->O                 2.571          ALUControl_1_OBUF (ALUControl<1>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 30 / 3
+-------------------------------------------------------------------------
+Offset:              7.075ns (Levels of Logic = 4)
+  Source:            controller/flagreg1/q_1 (FF)
+  Destination:       PCSrc (PAD)
+  Source Clock:      clk rising
+
+  Data Path: controller/flagreg1/q_1 to PCSrc
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   0.912  controller/flagreg1/q_1 (controller/flagreg1/q_1)
+     LUT6:I3->O            2   0.205   0.845  controller/conds/cond<3>1_SW2 (N8)
+     LUT5:I2->O            6   0.205   1.109  controller/conds/cond<3>1 (controller/CondEx)
+     LUT6:I0->O            1   0.203   0.579  controller/PCSrc (PCSrc_OBUF)
+     OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
+    ----------------------------------------
+    Total                      7.075ns (3.631ns logic, 3.444ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'deco/decoMain/ALUOp'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.535ns (Levels of Logic = 2)
+  Source:            deco/aluMain/NoWrite (LATCH)
+  Destination:       RegWrite (PAD)
+  Source Clock:      deco/decoMain/ALUOp falling
+
+  Data Path: deco/aluMain/NoWrite to RegWrite
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.498   0.684  deco/aluMain/NoWrite (deco/aluMain/NoWrite)
+     LUT3:I1->O            1   0.203   0.579  controller/RegWrite1 (RegWrite_OBUF)
+     OBUF:I->O                 2.571          RegWrite_OBUF (RegWrite)
+    ----------------------------------------
+    Total                      4.535ns (3.272ns logic, 1.263ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'deco/decoMain/_n0033<1>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            deco/decoMain/MemtoReg (LATCH)
+  Destination:       MemtoReg (PAD)
+  Source Clock:      deco/decoMain/_n0033<1> falling
+
+  Data Path: deco/decoMain/MemtoReg to MemtoReg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  deco/decoMain/MemtoReg (deco/decoMain/MemtoReg)
+     OBUF:I->O                 2.571          MemtoReg_OBUF (MemtoReg)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 34 / 3
+-------------------------------------------------------------------------
+Delay:               7.952ns (Levels of Logic = 5)
+  Source:            Instr<29> (PAD)
+  Destination:       PCSrc (PAD)
+
+  Data Path: Instr<29> to PCSrc
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   1.015  Instr_29_IBUF (Instr_29_IBUF)
+     LUT6:I0->O            2   0.203   0.845  controller/conds/cond<3>1_SW2 (N8)
+     LUT5:I2->O            6   0.205   1.109  controller/conds/cond<3>1 (controller/CondEx)
+     LUT6:I0->O            1   0.203   0.579  controller/PCSrc (PCSrc_OBUF)
+     OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
+    ----------------------------------------
+    Total                      7.952ns (4.404ns logic, 3.548ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+clk                    |    3.666|         |         |         |
+deco/aluMain/_n0037    |         |    2.777|         |         |
+deco/decoMain/_n0033<4>|         |    1.795|         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock deco/aluMain/_n0037
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+deco/decoMain/_n0033<4>|         |         |    2.528|         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.24 secs
+ 
+--> 
+
+Total memory usage is 244860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

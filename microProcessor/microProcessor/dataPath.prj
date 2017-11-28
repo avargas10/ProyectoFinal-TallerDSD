@@ -1,0 +1,7 @@
+verilog work "registerFile.v"
+verilog work "Mux.v"
+verilog work "InmExtension.v"
+verilog work "flip-flop.v"
+verilog work "ALU.v"
+verilog work "adder.v"
+verilog work "dataPath.v"

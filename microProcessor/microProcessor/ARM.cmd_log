@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
+xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
+xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
+xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 

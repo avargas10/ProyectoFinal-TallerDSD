@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj microProcessor -o "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/decode_alu.tfi" -lib work "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor//decode_alu.v" -module decode_alu -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

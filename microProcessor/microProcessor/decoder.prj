@@ -1,0 +1,4 @@
+verilog work "principalDecoder.v"
+verilog work "pc_decoder.v"
+verilog work "decode_alu.v"
+verilog work "decoder.v"
