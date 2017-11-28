@@ -52,9 +52,9 @@ module Instruction_MEM(input  [31:0] a,
 						RAM[21]=32'hE280200A;
 						RAM[22]=32'hE5802064;
 					end
-				always@*
+				always@(a)
 					begin
-						 rd = RAM[a[31:2]]; // word aligned
+						 rd = RAM[a/4]; // word aligned
 					end
 				
 endmodule

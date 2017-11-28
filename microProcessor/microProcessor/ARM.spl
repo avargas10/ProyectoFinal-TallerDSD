@@ -1,0 +1,14 @@
+[Inputs]
+clk
+reset
+=Instr[31:0]=
+=ReadData[31:0]=
+[Outputs]
+MemWrite
+=PC[31:0]=
+=ALUResult[31:0]=
+=WriteData[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ARM
+

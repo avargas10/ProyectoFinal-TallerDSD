@@ -18,26 +18,28 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
- module topLevelModule(input  clk, reset);
-							wire [31:0] WriteData, DataAdr;
-							wire [31:0] PC, Instr, ReadData;
-							wire MemWrite;
+ module topLevelModule(input  clk, reset,
+							  output [31:0] ReadData);	
+		
+		wire [31:0]  Instr, ReadData, WriteData;
+		wire [31:0]  DataAdr,PC;
+		wire MemWrite;					
 		// instantiate processor and memories
-		ARM arm (
-			.clk(clk), 
-			.reset(reset), 
-			.PC(PC), 
-			.Instr(Instr), 
-			.MemWrite(MemWrite), 
-			.ALUResult(DataAdr), 
-			.WriteData(WriteData), 
-			.ReadData(ReadData)
-		);
+		assign LED=1;
 		Instruction_MEM imem (
 			.a(PC), 
 			.rd(Instr)
 		);
-		
+		ARM uut (
+		.clk(clk), 
+		.reset(reset), 
+		.PC(PC), 
+		.Instr(Instr), 
+		.MemWrite(MemWrite), 
+		.ALUResult(ALUResult), 
+		.WriteData(WriteData), 
+		.ReadData(ReadData)
+	);
 		data_mem dmem (
 			.clk(clk), 
 			.we(MemWrite), 
@@ -45,5 +47,4 @@
 			.wd(WriteData), 
 			.rd(ReadData)
 		);
-
 endmodule 

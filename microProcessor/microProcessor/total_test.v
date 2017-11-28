@@ -41,18 +41,17 @@ module total_test;
 
 	initial begin
 		// Initialize Inputs
-		reset = 1;
-		#10
-		reset=0;
+		reset <= 1; # 22; reset <= 0;
         
 		// Add stimulus here
 
 	end
 	
-	always begin
-		clk <= 1; # 5; clk <= 0; # 5;
-	end
-	
+	always 
+		begin
+				#20 clk=5;
+				#20 clk=0;
+			end	
       
 endmodule
 

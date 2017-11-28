@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: topLevelModule.prj
 
@@ -143,12 +143,17 @@ Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microP
 Parsing module <ARM>.
 Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" into library work
 Parsing module <topLevelModule>.
+WARNING:HDLCompiler:751 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 24: Redeclaration of ansi port ReadData is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <topLevelModule>.
+WARNING:HDLCompiler:1127 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 28: Assignment to LED ignored, since the identifier is never used
+
+Elaborating module <Instruction_MEM>.
+WARNING:HDLCompiler:91 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\Instruction_mem.v" Line 57: Signal <RAM> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <ARM>.
 
@@ -172,17 +177,9 @@ Elaborating module <dataPath>.
 
 Elaborating module <Mux(WIDTH=32)>.
 
-Elaborating module <flipflop>.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 50: Size mismatch in connection of port <d>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 51: Size mismatch in connection of port <q>. Formal port size is 8-bit while actual signal size is 32-bit.
+Elaborating module <flipflop(WIDTH=32)>.
 
-Elaborating module <adder>.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 54: Size mismatch in connection of port <a>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 55: Size mismatch in connection of port <b>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 56: Size mismatch in connection of port <y>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 59: Size mismatch in connection of port <a>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 60: Size mismatch in connection of port <b>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\dataPath.v" Line 61: Size mismatch in connection of port <y>. Formal port size is 8-bit while actual signal size is 32-bit.
+Elaborating module <adder(WIDTH=32)>.
 
 Elaborating module <Mux(WIDTH=4)>.
 
@@ -191,10 +188,11 @@ Elaborating module <registerFile>.
 Elaborating module <InmExtension>.
 
 Elaborating module <ALU>.
-
-Elaborating module <Instruction_MEM>.
+WARNING:HDLCompiler:189 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 39: Size mismatch in connection of port <ALUResult>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 39: Assignment to ALUResult ignored, since the identifier is never used
 
 Elaborating module <data_mem>.
+WARNING:HDLCompiler:634 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 25: Net <DataAdr[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -202,9 +200,21 @@ Elaborating module <data_mem>.
 
 Synthesizing Unit <topLevelModule>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v".
+INFO:Xst:3210 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" line 33: Output port <ALUResult> of the instance <uut> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <DataAdr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <topLevelModule> synthesized.
+
+Synthesizing Unit <Instruction_MEM>.
+    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\Instruction_mem.v".
+WARNING:Xst:647 - Input <a<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <a<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'RAM', unconnected in block 'Instruction_MEM', is tied to its initial value.
+    Found 64x32-bit single-port Read Only RAM <Mram_RAM> for signal <RAM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <Instruction_MEM> synthesized.
 
 Synthesizing Unit <ARM>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\ARM.v".
@@ -272,8 +282,8 @@ Unit <flipflopEN> synthesized.
 
 Synthesizing Unit <conditionals>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\conditionals.v".
-    Found 1-bit 15-to-1 multiplexer for signal <CondEx> created at line 36.
-    Found 1-bit comparator equal for signal <ge> created at line 35
+    Found 1-bit 16-to-1 multiplexer for signal <CondEx> created at line 33.
+    Found 1-bit comparator equal for signal <ge> created at line 32
     Summary:
 	inferred   1 Comparator(s).
 	inferred   1 Multiplexer(s).
@@ -295,16 +305,16 @@ Unit <Mux_1> synthesized.
 
 Synthesizing Unit <flipflop>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flip-flop.v".
-        WIDTH = 8
-    Found 8-bit register for signal <q>.
+        WIDTH = 32
+    Found 32-bit register for signal <q>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred  32 D-type flip-flop(s).
 Unit <flipflop> synthesized.
 
 Synthesizing Unit <adder>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\adder.v".
-        WIDTH = 8
-    Found 8-bit adder for signal <y> created at line 29.
+        WIDTH = 32
+    Found 32-bit adder for signal <y> created at line 29.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <adder> synthesized.
@@ -327,30 +337,20 @@ Unit <registerFile> synthesized.
 
 Synthesizing Unit <InmExtension>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\InmExtension.v".
-    Found 32-bit 3-to-1 multiplexer for signal <ExtInm> created at line 28.
+    Found 32-bit 3-to-1 multiplexer for signal <ExtInm> created at line 29.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <InmExtension> synthesized.
 
 Synthesizing Unit <ALU>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\ALU.v".
-    Found 33-bit subtractor for signal <GND_103_o_GND_103_o_sub_2_OUT> created at line 50.
+    Found 33-bit subtractor for signal <GND_32_o_GND_32_o_sub_2_OUT> created at line 50.
     Found 33-bit adder for signal <n0027> created at line 49.
     Found 33-bit 4-to-1 multiplexer for signal <tmp> created at line 48.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   3 Multiplexer(s).
 Unit <ALU> synthesized.
-
-Synthesizing Unit <Instruction_MEM>.
-    Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\Instruction_mem.v".
-WARNING:Xst:647 - Input <a<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <a<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <RAM> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 64x32-bit single-port Read Only RAM <Mram_RAM> for signal <RAM>.
-    Summary:
-	inferred   1 RAM(s).
-Unit <Instruction_MEM> synthesized.
 
 Synthesizing Unit <data_mem>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\data_mem.v".
@@ -370,17 +370,17 @@ Macro Statistics
  64x32-bit single-port RAM                             : 1
  64x32-bit single-port Read Only RAM                   : 1
 # Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
  33-bit addsub                                         : 1
- 8-bit adder                                           : 2
 # Registers                                            : 3
  2-bit register                                        : 2
- 8-bit register                                        : 1
+ 32-bit register                                       : 1
 # Latches                                              : 11
  1-bit latch                                           : 11
 # Comparators                                          : 1
  1-bit comparator equal                                : 1
 # Multiplexers                                         : 17
- 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 16-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 4
  2-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 5
@@ -419,7 +419,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs eit
     |     aspect ratio   | 64-word x 32-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <we>            | high     |
-    |     addrA          | connected to signal <a>             |          |
+    |     addrA          | connected to signal <GND>           |          |
     |     diA            | connected to signal <wd>            |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -469,14 +469,14 @@ Macro Statistics
  64x32-bit single-port distributed RAM                 : 1
  64x32-bit single-port distributed Read Only RAM       : 1
 # Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
  33-bit addsub                                         : 1
- 8-bit adder                                           : 2
-# Registers                                            : 12
- Flip-Flops                                            : 12
+# Registers                                            : 36
+ Flip-Flops                                            : 36
 # Comparators                                          : 1
  1-bit comparator equal                                : 1
 # Multiplexers                                         : 16
- 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 16-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 3
  2-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 5
@@ -493,8 +493,6 @@ INFO:Xst:2261 - The FF/Latch <RegSrc_1> in Unit <principalDecoder> is equivalent
 
 Optimizing unit <topLevelModule> ...
 
-Optimizing unit <flipflop> ...
-
 Optimizing unit <dataPath> ...
 
 Optimizing unit <ALU> ...
@@ -506,83 +504,21 @@ Optimizing unit <conditionals> ...
 Optimizing unit <principalDecoder> ...
 
 Optimizing unit <decode_alu> ...
-WARNING:Xst:1426 - The value init of the FF/Latch arm/controller/deco/decoMain/ALUOp hinder the constant cleaning in the block topLevelModule.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch arm/controller/deco/decoMain/RegWR hinder the constant cleaning in the block topLevelModule.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/decoMain/RegSrc_1> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/decoMain/InmSrc_0> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/decoMain/InmSrc_1> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/decoMain/MemtoReg> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/decoMain/ALUSrc> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/aluMain/ALUControl_0> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <arm/controller/deco/aluMain/NoWrite> has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <arm/data/ffPc/q_0> (without init value) has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <arm/controller/controller/flagreg1/q_0> (without init value) has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <arm/controller/controller/flagreg1/q_1> (without init value) has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <arm/controller/controller/flagreg2/q_0> (without init value) has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <arm/controller/controller/flagreg2/q_1> (without init value) has a constant value of 0 in block <topLevelModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1294 - Latch <arm/controller/deco/decoMain/RegWR> is equivalent to a wire in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM1> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM2> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM3> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM4> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM5> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM8> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM6> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM7> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM9> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM10> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM11> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM12> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM13> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM14> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM17> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM15> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM16> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM18> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM19> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM20> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM21> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM22> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM23> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM26> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM24> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM25> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM27> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM28> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM29> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM30> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM31> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <dmem/Mram_RAM32> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_7> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_6> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_5> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_4> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_3> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_2> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:2677 - Node <arm/data/ffPc/q_1> of sequential type is unconnected in block <topLevelModule>.
-WARNING:Xst:1294 - Latch <arm/controller/deco/decoMain/ALUOp> is equivalent to a wire in block <topLevelModule>.
-WARNING:Xst:1426 - The value init of the FF/Latch arm/controller/deco/aluMain/ALUControl_1 hinder the constant cleaning in the block topLevelModule.
-   You should achieve better results by setting this init to 1.
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers162>, <arm/data/regFile/Mram_registers72> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers161>, <arm/data/regFile/Mram_registers71> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers15>, <arm/data/regFile/Mram_registers6> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers14>, <arm/data/regFile/Mram_registers5> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers12>, <arm/data/regFile/Mram_registers3> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers11>, <arm/data/regFile/Mram_registers2> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <arm/data/regFile/Mram_registers13>, <arm/data/regFile/Mram_registers4> are equivalent, second RAM is removed
-((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<0>) + (arm/ALUControl<1> * WriteData<0> * WriteData<0>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<1>) + (arm/ALUControl<1> * WriteData<1> * WriteData<1>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<2>) + (arm/ALUControl<1> * WriteData<2> * WriteData<2>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<3>) + (arm/ALUControl<1> * WriteData<3> * WriteData<3>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<4>) + (arm/ALUControl<1> * WriteData<4> * WriteData<4>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<5>) + (arm/ALUControl<1> * WriteData<5> * WriteData<5>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<6>) + (arm/ALUControl<1> * WriteData<6> * WriteData<6>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<7>) + (arm/ALUControl<1> * WriteData<7> * WriteData<7>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<8>) + (arm/ALUControl<1> * WriteData<8> * WriteData<8>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<9>) + (arm/ALUControl<1> * WriteData<9> * WriteData<9>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<10>) + (arm/ALUControl<1> * WriteData<10> * WriteData<10>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<11>) + (arm/ALUControl<1> * WriteData<11> * WriteData<11>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<12>) + (arm/ALUControl<1> * WriteData<12> * WriteData<12>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<13>) + (arm/ALUControl<1> * WriteData<13> * WriteData<13>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<14>) + (arm/ALUControl<1> * WriteData<14> * WriteData<14>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<15>) + (arm/ALUControl<1> * WriteData<15> * WriteData<15>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<16>) + (arm/ALUControl<1> * WriteData<16> * WriteData<16>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<17>) + (arm/ALUControl<1> * WriteData<17> * WriteData<17>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<18>) + (arm/ALUControl<1> * WriteData<18> * WriteData<18>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<19>) + (arm/ALUControl<1> * WriteData<19> * WriteData<19>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<20>) + (arm/ALUControl<1> * WriteData<20> * WriteData<20>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<21>) + (arm/ALUControl<1> * WriteData<21> * WriteData<21>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<22>) + (arm/ALUControl<1> * WriteData<22> * WriteData<22>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<23>) + (arm/ALUControl<1> * WriteData<23> * WriteData<23>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<24>) + (arm/ALUControl<1> * WriteData<24> * WriteData<24>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<25>) + (arm/ALUControl<1> * WriteData<25> * WriteData<25>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<26>) + (arm/ALUControl<1> * WriteData<26> * WriteData<26>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<27>) + (arm/ALUControl<1> * WriteData<27> * WriteData<27>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<28>) + (arm/ALUControl<1> * WriteData<28> * WriteData<28>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<29>) + (arm/ALUControl<1> * WriteData<29> * WriteData<29>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<30>) + (arm/ALUControl<1> * WriteData<30> * WriteData<30>))((!arm/ALUControl<1> * arm/data/mainALU/Mmux_tmp1_split<31>) + (arm/ALUControl<1> * WriteData<31> * WriteData<31>))
+WARNING:Xst:2677 - Node <uut/controller/deco/decoMain/InmSrc_0> of sequential type is unconnected in block <topLevelModule>.
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block topLevelModule, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block topLevelModule, actual ratio is 4.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
 =========================================================================
 
 =========================================================================
@@ -604,22 +540,33 @@ Top Level Output File Name         : topLevelModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 96
+# BELS                             : 552
 #      GND                         : 1
-#      LUT2                        : 1
-#      LUT3                        : 31
-#      MUXCY                       : 31
+#      INV                         : 3
+#      LUT1                        : 58
+#      LUT2                        : 11
+#      LUT3                        : 74
+#      LUT4                        : 11
+#      LUT5                        : 113
+#      LUT6                        : 97
+#      MUXCY                       : 90
 #      VCC                         : 1
-#      XORCY                       : 31
-# FlipFlops/Latches                : 1
-#      LDC                         : 1
-# RAMS                             : 7
-#      RAM16X1D                    : 2
-#      RAM32M                      : 5
+#      XORCY                       : 93
+# FlipFlops/Latches                : 45
+#      FDC                         : 32
+#      FDCE                        : 4
+#      LD                          : 6
+#      LDC                         : 2
+#      LDE                         : 1
+# RAMS                             : 46
+#      RAM16X1D                    : 4
+#      RAM32M                      : 10
+#      RAM64X1S                    : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 65
-#      OBUF                        : 65
+# IO Buffers                       : 33
+#      IBUF                        : 1
+#      OBUF                        : 32
 
 Device utilization summary:
 ---------------------------
@@ -628,22 +575,22 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               1  out of  18224     0%  
- Number of Slice LUTs:                   56  out of   9112     0%  
-    Number used as Logic:                32  out of   9112     0%  
-    Number used as Memory:               24  out of   2176     1%  
-       Number used as RAM:               24
+ Number of Slice Registers:              45  out of  18224     0%  
+ Number of Slice LUTs:                  447  out of   9112     4%  
+    Number used as Logic:               367  out of   9112     4%  
+    Number used as Memory:               80  out of   2176     3%  
+       Number used as RAM:               80
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     57
-   Number with an unused Flip Flop:      56  out of     57    98%  
-   Number with an unused LUT:             1  out of     57     1%  
-   Number of fully used LUT-FF pairs:     0  out of     57     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:    447
+   Number with an unused Flip Flop:     402  out of    447    89%  
+   Number with an unused LUT:             0  out of    447     0%  
+   Number of fully used LUT-FF pairs:    45  out of    447    10%  
+   Number of unique control sets:         7
 
 IO Utilization: 
- Number of IOs:                          67
- Number of bonded IOBs:                  66  out of    232    28%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    232    14%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -666,12 +613,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                         | Load  |
------------------------------------+-----------------------------------------------+-------+
-clk                                | BUFGP                                         | 7     |
-arm/controller/RegW                | NONE(arm/controller/deco/aluMain/ALUControl_1)| 1     |
------------------------------------+-----------------------------------------------+-------+
+---------------------------------------------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                                                                     | Clock buffer(FF name)                            | Load  |
+---------------------------------------------------------------------------------+--------------------------------------------------+-------+
+clk                                                                              | BUFGP                                            | 82    |
+uut/controller/deco/decoMain/_n0033<4>(uut/controller/deco/decoMain/_n0033<4>1:O)| NONE(*)(uut/controller/deco/decoMain/RegSrc_1)   | 5     |
+uut/controller/deco/decoMain/_n0033<1>(uut/controller/deco/decoMain/_n0033<1>1:O)| NONE(*)(uut/controller/deco/decoMain/MemtoReg)   | 1     |
+uut/controller/deco/aluMain/_n0048(uut/controller/deco/aluMain/out1:O)           | NONE(*)(uut/controller/deco/aluMain/ALUControl_1)| 2     |
+uut/controller/deco/decoMain/ALUOp                                               | NONE(uut/controller/deco/aluMain/NoWrite)        | 1     |
+---------------------------------------------------------------------------------+--------------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -682,9 +635,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.992ns (Maximum Frequency: 250.479MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 6.393ns
+   Minimum period: 10.444ns (Maximum Frequency: 95.750MHz)
+   Minimum input arrival time before clock: 3.000ns
+   Maximum output required time after clock: 4.075ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -693,102 +646,76 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.992ns (frequency: 250.479MHz)
-  Total number of paths / destination ports: 528 / 32
+  Clock period: 10.444ns (frequency: 95.750MHz)
+  Total number of paths / destination ports: 895098 / 254
 -------------------------------------------------------------------------
-Delay:               3.992ns (Levels of Logic = 26)
-  Source:            arm/data/regFile/Mram_registers11 (RAM)
-  Destination:       arm/data/regFile/Mram_registers15 (RAM)
+Delay:               10.444ns (Levels of Logic = 14)
+  Source:            uut/data/ffPc/q_7 (FF)
+  Destination:       uut/controller/controller/flagreg1/q_1 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: arm/data/regFile/Mram_registers11 to arm/data/regFile/Mram_registers15
+  Data Path: uut/data/ffPc/q_7 to uut/controller/controller/flagreg1/q_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAM32M:WCLK->DOA0     2   0.910   0.616  arm/data/regFile/Mram_registers11 (WriteData_0_OBUF)
-     MUXCY:DI->O           1   0.145   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<0> (arm/data/mainALU/Mmux_tmp1_rs_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<1> (arm/data/mainALU/Mmux_tmp1_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<2> (arm/data/mainALU/Mmux_tmp1_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<3> (arm/data/mainALU/Mmux_tmp1_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<4> (arm/data/mainALU/Mmux_tmp1_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<5> (arm/data/mainALU/Mmux_tmp1_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<6> (arm/data/mainALU/Mmux_tmp1_rs_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<7> (arm/data/mainALU/Mmux_tmp1_rs_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<8> (arm/data/mainALU/Mmux_tmp1_rs_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<9> (arm/data/mainALU/Mmux_tmp1_rs_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<10> (arm/data/mainALU/Mmux_tmp1_rs_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<11> (arm/data/mainALU/Mmux_tmp1_rs_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<12> (arm/data/mainALU/Mmux_tmp1_rs_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<13> (arm/data/mainALU/Mmux_tmp1_rs_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<14> (arm/data/mainALU/Mmux_tmp1_rs_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<15> (arm/data/mainALU/Mmux_tmp1_rs_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<16> (arm/data/mainALU/Mmux_tmp1_rs_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<17> (arm/data/mainALU/Mmux_tmp1_rs_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<18> (arm/data/mainALU/Mmux_tmp1_rs_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<19> (arm/data/mainALU/Mmux_tmp1_rs_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<20> (arm/data/mainALU/Mmux_tmp1_rs_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<21> (arm/data/mainALU/Mmux_tmp1_rs_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<22> (arm/data/mainALU/Mmux_tmp1_rs_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<23> (arm/data/mainALU/Mmux_tmp1_rs_cy<23>)
-     XORCY:CI->O           1   0.180   0.580  arm/data/mainALU/Mmux_tmp1_rs_xor<24> (arm/data/mainALU/Mmux_tmp1_split<24>)
-     LUT3:I2->O            2   0.205   0.616  arm/data/mainALU/Mmux_tmp3171 (DataAdr_24_OBUF)
-     RAM32M:DIA0               0.303          arm/data/regFile/Mram_registers15
+     FDC:C->Q             25   0.447   1.557  uut/data/ffPc/q_7 (uut/data/ffPc/q_7)
+     LUT6:I0->O           27   0.203   1.468  imem/Mram_RAM151 (Instr<15>)
+     LUT4:I0->O            9   0.203   0.830  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
+     LUT6:I5->O           14   0.205   0.958  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_1 (uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>)
+     LUT3:I2->O            2   0.205   0.617  uut/data/regFile/Mmux_rd2301 (WriteData<7>)
+     LUT6:I5->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<7> (uut/data/mainALU/Mmux_tmp1_rs_lut<7>)
+     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<7> (uut/data/mainALU/Mmux_tmp1_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<8> (uut/data/mainALU/Mmux_tmp1_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<9> (uut/data/mainALU/Mmux_tmp1_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<10> (uut/data/mainALU/Mmux_tmp1_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<11> (uut/data/mainALU/Mmux_tmp1_rs_cy<11>)
+     XORCY:CI->O           1   0.180   0.580  uut/data/mainALU/Mmux_tmp1_rs_xor<12> (uut/data/mainALU/Mmux_tmp1_split<12>)
+     LUT6:I5->O            3   0.205   1.015  uut/data/mainALU/Mmux_tmp341 (uut/data/ALUResult<12>)
+     LUT6:I0->O            1   0.203   0.808  uut/data/mainALU/Zero<31>2_SW0 (N26)
+     LUT6:I3->O            1   0.205   0.000  uut/data/mainALU/Zero<31>7 (uut/ALUFlags<3>)
+     FDCE:D                    0.102          uut/controller/controller/flagreg1/q_1
     ----------------------------------------
-    Total                      3.992ns (2.180ns logic, 1.812ns route)
-                                       (54.6% logic, 45.4% route)
+    Total                     10.444ns (2.611ns logic, 7.833ns route)
+                                       (25.0% logic, 75.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              3.000ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       uut/data/ffPc/q_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to uut/data/ffPc/q_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.222   1.348  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          uut/data/ffPc/q_0
+    ----------------------------------------
+    Total                      3.000ns (1.652ns logic, 1.348ns route)
+                                       (55.1% logic, 44.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 560 / 64
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              6.393ns (Levels of Logic = 34)
-  Source:            arm/data/regFile/Mram_registers11 (RAM)
-  Destination:       DataAdr<31> (PAD)
+Offset:              4.075ns (Levels of Logic = 1)
+  Source:            dmem/Mram_RAM32 (RAM)
+  Destination:       ReadData<31> (PAD)
   Source Clock:      clk rising
 
-  Data Path: arm/data/regFile/Mram_registers11 to DataAdr<31>
+  Data Path: dmem/Mram_RAM32 to ReadData<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAM32M:WCLK->DOA0     2   0.910   0.616  arm/data/regFile/Mram_registers11 (WriteData_0_OBUF)
-     MUXCY:DI->O           1   0.145   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<0> (arm/data/mainALU/Mmux_tmp1_rs_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<1> (arm/data/mainALU/Mmux_tmp1_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<2> (arm/data/mainALU/Mmux_tmp1_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<3> (arm/data/mainALU/Mmux_tmp1_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<4> (arm/data/mainALU/Mmux_tmp1_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<5> (arm/data/mainALU/Mmux_tmp1_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<6> (arm/data/mainALU/Mmux_tmp1_rs_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<7> (arm/data/mainALU/Mmux_tmp1_rs_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<8> (arm/data/mainALU/Mmux_tmp1_rs_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<9> (arm/data/mainALU/Mmux_tmp1_rs_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<10> (arm/data/mainALU/Mmux_tmp1_rs_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<11> (arm/data/mainALU/Mmux_tmp1_rs_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<12> (arm/data/mainALU/Mmux_tmp1_rs_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<13> (arm/data/mainALU/Mmux_tmp1_rs_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<14> (arm/data/mainALU/Mmux_tmp1_rs_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<15> (arm/data/mainALU/Mmux_tmp1_rs_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<16> (arm/data/mainALU/Mmux_tmp1_rs_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<17> (arm/data/mainALU/Mmux_tmp1_rs_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<18> (arm/data/mainALU/Mmux_tmp1_rs_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<19> (arm/data/mainALU/Mmux_tmp1_rs_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<20> (arm/data/mainALU/Mmux_tmp1_rs_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<21> (arm/data/mainALU/Mmux_tmp1_rs_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<22> (arm/data/mainALU/Mmux_tmp1_rs_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<23> (arm/data/mainALU/Mmux_tmp1_rs_cy<23>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<24> (arm/data/mainALU/Mmux_tmp1_rs_cy<24>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<25> (arm/data/mainALU/Mmux_tmp1_rs_cy<25>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<26> (arm/data/mainALU/Mmux_tmp1_rs_cy<26>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<27> (arm/data/mainALU/Mmux_tmp1_rs_cy<27>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<28> (arm/data/mainALU/Mmux_tmp1_rs_cy<28>)
-     MUXCY:CI->O           1   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<29> (arm/data/mainALU/Mmux_tmp1_rs_cy<29>)
-     MUXCY:CI->O           0   0.019   0.000  arm/data/mainALU/Mmux_tmp1_rs_cy<30> (arm/data/mainALU/Mmux_tmp1_rs_cy<30>)
-     XORCY:CI->O           1   0.180   0.580  arm/data/mainALU/Mmux_tmp1_rs_xor<31> (arm/data/mainALU/Mmux_tmp1_split<31>)
-     LUT3:I2->O            2   0.205   0.616  arm/data/mainALU/Mmux_tmp3251 (DataAdr_31_OBUF)
-     OBUF:I->O                 2.571          DataAdr_31_OBUF (DataAdr<31>)
+     RAM64X1S:WCLK->O      3   0.854   0.650  dmem/Mram_RAM32 (ReadData_31_OBUF)
+     OBUF:I->O                 2.571          ReadData_31_OBUF (ReadData<31>)
     ----------------------------------------
-    Total                      6.393ns (4.581ns logic, 1.812ns route)
-                                       (71.7% logic, 28.3% route)
+    Total                      4.075ns (3.425ns logic, 0.650ns route)
+                                       (84.0% logic, 16.0% route)
 
 =========================================================================
 
@@ -796,24 +723,61 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+clk                                   |   10.444|         |         |         |
+uut/controller/deco/aluMain/_n0048    |         |    7.182|         |         |
+uut/controller/deco/decoMain/ALUOp    |         |    2.906|         |         |
+uut/controller/deco/decoMain/_n0033<1>|         |    3.491|         |         |
+uut/controller/deco/decoMain/_n0033<4>|         |    9.116|         |         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut/controller/deco/aluMain/_n0048
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+clk                                   |         |         |    3.664|         |
+uut/controller/deco/decoMain/_n0033<4>|         |         |    2.433|         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut/controller/deco/decoMain/ALUOp
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.992|         |         |         |
+clk            |         |         |    4.726|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut/controller/deco/decoMain/_n0033<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut/controller/deco/decoMain/_n0033<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.479|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.62 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.96 secs
  
 --> 
 
-Total memory usage is 246964 kilobytes
+Total memory usage is 247028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   83 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

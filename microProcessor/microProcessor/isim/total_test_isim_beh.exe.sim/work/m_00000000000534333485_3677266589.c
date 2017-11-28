@@ -848,7 +848,7 @@ LAB58:    t12 = *((unsigned int *)t5);
 static void Always_55_1(char *t0)
 {
     char t7[8];
-    char t14[8];
+    char t16[8];
     char *t1;
     char *t2;
     char *t3;
@@ -861,16 +861,9 @@ static void Always_55_1(char *t0)
     char *t11;
     char *t12;
     char *t13;
+    char *t14;
     char *t15;
-    char *t16;
     char *t17;
-    unsigned int t18;
-    unsigned int t19;
-    unsigned int t20;
-    unsigned int t21;
-    unsigned int t22;
-    unsigned int t23;
-    char *t24;
 
 LAB0:    t1 = (t0 + 1680U);
     t2 = *((char **)t1);
@@ -899,24 +892,14 @@ LAB5:    xsi_set_current_line(57, ng0);
     t11 = (t0 + 920);
     t12 = (t11 + 40U);
     t13 = *((char **)t12);
-    t15 = (t0 + 600U);
-    t16 = *((char **)t15);
-    memset(t14, 0, 8);
-    t15 = (t14 + 4);
-    t17 = (t16 + 4);
-    t18 = *((unsigned int *)t16);
-    t19 = (t18 >> 2);
-    *((unsigned int *)t14) = t19;
-    t20 = *((unsigned int *)t17);
-    t21 = (t20 >> 2);
-    *((unsigned int *)t15) = t21;
-    t22 = *((unsigned int *)t14);
-    *((unsigned int *)t14) = (t22 & 1073741823U);
-    t23 = *((unsigned int *)t15);
-    *((unsigned int *)t15) = (t23 & 1073741823U);
-    xsi_vlog_generic_get_array_select_value(t7, 32, t6, t10, t13, 2, 1, t14, 30, 2);
-    t24 = (t0 + 828);
-    xsi_vlogvar_assign_value(t24, t7, 0, 0, 32);
+    t14 = (t0 + 600U);
+    t15 = *((char **)t14);
+    t14 = ((char*)((ng11)));
+    memset(t16, 0, 8);
+    xsi_vlog_unsigned_divide(t16, 32, t15, 32, t14, 32);
+    xsi_vlog_generic_get_array_select_value(t7, 32, t6, t10, t13, 2, 1, t16, 32, 2);
+    t17 = (t0 + 828);
+    xsi_vlogvar_assign_value(t17, t7, 0, 0, 32);
     goto LAB2;
 
 }

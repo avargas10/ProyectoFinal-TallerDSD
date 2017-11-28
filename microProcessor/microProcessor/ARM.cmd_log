@@ -2,3 +2,5 @@ xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microP
 xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
 xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
 xst -intstyle ise -ifn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.xst" -ofn "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.syr" 
+vhdtdtfi -lib work {C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.v} -lang verilog -prj microProcessor -o ARM.spl -module ARM -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 ARM.spl {C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.sym} 

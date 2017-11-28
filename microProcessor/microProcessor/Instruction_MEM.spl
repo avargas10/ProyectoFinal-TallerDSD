@@ -1,0 +1,8 @@
+[Inputs]
+=a[31:0]=
+[Outputs]
+=rd[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Instruction_MEM
+

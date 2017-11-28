@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <!--This is an ISE project configuration file.-->
 <!--It holds project specific layout data for the projectmgr plugin.-->
 <!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
@@ -18,17 +18,19 @@
          <ClosedNode>/logicControl C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|logicControl.v</ClosedNode>
          <ClosedNode>/testbench C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|testbench.v/final - topLevelModule</ClosedNode>
          <ClosedNode>/testbench C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|testbench.v/final - topLevelModule/arm - ARM/data - dataPath</ClosedNode>
+         <ClosedNode>/topLevelModule C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|topLevelModule.v/arm - ARM</ClosedNode>
          <ClosedNode>/topLevelModule C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|topLevelModule.v/arm - ARM/controller - fullController</ClosedNode>
          <ClosedNode>/topLevelModule C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|topLevelModule.v/arm - ARM/controller - fullController/controller - logicControl</ClosedNode>
+         <ClosedNode>/topLevelModule C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|topLevelModule.v/arm - ARM/data - dataPath</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>data - dataPath (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/dataPath.v)</SelectedItem>
+         <SelectedItem>topLevelModule (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000014a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000014a0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000114000000020000000000000000000000000200000064ffffffff000000810000000300000002000001140000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>data - dataPath (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/dataPath.v)</CurrentItem>
+      <CurrentItem>topLevelModule (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -81,13 +83,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -97,13 +99,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>View RTL Schematic</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>View RTL Schematic</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -113,8 +115,10 @@
          <ClosedNode>/alu_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|alu_test.v</ClosedNode>
          <ClosedNode>/arm_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|arm_test.v/uut - ARM/controller - fullController</ClosedNode>
          <ClosedNode>/arm_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|arm_test.v/uut - ARM/controller - fullController/controller - logicControl</ClosedNode>
+         <ClosedNode>/arm_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|arm_test.v/uut - ARM/controller - fullController/deco - decoder</ClosedNode>
+         <ClosedNode>/arm_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|arm_test.v/uut - ARM/data - dataPath</ClosedNode>
          <ClosedNode>/condTest C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|condTest.v</ClosedNode>
-         <ClosedNode>/dataPath_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|dataPath_test.v</ClosedNode>
+         <ClosedNode>/dataPath_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|dataPath_test.v/uut - dataPath</ClosedNode>
          <ClosedNode>/deco_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|deco_test.v</ClosedNode>
          <ClosedNode>/decode_alu_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|decode_alu_test.v</ClosedNode>
          <ClosedNode>/decoder C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|decoder.v</ClosedNode>
@@ -131,17 +135,17 @@
          <ClosedNode>/regFileTest C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|regFileTest.v</ClosedNode>
          <ClosedNode>/regFile_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|regFile_test.v</ClosedNode>
          <ClosedNode>/testbench C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|testbench.v</ClosedNode>
-         <ClosedNode>/total_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|total_test.v</ClosedNode>
-         <ClosedNode>/total_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|total_test.v/uut - topLevelModule/arm - ARM</ClosedNode>
+         <ClosedNode>/total_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|total_test.v/uut - topLevelModule/arm - ARM/controller - fullController</ClosedNode>
+         <ClosedNode>/total_test C:|Users|Andres Vargas|Documents|Verilog Projects|microProcessor|microProcessor|total_test.v/uut - topLevelModule/arm - ARM/data - dataPath</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>dataPath_test (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/dataPath_test.v)</SelectedItem>
+         <SelectedItem>total_test (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >22</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >23</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000014a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000014a0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>dataPath_test (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/dataPath_test.v)</CurrentItem>
+      <CurrentItem>total_test (C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -149,13 +153,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -175,13 +179,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000be000000e101000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

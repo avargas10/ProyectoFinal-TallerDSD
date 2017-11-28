@@ -1,0 +1,11 @@
+[Inputs]
+clk
+reset
+[Outputs]
+=PC[31:0]=
+=Instr[31:0]=
+=ReadData[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel topLevelModule
+

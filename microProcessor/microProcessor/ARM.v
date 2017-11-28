@@ -23,7 +23,7 @@ module ARM(input  clk, reset,
 			input  [31:0] Instr,
 			output wire MemWrite,
 			output wire [31:0] ALUResult, WriteData,
-			input  [31:0] ReadData);
+			input wire [31:0] ReadData);
 			
 			wire [3:0] ALUFlags;
 			wire RegWrite,ALUSrc, MemtoReg, PCSrc;
