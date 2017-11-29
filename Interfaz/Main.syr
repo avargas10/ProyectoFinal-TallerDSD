@@ -1,18 +1,21 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
---> Reading design: Main.prj
+--> 
+Reading design: Main.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -105,7 +108,18 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" into library work
+Analyzing Verilog file "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Data_In.v" into library work
+Parsing module <Altera_UP_PS2_Data_In>.
+Analyzing Verilog file "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Command_Out.v" into library work
+Parsing module <Altera_UP_PS2_Command_Out>.
+Analyzing Verilog file "/home/victor/Escritorio/Keyboard/PS2_Controller.v" into library work
+Parsing module <PS2_Controller>.
+Analyzing Verilog file "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v" into library work
+Parsing module <Divisor_Clk_50>.
+Analyzing Verilog file "/home/victor/Escritorio/Keyboard/KeyboarController.v" into library work
+Parsing module <KeyboarController>.
+WARNING:HDLCompiler:568 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 147: Constant value is truncated to fit in <8> bits.
+Analyzing Verilog file "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" into library work
 Parsing verilog file "VGA.v" included at line 1.
 Parsing verilog file "vga_sync.v" included at line 1.
 Parsing module <vga_sync>.
@@ -121,156 +135,202 @@ Parsing module <Main>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Port reset is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 20: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 26: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 28: Port reset is not connected to this instance
 
 Elaborating module <Main>.
 
+Elaborating module <Divisor_Clk_50>.
+WARNING:HDLCompiler:413 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
+
 Elaborating module <Divisor_de_frecuencia>.
 WARNING:HDLCompiler:413 - "Divisor_de_frecuencia.v" Line 43: Result of 24-bit expression is truncated to fit in 23-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Assignment to clk_1HZ ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Assignment to clk_1HZ ignored, since the identifier is never used
 
 Elaborating module <Divisor_vga_Clk>.
 WARNING:HDLCompiler:413 - "Divisor_vga_Clk.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <Divisor_1Hz>.
 WARNING:HDLCompiler:413 - "Divisor_1Hz.v" Line 39: Result of 32-bit expression is truncated to fit in 27-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 21: Assignment to clkPer ignored, since the identifier is never used
-WARNING:HDLCompiler:1016 - "VGA.v" Line 32: Port reset is not connected to this instance
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 29: Assignment to clkPer ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "VGA.v" Line 36: Port reset is not connected to this instance
 
 Elaborating module <VGA>.
 
 Elaborating module <vga_sync>.
 WARNING:HDLCompiler:413 - "vga_sync.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:1127 - "VGA.v" Line 35: Assignment to gx ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "VGA.v" Line 32: Input port reset is not connected on this instance
-WARNING:HDLCompiler:552 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 19: Input port reset is not connected on this instance
-WARNING:HDLCompiler:552 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" Line 20: Input port reset is not connected on this instance
-WARNING:Xst:2972 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 19. All outputs of instance <div> of block <Divisor_de_frecuencia> are unconnected in block <Main>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 21. All outputs of instance <divPer> of block <Divisor_1Hz> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:HDLCompiler:552 - "VGA.v" Line 36: Input port reset is not connected on this instance
+WARNING:HDLCompiler:189 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 31: Size mismatch in connection of port <result>. Formal port size is 9-bit while actual signal size is 32-bit.
+
+Elaborating module <KeyboarController>.
+WARNING:HDLCompiler:872 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 41: Using initial value of the_command since it is never assigned
+
+Elaborating module <PS2_Controller>.
+
+Elaborating module <Altera_UP_PS2_Data_In>.
+
+Elaborating module <Altera_UP_PS2_Command_Out>.
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 53: Assignment to command_sent ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 54: Assignment to error_communication_timed_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 56: Assignment to received_data_en ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 26: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 28: Input port reset is not connected on this instance
+WARNING:Xst:2972 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 27. All outputs of instance <div> of block <Divisor_de_frecuencia> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 29. All outputs of instance <divPer> of block <Divisor_1Hz> are unconnected in block <Main>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Main>.
-    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v".
+    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'keyclk', is tied to GND.
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'div', is tied to GND.
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vgaClk', is tied to GND.
+WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bDer> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bIzq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bCen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 19: Output port <div_frec> of the instance <div> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master\Main.v" line 21: Output port <div_frec> of the instance <divPer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 27: Output port <div_frec> of the instance <div> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 29: Output port <div_frec> of the instance <divPer> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Main> synthesized.
 
-Synthesizing Unit <Divisor_vga_Clk>.
-    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/Divisor_vga_Clk.v".
+Synthesizing Unit <Divisor_Clk_50>.
+    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v".
     Found 1-bit register for signal <divcounter>.
-    Found 1-bit adder for signal <divcounter[0]_PWR_3_o_add_0_OUT<0>> created at line 42.
+    Found 1-bit adder for signal <divcounter[0]_PWR_2_o_add_0_OUT<0>> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Divisor_Clk_50> synthesized.
+
+Synthesizing Unit <Divisor_vga_Clk>.
+    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_vga_Clk.v".
+    Found 1-bit register for signal <divcounter>.
+    Found 1-bit adder for signal <divcounter[0]_PWR_4_o_add_0_OUT<0>> created at line 42.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 D-type flip-flop(s).
 Unit <Divisor_vga_Clk> synthesized.
 
 Synthesizing Unit <VGA>.
-    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v".
+    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/VGA.v".
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vsync_unit', is tied to GND.
-INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v" line 32: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/VGA.v" line 36: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
     Found 9-bit register for signal <rgb_reg>.
-    Found 10-bit comparator lessequal for signal <n0000> created at line 38
-    Found 10-bit comparator lessequal for signal <n0003> created at line 39
-    Found 10-bit comparator lessequal for signal <n0007> created at line 40
-    Found 10-bit comparator lessequal for signal <n0010> created at line 41
-    Found 10-bit comparator lessequal for signal <n0012> created at line 41
-    Found 10-bit comparator lessequal for signal <n0015> created at line 41
-    Found 10-bit comparator greater for signal <n0022> created at line 46
-    Found 11-bit comparator greater for signal <n0025> created at line 46
-    Found 11-bit comparator greater for signal <n0029> created at line 47
-    Found 11-bit comparator greater for signal <n0032> created at line 47
-    Found 11-bit comparator greater for signal <n0036> created at line 47
-    Found 11-bit comparator greater for signal <n0040> created at line 47
-    Found 32-bit comparator greater for signal <n0045> created at line 48
-    Found 11-bit comparator greater for signal <n0049> created at line 49
-    Found 11-bit comparator greater for signal <n0053> created at line 49
-    Found 32-bit comparator greater for signal <n0057> created at line 50
-    Found 32-bit comparator greater for signal <n0060> created at line 50
-    Found 11-bit comparator greater for signal <n0066> created at line 51
-    Found 11-bit comparator greater for signal <n0069> created at line 51
-    Found 32-bit comparator greater for signal <n0073> created at line 51
-    Found 11-bit comparator greater for signal <n0077> created at line 51
-    Found 11-bit comparator greater for signal <n0088> created at line 55
-    Found 11-bit comparator greater for signal <n0092> created at line 56
-    Found 11-bit comparator greater for signal <n0101> created at line 57
-    Found 11-bit comparator greater for signal <n0105> created at line 57
-    Found 11-bit comparator greater for signal <n0109> created at line 58
-    Found 10-bit comparator greater for signal <n0117> created at line 59
-    Found 11-bit comparator greater for signal <n0120> created at line 59
-    Found 11-bit comparator greater for signal <n0128> created at line 59
-    Found 32-bit comparator greater for signal <n0145> created at line 62
-    Found 32-bit comparator greater for signal <n0148> created at line 62
-    Found 11-bit comparator greater for signal <n0154> created at line 63
-    Found 11-bit comparator greater for signal <n0157> created at line 63
-    Found 11-bit comparator greater for signal <n0189> created at line 69
-    Found 10-bit comparator greater for signal <n0204> created at line 71
-    Found 11-bit comparator greater for signal <n0207> created at line 71
-    Found 32-bit comparator greater for signal <n0232> created at line 74
-    Found 32-bit comparator greater for signal <n0235> created at line 74
-    Found 11-bit comparator greater for signal <n0241> created at line 75
-    Found 11-bit comparator greater for signal <n0244> created at line 75
-    Found 11-bit comparator lessequal for signal <n0272> created at line 81
-    Found 11-bit comparator greater for signal <n0278> created at line 82
-    Found 10-bit comparator greater for signal <n0295> created at line 84
-    Found 11-bit comparator lessequal for signal <n0298> created at line 84
-    Found 32-bit comparator greater for signal <n0322> created at line 87
-    Found 32-bit comparator greater for signal <n0325> created at line 87
-    Found 11-bit comparator greater for signal <n0331> created at line 88
-    Found 11-bit comparator greater for signal <n0334> created at line 88
-    Found 10-bit comparator lessequal for signal <n0363> created at line 93
-    Found 11-bit comparator lessequal for signal <n0366> created at line 93
-    Found 32-bit comparator lessequal for signal <n0391> created at line 96
-    Found 32-bit comparator lessequal for signal <n0394> created at line 96
-    Found 11-bit comparator lessequal for signal <n0400> created at line 97
-    Found 11-bit comparator lessequal for signal <n0403> created at line 97
-    Found 11-bit comparator greater for signal <n0428> created at line 102
-    Found 11-bit comparator lessequal for signal <n0432> created at line 103
-    Found 10-bit comparator greater for signal <n0435> created at line 103
-    Found 11-bit comparator greater for signal <n0438> created at line 103
-    Found 10-bit comparator greater for signal <n0441> created at line 104
-    Found 11-bit comparator greater for signal <n0448> created at line 104
-    Found 11-bit comparator greater for signal <n0452> created at line 104
-    Found 32-bit comparator greater for signal <n0457> created at line 105
-    Found 11-bit comparator greater for signal <n0461> created at line 106
-    Found 11-bit comparator greater for signal <n0465> created at line 106
-    Found 32-bit comparator greater for signal <n0485> created at line 108
-    Found 11-bit comparator greater for signal <n0489> created at line 108
-    Found 11-bit comparator greater for signal <n0502> created at line 112
-    Found 11-bit comparator greater for signal <n0514> created at line 114
-    Found 11-bit comparator greater for signal <n0518> created at line 114
-    Found 11-bit comparator greater for signal <n0615> created at line 128
-    Found 11-bit comparator greater for signal <n0755> created at line 155
-    Found 11-bit comparator greater for signal <n0766> created at line 158
-    Found 11-bit comparator greater for signal <n0770> created at line 158
-    Found 11-bit comparator greater for signal <n0775> created at line 159
-    Found 10-bit comparator greater for signal <n0782> created at line 160
-    Found 11-bit comparator greater for signal <n0785> created at line 160
-    Found 11-bit comparator greater for signal <n0795> created at line 161
-    Found 11-bit comparator greater for signal <n0799> created at line 161
-    Found 32-bit comparator greater for signal <n0804> created at line 162
-    Found 11-bit comparator greater for signal <n0808> created at line 163
-    Found 11-bit comparator greater for signal <n0812> created at line 163
-    Found 32-bit comparator greater for signal <n0832> created at line 165
-    Found 11-bit comparator greater for signal <n0836> created at line 165
-    Found 11-bit comparator greater for signal <n0945> created at line 182
-    Found 11-bit comparator greater for signal <n0952> created at line 183
-    Found 11-bit comparator greater for signal <n0955> created at line 183
-    Found 11-bit comparator greater for signal <n0960> created at line 183
-    Found 11-bit comparator lessequal for signal <n1026> created at line 192
-    Found 11-bit comparator lessequal for signal <n1036> created at line 193
+    Found 1-bit register for signal <r1>.
+    Found 9-bit 12-to-1 multiplexer for signal <_n3275> created at line 463.
+    Found 9-bit 12-to-1 multiplexer for signal <GND_6_o_GND_6_o_mux_3092_OUT> created at line 552.
+    Found 10-bit comparator lessequal for signal <n0000> created at line 42
+    Found 10-bit comparator lessequal for signal <n0003> created at line 43
+    Found 10-bit comparator lessequal for signal <n0007> created at line 44
+    Found 10-bit comparator lessequal for signal <n0010> created at line 45
+    Found 10-bit comparator lessequal for signal <n0012> created at line 45
+    Found 10-bit comparator lessequal for signal <n0015> created at line 45
+    Found 10-bit comparator greater for signal <n0022> created at line 50
+    Found 11-bit comparator greater for signal <n0025> created at line 50
+    Found 11-bit comparator greater for signal <n0029> created at line 51
+    Found 11-bit comparator greater for signal <n0032> created at line 51
+    Found 11-bit comparator greater for signal <n0036> created at line 51
+    Found 11-bit comparator greater for signal <n0040> created at line 51
+    Found 32-bit comparator greater for signal <n0045> created at line 52
+    Found 11-bit comparator greater for signal <n0049> created at line 53
+    Found 11-bit comparator greater for signal <n0053> created at line 53
+    Found 32-bit comparator greater for signal <n0057> created at line 54
+    Found 32-bit comparator greater for signal <n0060> created at line 54
+    Found 11-bit comparator greater for signal <n0066> created at line 55
+    Found 11-bit comparator greater for signal <n0069> created at line 55
+    Found 32-bit comparator greater for signal <n0073> created at line 55
+    Found 11-bit comparator greater for signal <n0077> created at line 55
+    Found 11-bit comparator greater for signal <n0088> created at line 59
+    Found 11-bit comparator greater for signal <n0092> created at line 60
+    Found 11-bit comparator greater for signal <n0101> created at line 61
+    Found 11-bit comparator greater for signal <n0105> created at line 61
+    Found 11-bit comparator greater for signal <n0109> created at line 62
+    Found 10-bit comparator greater for signal <n0117> created at line 63
+    Found 11-bit comparator greater for signal <n0120> created at line 63
+    Found 11-bit comparator greater for signal <n0128> created at line 63
+    Found 32-bit comparator greater for signal <n0145> created at line 66
+    Found 32-bit comparator greater for signal <n0148> created at line 66
+    Found 11-bit comparator greater for signal <n0154> created at line 67
+    Found 11-bit comparator greater for signal <n0157> created at line 67
+    Found 11-bit comparator greater for signal <n0189> created at line 73
+    Found 10-bit comparator greater for signal <n0204> created at line 75
+    Found 11-bit comparator greater for signal <n0207> created at line 75
+    Found 32-bit comparator greater for signal <n0232> created at line 78
+    Found 32-bit comparator greater for signal <n0235> created at line 78
+    Found 11-bit comparator greater for signal <n0241> created at line 79
+    Found 11-bit comparator greater for signal <n0244> created at line 79
+    Found 11-bit comparator greater for signal <n0272> created at line 85
+    Found 11-bit comparator greater for signal <n0278> created at line 86
+    Found 10-bit comparator greater for signal <n0295> created at line 88
+    Found 11-bit comparator greater for signal <n0298> created at line 88
+    Found 32-bit comparator greater for signal <n0322> created at line 91
+    Found 32-bit comparator greater for signal <n0325> created at line 91
+    Found 11-bit comparator greater for signal <n0331> created at line 92
+    Found 11-bit comparator greater for signal <n0334> created at line 92
+    Found 10-bit comparator lessequal for signal <n0363> created at line 97
+    Found 11-bit comparator lessequal for signal <n0366> created at line 97
+    Found 32-bit comparator greater for signal <n0391> created at line 100
+    Found 32-bit comparator greater for signal <n0394> created at line 100
+    Found 11-bit comparator greater for signal <n0400> created at line 101
+    Found 11-bit comparator greater for signal <n0403> created at line 101
+    Found 11-bit comparator greater for signal <n0428> created at line 106
+    Found 11-bit comparator lessequal for signal <n0432> created at line 107
+    Found 10-bit comparator greater for signal <n0435> created at line 107
+    Found 11-bit comparator greater for signal <n0438> created at line 107
+    Found 10-bit comparator greater for signal <n0441> created at line 108
+    Found 11-bit comparator greater for signal <n0448> created at line 108
+    Found 11-bit comparator greater for signal <n0452> created at line 108
+    Found 32-bit comparator greater for signal <n0457> created at line 109
+    Found 11-bit comparator greater for signal <n0461> created at line 110
+    Found 11-bit comparator greater for signal <n0465> created at line 110
+    Found 32-bit comparator greater for signal <n0485> created at line 112
+    Found 11-bit comparator greater for signal <n0489> created at line 112
+    Found 11-bit comparator greater for signal <n0502> created at line 116
+    Found 11-bit comparator greater for signal <n0514> created at line 118
+    Found 11-bit comparator greater for signal <n0518> created at line 118
+    Found 11-bit comparator greater for signal <n0615> created at line 132
+    Found 11-bit comparator lessequal for signal <n0742> created at line 149
+    Found 11-bit comparator lessequal for signal <n0745> created at line 149
+    Found 11-bit comparator greater for signal <n0803> created at line 157
+    Found 10-bit comparator greater for signal <n0806> created at line 158
+    Found 11-bit comparator greater for signal <n0809> created at line 158
+    Found 11-bit comparator greater for signal <n0820> created at line 159
+    Found 11-bit comparator greater for signal <n0824> created at line 159
+    Found 32-bit comparator greater for signal <n0829> created at line 160
+    Found 11-bit comparator greater for signal <n0833> created at line 161
+    Found 11-bit comparator greater for signal <n0837> created at line 161
+    Found 32-bit comparator greater for signal <n0857> created at line 163
+    Found 11-bit comparator greater for signal <n0861> created at line 163
+    Found 11-bit comparator greater for signal <n0884> created at line 170
+    Found 11-bit comparator greater for signal <n0888> created at line 170
+    Found 11-bit comparator greater for signal <n0917> created at line 173
+    Found 11-bit comparator lessequal for signal <n1063> created at line 194
+    Found 11-bit comparator greater for signal <n1070> created at line 195
+    Found 11-bit comparator greater for signal <n1073> created at line 195
+    Found 11-bit comparator lessequal for signal <n1078> created at line 195
+    Found 11-bit comparator greater for signal <n1248> created at line 384
+    Found 11-bit comparator greater for signal <n1258> created at line 386
+    Found 11-bit comparator greater for signal <n1262> created at line 387
+    Found 11-bit comparator greater for signal <n1266> created at line 387
+    Found 10-bit comparator greater for signal <n1273> created at line 388
+    Found 11-bit comparator greater for signal <n1276> created at line 388
+    Found 11-bit comparator greater for signal <n1286> created at line 389
+    Found 11-bit comparator greater for signal <n1290> created at line 389
+    Found 11-bit comparator lessequal for signal <n1320> created at line 405
+    Found 11-bit comparator lessequal for signal <n1330> created at line 410
+    Found 11-bit comparator lessequal for signal <n1352> created at line 439
+    Found 11-bit comparator lessequal for signal <n1409> created at line 536
+    Found 11-bit comparator lessequal for signal <n1425> created at line 538
+    Found 10-bit comparator lessequal for signal <n1434> created at line 539
+    Found 11-bit comparator lessequal for signal <n1437> created at line 539
     WARNING:Xst:2404 -  FFs/Latches <ax<1:4>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ax<4:7>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ax<7:8>> (without init value) have a constant value of 0 in block <VGA>.
@@ -363,16 +423,40 @@ INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v" line 
     WARNING:Xst:2404 -  FFs/Latches <fy<9:5>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <fy<5:5>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <fy<5:4>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <lx<9:6>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <lx<6:3>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <lx<3:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <lx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ly<9:9>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ly<9:8>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ly<8:8>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ly<8:8>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ly<8:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<9:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<5:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ly<5:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<9:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<8:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<7:7>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sx<7:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sy<9:9>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sy<9:9>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sy<9:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sy<5:5>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <sy<5:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gx<9:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gx<6:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gx<3:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gy<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gy<2:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <gy<2:6>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <hx<9:8>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <hx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <hx<8:7>> (without init value) have a constant value of 0 in block <VGA>.
@@ -380,11 +464,11 @@ INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v" line 
     WARNING:Xst:2404 -  FFs/Latches <hx<7:7>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <hx<7:6>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <hx<6:6>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <hy<1:2>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <hy<2:2>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <hy<2:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<9:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<8:8>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<8:8>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <hy<8:4>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ix<9:8>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ix<8:5>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ix<5:2>> (without init value) have a constant value of 0 in block <VGA>.
@@ -416,58 +500,284 @@ INFO:Xst:3210 - "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/VGA.v" line 
     WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <nx<8:8>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ny<9:8>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 0 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ny<8:8>> (without init value) have a constant value of 1 in block <VGA>.
-    WARNING:Xst:2404 -  FFs/Latches <ny<8:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<1:3>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<3:3>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<3:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<5:6>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ny<6:6>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<1:1>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<1:1>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<1:2>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<2:2>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<2:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<4:4>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <tx<4:4>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ty<9:7>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ty<7:7>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ty<7:5>> (without init value) have a constant value of 0 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ty<5:4>> (without init value) have a constant value of 1 in block <VGA>.
+    WARNING:Xst:2404 -  FFs/Latches <ty<4:4>> (without init value) have a constant value of 0 in block <VGA>.
     Summary:
-	inferred   9 D-type flip-flop(s).
-	inferred  89 Comparator(s).
-	inferred 118 Multiplexer(s).
+	inferred  10 D-type flip-flop(s).
+	inferred 104 Comparator(s).
+	inferred 334 Multiplexer(s).
 Unit <VGA> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "C:\Users\ijtj0\Desktop\Proyecto-Corto-1-TDD-master/vga_sync.v".
+    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/vga_sync.v".
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
     Found 1-bit register for signal <v_sync_reg>.
     Found 1-bit register for signal <h_sync_reg>.
     Found 1-bit register for signal <mod2_reg>.
-    Found 10-bit adder for signal <h_count_reg[9]_GND_6_o_add_4_OUT> created at line 70.
-    Found 10-bit adder for signal <v_count_reg[9]_GND_6_o_add_7_OUT> created at line 83.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_7_o_add_4_OUT> created at line 70.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_7_o_add_7_OUT> created at line 83.
     Found 10-bit comparator lessequal for signal <n0015> created at line 89
     Found 10-bit comparator lessequal for signal <n0017> created at line 89
     Found 10-bit comparator lessequal for signal <n0020> created at line 91
     Found 10-bit comparator lessequal for signal <n0022> created at line 91
-    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_6_o_LessThan_15_o> created at line 93
-    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_6_o_LessThan_16_o> created at line 93
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_7_o_LessThan_15_o> created at line 93
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_7_o_LessThan_16_o> created at line 93
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
 	inferred   6 Comparator(s).
 Unit <vga_sync> synthesized.
 
+Synthesizing Unit <div_9u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <GND_8_o_b[3]_add_3_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_8_o_b[3]_add_5_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_8_o_b[3]_add_7_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_b[3]_add_9_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_8_o_add_11_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_8_o_add_13_OUT[8:0]> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_8_o_add_15_OUT[8:0]> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_8_o_add_17_OUT[8:0]> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  48 Multiplexer(s).
+Unit <div_9u_4u> synthesized.
+
+Synthesizing Unit <mod_9u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <GND_9_o_b[3]_add_3_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_9_o_b[3]_add_5_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_9_o_b[3]_add_7_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_b[3]_add_9_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_9_o_add_11_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_9_o_add_13_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_9_o_add_15_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_9_o_add_17_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_9_o_add_19_OUT> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <mod_9u_4u> synthesized.
+
+Synthesizing Unit <KeyboarController>.
+    Related source file is "/home/victor/Escritorio/Keyboard/KeyboarController.v".
+INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <command_was_sent> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <error_communication_timed_out> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <received_data_en> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <LED<13>>.
+    Found 1-bit register for signal <LED<12>>.
+    Found 1-bit register for signal <LED<11>>.
+    Found 1-bit register for signal <LED<10>>.
+    Found 1-bit register for signal <LED<9>>.
+    Found 1-bit register for signal <LED<8>>.
+    Found 1-bit register for signal <LED<7>>.
+    Found 1-bit register for signal <LED<6>>.
+    Found 1-bit register for signal <LED<5>>.
+    Found 1-bit register for signal <LED<4>>.
+    Found 1-bit register for signal <LED<3>>.
+    Found 1-bit register for signal <LED<2>>.
+    Found 1-bit register for signal <LED<1>>.
+    Found 1-bit register for signal <LED<0>>.
+    Found 8-bit register for signal <previous_word>.
+    Summary:
+	inferred  22 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <KeyboarController> synthesized.
+
+Synthesizing Unit <PS2_Controller>.
+    Related source file is "/home/victor/Escritorio/Keyboard/PS2_Controller.v".
+        INITIALIZE_MOUSE = 0
+    Found 1-bit register for signal <last_ps2_clk>.
+    Found 1-bit register for signal <ps2_clk_reg>.
+    Found 1-bit register for signal <ps2_data_reg>.
+    Found 3-bit register for signal <s_ps2_transceiver>.
+INFO:Xst:1799 - State 010 is never reached in FSM <s_ps2_transceiver>.
+INFO:Xst:1799 - State 011 is never reached in FSM <s_ps2_transceiver>.
+INFO:Xst:1799 - State 100 is never reached in FSM <s_ps2_transceiver>.
+    Found finite state machine <FSM_0> for signal <s_ps2_transceiver>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLOCK_50 (rising_edge)                         |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <PS2_Controller> synthesized.
+
+Synthesizing Unit <Altera_UP_PS2_Data_In>.
+    Related source file is "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Data_In.v".
+WARNING:Xst:647 - Input <ps2_clk_negedge> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <data_count>.
+    Found 8-bit register for signal <data_shift_reg>.
+    Found 8-bit register for signal <received_data>.
+    Found 1-bit register for signal <received_data_en>.
+    Found 3-bit register for signal <s_ps2_receiver>.
+    Found finite state machine <FSM_1> for signal <s_ps2_receiver>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <data_count[3]_GND_12_o_add_27_OUT> created at line 153.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Altera_UP_PS2_Data_In> synthesized.
+
+Synthesizing Unit <Altera_UP_PS2_Command_Out>.
+    Related source file is "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Command_Out.v".
+        CLOCK_CYCLES_FOR_101US = 5050
+        NUMBER_OF_BITS_FOR_101US = 13
+        COUNTER_INCREMENT_FOR_101US = 13'b0000000000001
+        CLOCK_CYCLES_FOR_15MS = 750000
+        NUMBER_OF_BITS_FOR_15MS = 20
+        COUNTER_INCREMENT_FOR_15MS = 20'b00000000000000000001
+        CLOCK_CYCLES_FOR_2MS = 100000
+        NUMBER_OF_BITS_FOR_2MS = 17
+        COUNTER_INCREMENT_FOR_2MS = 17'b00000000000000001
+        PS2_STATE_0_IDLE = 3'b000
+        PS2_STATE_1_INITIATE_COMMUNICATION = 3'b001
+        PS2_STATE_2_WAIT_FOR_CLOCK = 3'b010
+        PS2_STATE_3_TRANSMIT_DATA = 3'b011
+        PS2_STATE_4_TRANSMIT_STOP_BIT = 3'b100
+        PS2_STATE_5_RECEIVE_ACK_BIT = 3'b101
+        PS2_STATE_6_COMMAND_WAS_SENT = 3'b110
+        PS2_STATE_7_TRANSMISSION_ERROR = 3'b111
+    Found 9-bit register for signal <ps2_command>.
+    Found 13-bit register for signal <command_initiate_counter>.
+    Found 20-bit register for signal <waiting_counter>.
+    Found 17-bit register for signal <transfer_counter>.
+    Found 4-bit register for signal <cur_bit>.
+    Found 1-bit register for signal <command_was_sent>.
+    Found 1-bit register for signal <error_communication_timed_out>.
+    Found 3-bit register for signal <s_ps2_transmitter>.
+    Found finite state machine <FSM_2> for signal <s_ps2_transmitter>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 13-bit adder for signal <command_initiate_counter[13]_GND_13_o_add_41_OUT> created at line 215.
+    Found 20-bit adder for signal <waiting_counter[20]_GND_13_o_add_51_OUT> created at line 226.
+    Found 17-bit adder for signal <transfer_counter[17]_GND_13_o_add_63_OUT> created at line 242.
+    Found 4-bit adder for signal <cur_bit[3]_GND_13_o_add_72_OUT> created at line 255.
+    Found 1-bit 9-to-1 multiplexer for signal <cur_bit[3]_X_11_o_Mux_88_o> created at line 290.
+    Found 1-bit tristate buffer for signal <PS2_CLK> created at line 284
+    Found 1-bit tristate buffer for signal <PS2_DAT> created at line 289
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   2 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Altera_UP_PS2_Command_Out> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 1-bit adder                                           : 1
- 10-bit adder                                          : 2
-# Registers                                            : 7
- 1-bit register                                        : 4
+# Adders/Subtractors                                   : 26
+ 1-bit adder                                           : 2
+ 10-bit adder                                          : 4
+ 11-bit adder                                          : 2
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 9-bit adder                                           : 11
+# Registers                                            : 25
+ 1-bit register                                        : 12
  10-bit register                                       : 2
- 9-bit register                                        : 1
-# Comparators                                          : 95
- 10-bit comparator greater                             : 9
- 10-bit comparator lessequal                           : 11
- 11-bit comparator greater                             : 51
- 11-bit comparator lessequal                           : 8
- 32-bit comparator greater                             : 14
- 32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 118
- 9-bit 2-to-1 multiplexer                              : 118
+ 13-bit register                                       : 1
+ 14-bit register                                       : 1
+ 17-bit register                                       : 1
+ 20-bit register                                       : 1
+ 4-bit register                                        : 2
+ 8-bit register                                        : 3
+ 9-bit register                                        : 2
+# Comparators                                          : 128
+ 10-bit comparator greater                             : 10
+ 10-bit comparator lessequal                           : 14
+ 11-bit comparator greater                             : 60
+ 11-bit comparator lessequal                           : 14
+ 12-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 16
+ 9-bit comparator lessequal                            : 12
+# Multiplexers                                         : 476
+ 1-bit 2-to-1 multiplexer                              : 134
+ 1-bit 9-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 9-bit 12-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 333
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
 
 =========================================================================
 
@@ -475,6 +785,21 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+
+Synthesizing (advanced) Unit <Altera_UP_PS2_Command_Out>.
+The following registers are absorbed into counter <cur_bit>: 1 register on signal <cur_bit>.
+The following registers are absorbed into counter <command_initiate_counter>: 1 register on signal <command_initiate_counter>.
+The following registers are absorbed into counter <waiting_counter>: 1 register on signal <waiting_counter>.
+The following registers are absorbed into counter <transfer_counter>: 1 register on signal <transfer_counter>.
+Unit <Altera_UP_PS2_Command_Out> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Altera_UP_PS2_Data_In>.
+The following registers are absorbed into counter <data_count>: 1 register on signal <data_count>.
+Unit <Altera_UP_PS2_Data_In> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Divisor_Clk_50>.
+The following registers are absorbed into counter <divcounter_0>: 1 register on signal <divcounter_0>.
+Unit <Divisor_Clk_50> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Divisor_vga_Clk>.
 The following registers are absorbed into counter <divcounter_0>: 1 register on signal <divcounter_0>.
@@ -489,56 +814,171 @@ Unit <vga_sync> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 3
- 1-bit up counter                                      : 1
+# Adders/Subtractors                                   : 17
+ 4-bit adder                                           : 1
+ 9-bit adder                                           : 16
+# Counters                                             : 9
+ 1-bit up counter                                      : 2
  10-bit up counter                                     : 2
-# Registers                                            : 12
- Flip-Flops                                            : 12
-# Comparators                                          : 95
- 10-bit comparator greater                             : 9
- 10-bit comparator lessequal                           : 11
- 11-bit comparator greater                             : 51
- 11-bit comparator lessequal                           : 8
- 32-bit comparator greater                             : 14
- 32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 118
- 9-bit 2-to-1 multiplexer                              : 118
+ 13-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Comparators                                          : 128
+ 10-bit comparator greater                             : 10
+ 10-bit comparator lessequal                           : 14
+ 11-bit comparator greater                             : 60
+ 11-bit comparator lessequal                           : 14
+ 12-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 16
+ 9-bit comparator lessequal                            : 12
+# Multiplexers                                         : 471
+ 1-bit 2-to-1 multiplexer                              : 134
+ 1-bit 9-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 9-bit 12-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 333
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <ps2_command_0> in Unit <Altera_UP_PS2_Command_Out> is equivalent to the following 7 FFs/Latches, which will be removed : <ps2_command_1> <ps2_command_2> <ps2_command_3> <ps2_command_4> <ps2_command_5> <ps2_command_6> <ps2_command_7> 
+INFO:Xst:2146 - In block <Main>, Counter <keyclk/divcounter_0> <vgaClk/divcounter_0> are equivalent, XST will keep only <keyclk/divcounter_0>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <kb/PS2_Keyboard_Controller/FSM_0> on signal <s_ps2_transceiver[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0
+ 001   | 1
+ 010   | unreached
+ 011   | unreached
+ 100   | unreached
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <kb/PS2_Keyboard_Controller/PS2_Data_In/FSM_1> on signal <s_ps2_receiver[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 010
+ 001   | 001
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <kb/PS2_Keyboard_Controller/PS2_Command_Out/FSM_2> on signal <s_ps2_transmitter[1:8]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00000001
+ 001   | 00000010
+ 010   | 00000100
+ 111   | 00001000
+ 011   | 00010000
+ 100   | 00100000
+ 101   | 01000000
+ 110   | 10000000
+-------------------
+WARNING:Xst:1710 - FF/Latch <s_ps2_transmitter_FSM_FFd8> (without init value) has a constant value of 1 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd7> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd6> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd4> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ps2_command_8> is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ps2_command_0> is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1710 - FF/Latch <s_ps2_transmitter_FSM_FFd5> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd3> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd2> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cur_bit_3> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <error_communication_timed_out> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_ps2_transmitter_FSM_FFd1> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <command_was_sent> (without init value) has a constant value of 0 in block <Altera_UP_PS2_Command_Out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <command_initiate_counter_1> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_2> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_3> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_4> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_5> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_6> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_7> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_8> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_9> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_10> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_11> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_12> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <command_initiate_counter_13> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_1> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_2> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_3> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_4> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_5> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_6> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_7> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_8> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_9> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_10> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_11> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_12> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_13> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_14> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_15> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_16> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_17> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_18> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_19> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <waiting_counter_20> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <cur_bit_0> is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <cur_bit_1> is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <cur_bit_2> is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_1> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_2> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_3> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_4> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_5> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_6> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_7> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_8> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_9> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_10> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_11> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_12> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_13> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_14> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_15> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_16> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:2677 - Node <transfer_counter_17> of sequential type is unconnected in block <Altera_UP_PS2_Command_Out>.
+WARNING:Xst:1710 - FF/Latch <rgb_reg_8> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <Main> ...
+
+Optimizing unit <Altera_UP_PS2_Data_In> ...
 
 Optimizing unit <VGA> ...
 
 Optimizing unit <vga_sync> ...
+INFO:Xst:2261 - The FF/Latch <image/rgb_reg_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <image/rgb_reg_0> 
+INFO:Xst:2261 - The FF/Latch <image/rgb_reg_7> in Unit <Main> is equivalent to the following 5 FFs/Latches, which will be removed : <image/rgb_reg_6> <image/rgb_reg_5> <image/rgb_reg_4> <image/rgb_reg_3> <image/rgb_reg_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 4.
-FlipFlop image/vsync_unit/h_count_reg_0 has been replicated 1 time(s)
-FlipFlop image/vsync_unit/h_count_reg_1 has been replicated 2 time(s)
-FlipFlop image/vsync_unit/h_count_reg_2 has been replicated 2 time(s)
-FlipFlop image/vsync_unit/h_count_reg_3 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/h_count_reg_4 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/h_count_reg_5 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/h_count_reg_6 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/h_count_reg_7 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/h_count_reg_8 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/h_count_reg_9 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_0 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 12.
+FlipFlop image/vsync_unit/h_count_reg_0 has been replicated 6 time(s)
+FlipFlop image/vsync_unit/h_count_reg_1 has been replicated 9 time(s)
+FlipFlop image/vsync_unit/h_count_reg_2 has been replicated 12 time(s)
+FlipFlop image/vsync_unit/h_count_reg_3 has been replicated 9 time(s)
+FlipFlop image/vsync_unit/h_count_reg_4 has been replicated 10 time(s)
+FlipFlop image/vsync_unit/h_count_reg_5 has been replicated 7 time(s)
+FlipFlop image/vsync_unit/h_count_reg_6 has been replicated 1 time(s)
+FlipFlop image/vsync_unit/v_count_reg_0 has been replicated 3 time(s)
 FlipFlop image/vsync_unit/v_count_reg_1 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_2 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_3 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_4 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_5 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_6 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_7 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_8 has been replicated 4 time(s)
-FlipFlop image/vsync_unit/v_count_reg_9 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/v_count_reg_2 has been replicated 3 time(s)
+FlipFlop image/vsync_unit/v_count_reg_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -546,8 +986,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 94
- Flip-Flops                                            : 94
+# Registers                                            : 141
+ Flip-Flops                                            : 141
 
 =========================================================================
 
@@ -570,30 +1010,30 @@ Top Level Output File Name         : Main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 474
+# BELS                             : 1069
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 4
 #      LUT1                        : 18
-#      LUT2                        : 22
-#      LUT3                        : 26
-#      LUT4                        : 100
-#      LUT5                        : 55
-#      LUT6                        : 164
-#      MUXCY                       : 63
-#      MUXF7                       : 1
+#      LUT2                        : 23
+#      LUT3                        : 51
+#      LUT4                        : 86
+#      LUT5                        : 228
+#      LUT6                        : 550
+#      MUXCY                       : 18
+#      MUXF7                       : 69
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 94
-#      FD                          : 1
-#      FDR                         : 10
-#      FDRE                        : 81
-#      FDS                         : 2
+# FlipFlops/Latches                : 141
+#      FD                          : 3
+#      FDR                         : 31
+#      FDRE                        : 104
+#      FDS                         : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 20
-#      IBUF                        : 9
-#      OBUF                        : 11
+# IO Buffers                       : 27
+#      IOBUF                       : 2
+#      OBUF                        : 25
 
 Device utilization summary:
 ---------------------------
@@ -602,20 +1042,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              94  out of  18224     0%  
- Number of Slice LUTs:                  388  out of   9112     4%  
-    Number used as Logic:               388  out of   9112     4%  
+ Number of Slice Registers:             141  out of  18224     0%  
+ Number of Slice LUTs:                  960  out of   9112    10%  
+    Number used as Logic:               960  out of   9112    10%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    449
-   Number with an unused Flip Flop:     355  out of    449    79%  
-   Number with an unused LUT:            61  out of    449    13%  
-   Number of fully used LUT-FF pairs:    33  out of    449     7%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:   1038
+   Number with an unused Flip Flop:     897  out of   1038    86%  
+   Number with an unused LUT:            78  out of   1038     7%  
+   Number of fully used LUT-FF pairs:    63  out of   1038     6%  
+   Number of unique control sets:        15
 
 IO Utilization: 
- Number of IOs:                          25
- Number of bonded IOBs:                  21  out of    232     9%  
+ Number of IOs:                          41
+ Number of bonded IOBs:                  28  out of    232    12%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -641,8 +1081,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-gen_clk                            | BUFGP                  | 1     |
-vgaClk/divcounter_0                | BUFG                   | 93    |
+gen_clk                            | BUFGP                  | 23    |
+keyclk/divcounter_0                | BUFG                   | 118   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -653,9 +1093,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 7.731ns (Maximum Frequency: 129.354MHz)
-   Minimum input arrival time before clock: 3.769ns
-   Maximum output required time after clock: 7.448ns
+   Minimum period: 12.785ns (Maximum Frequency: 78.215MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 7.609ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -664,97 +1104,123 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'gen_clk'
-  Clock period: 1.913ns (frequency: 522.821MHz)
-  Total number of paths / destination ports: 1 / 1
+  Clock period: 5.618ns (frequency: 177.998MHz)
+  Total number of paths / destination ports: 215 / 15
 -------------------------------------------------------------------------
-Delay:               1.913ns (Levels of Logic = 1)
-  Source:            vgaClk/divcounter_0 (FF)
-  Destination:       vgaClk/divcounter_0 (FF)
+Delay:               5.618ns (Levels of Logic = 5)
+  Source:            kb/previous_word_3 (FF)
+  Destination:       kb/LED_4 (FF)
   Source Clock:      gen_clk rising
   Destination Clock: gen_clk rising
 
-  Data Path: vgaClk/divcounter_0 to vgaClk/divcounter_0
+  Data Path: kb/previous_word_3 to kb/LED_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.579  vgaClk/divcounter_0 (vgaClk/divcounter_0)
-     INV:I->O              1   0.206   0.579  vgaClk/Mcount_divcounter_0_xor<0>11_INV_0 (Result)
-     FD:D                      0.102          vgaClk/divcounter_0
+     FDR:C->Q              1   0.447   0.808  kb/previous_word_3 (kb/previous_word_3)
+     LUT3:I0->O            1   0.205   0.684  kb/previous_word[7]_PWR_11_o_equal_2_o<7>_SW0 (N3)
+     LUT6:I4->O            4   0.203   0.684  kb/previous_word[7]_PWR_11_o_equal_2_o<7> (kb/previous_word[7]_PWR_11_o_equal_2_o)
+     LUT4:I3->O            4   0.205   0.912  kb/received_data[7]_LED[13]_select_31_OUT<6>111 (kb/received_data[7]_LED[13]_select_31_OUT<6>11)
+     LUT5:I2->O            2   0.205   0.961  kb/received_data[7]_LED[13]_select_31_OUT<12>111 (kb/received_data[7]_LED[13]_select_31_OUT<12>11)
+     LUT6:I1->O            1   0.203   0.000  kb/received_data[7]_LED[13]_select_31_OUT<9>1 (kb/received_data[7]_LED[13]_select_31_OUT<4>)
+     FDR:D                     0.102          kb/LED_4
     ----------------------------------------
-    Total                      1.913ns (0.755ns logic, 1.158ns route)
-                                       (39.5% logic, 60.5% route)
+    Total                      5.618ns (1.570ns logic, 4.048ns route)
+                                       (27.9% logic, 72.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'vgaClk/divcounter_0'
-  Clock period: 7.731ns (frequency: 129.354MHz)
-  Total number of paths / destination ports: 42483 / 266
+Timing constraint: Default period analysis for Clock 'keyclk/divcounter_0'
+  Clock period: 12.785ns (frequency: 78.215MHz)
+  Total number of paths / destination ports: 122004 / 334
 -------------------------------------------------------------------------
-Delay:               7.731ns (Levels of Logic = 7)
-  Source:            image/vsync_unit/h_count_reg_0 (FF)
+Delay:               12.785ns (Levels of Logic = 13)
+  Source:            image/vsync_unit/h_count_reg_3_1 (FF)
   Destination:       image/rgb_reg_7 (FF)
-  Source Clock:      vgaClk/divcounter_0 rising
-  Destination Clock: vgaClk/divcounter_0 rising
+  Source Clock:      keyclk/divcounter_0 rising
+  Destination Clock: keyclk/divcounter_0 rising
 
-  Data Path: image/vsync_unit/h_count_reg_0 to image/rgb_reg_7
+  Data Path: image/vsync_unit/h_count_reg_3_1 to image/rgb_reg_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            15   0.447   0.982  image/vsync_unit/h_count_reg_0 (image/vsync_unit/h_count_reg_0)
-     LUT5:I4->O            2   0.205   0.617  image/n02071_SW0 (N35)
-     LUT6:I5->O           13   0.205   0.933  image/n02071 (image/n0207)
-     LUT6:I5->O            3   0.205   0.995  image/BUS_0040_GND_5_o_AND_61_o1 (image/BUS_0040_GND_5_o_AND_61_o)
-     LUT5:I0->O            3   0.203   0.898  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9231 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT923)
-     LUT6:I2->O            1   0.203   0.580  image/Mmux_sw[8]_GND_5_o_mux_980_OUT3117 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT3118)
-     LUT5:I4->O            6   0.205   0.745  image/Mmux_sw[8]_GND_5_o_mux_980_OUT3118 (image/Mmux_sw[8]_GND_5_o_mux_980_OUT311)
-     LUT5:I4->O            1   0.205   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT41 (image/sw[8]_GND_5_o_mux_980_OUT<3>)
-     FDR:D                     0.102          image/rgb_reg_3
+     FDRE:C->Q            15   0.447   1.229  image/vsync_unit/h_count_reg_3_1 (image/vsync_unit/h_count_reg_3_1)
+     LUT5:I1->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_2305_OUT<6>2671 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd529)
+     LUT6:I4->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22621 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22620)
+     LUT5:I3->O            1   0.203   0.808  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22623 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22622)
+     LUT6:I3->O            1   0.205   0.580  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22628 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22627)
+     LUT5:I4->O            1   0.205   0.580  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22629 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22628)
+     LUT6:I5->O            2   0.205   0.617  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22630 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd330)
+     LUT6:I5->O            2   0.205   0.864  image/GND_6_o_GND_6_o_mux_2305_OUT<6>169 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd1)
+     LUT6:I2->O            1   0.203   0.580  image/GND_6_o_GND_6_o_mux_2367_OUT<2>21 (image/GND_6_o_GND_6_o_mux_2367_OUT<2>2)
+     LUT5:I4->O            2   0.205   0.617  image/GND_6_o_GND_6_o_mux_2826_OUT<7>35 (image/GND_6_o_GND_6_o_mux_2826_OUT<7>_bdd4)
+     LUT6:I5->O            9   0.205   0.830  image/GND_6_o_GND_6_o_mux_2826_OUT<7> (image/Mmux_GND_6_o_GND_6_o_mux_3092_OUT_5_f77)
+     LUT6:I5->O            1   0.205   0.827  image/GND_6_o_GND_6_o_mux_3093_OUT<7>2 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>2)
+     LUT6:I2->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_3093_OUT<7>5 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>5)
+     LUT6:I4->O            1   0.203   0.000  image/GND_6_o_GND_6_o_mux_3093_OUT<7>15 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>)
+     FD:D                      0.102          image/rgb_reg_7
     ----------------------------------------
-    Total                      7.731ns (1.980ns logic, 5.751ns route)
-                                       (25.6% logic, 74.4% route)
+    Total                     12.785ns (3.202ns logic, 9.583ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'vgaClk/divcounter_0'
-  Total number of paths / destination ports: 9 / 9
+Timing constraint: Default OFFSET IN BEFORE for Clock 'keyclk/divcounter_0'
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              3.769ns (Levels of Logic = 4)
-  Source:            sw<8> (PAD)
-  Destination:       image/rgb_reg_8 (FF)
-  Destination Clock: vgaClk/divcounter_0 rising
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            PS2DATA (PAD)
+  Destination:       kb/PS2_Keyboard_Controller/ps2_data_reg (FF)
+  Destination Clock: keyclk/divcounter_0 rising
 
-  Data Path: sw<8> to image/rgb_reg_8
+  Data Path: PS2DATA to kb/PS2_Keyboard_Controller/ps2_data_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.944  sw_8_IBUF (sw_8_IBUF)
-     LUT6:I0->O            1   0.203   0.684  image/Mmux_sw[8]_GND_5_o_mux_980_OUT91_SW0 (N113)
-     LUT6:I4->O            1   0.203   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_lut<8> (image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_lut<8>)
-     MUXCY:S->O            1   0.411   0.000  image/Mmux_sw[8]_GND_5_o_mux_980_OUT9_wg_cy<8> (image/sw[8]_GND_5_o_mux_980_OUT<8>)
-     FDR:D                     0.102          image/rgb_reg_8
+     IOBUF:IO->O           1   1.222   0.579  PS2DATA_IOBUF (N140)
+     FDS:D                     0.102          kb/PS2_Keyboard_Controller/ps2_data_reg
     ----------------------------------------
-    Total                      3.769ns (2.141ns logic, 1.628ns route)
-                                       (56.8% logic, 43.2% route)
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaClk/divcounter_0'
-  Total number of paths / destination ports: 83 / 11
+Timing constraint: Default OFFSET OUT AFTER for Clock 'keyclk/divcounter_0'
+  Total number of paths / destination ports: 74 / 10
 -------------------------------------------------------------------------
-Offset:              7.448ns (Levels of Logic = 4)
-  Source:            image/vsync_unit/h_count_reg_9 (FF)
-  Destination:       rgb<8> (PAD)
-  Source Clock:      vgaClk/divcounter_0 rising
+Offset:              7.609ns (Levels of Logic = 4)
+  Source:            image/vsync_unit/v_count_reg_8 (FF)
+  Destination:       rgb<7> (PAD)
+  Source Clock:      keyclk/divcounter_0 rising
 
-  Data Path: image/vsync_unit/h_count_reg_9 to rgb<8>
+  Data Path: image/vsync_unit/v_count_reg_8 to rgb<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            23   0.447   1.382  image/vsync_unit/h_count_reg_9 (image/vsync_unit/h_count_reg_9)
-     LUT3:I0->O            1   0.205   0.924  image/vsync_unit/video_on_SW0 (N87)
-     LUT6:I1->O            9   0.203   0.934  image/vsync_unit/video_on (image/video_on)
-     LUT2:I0->O            1   0.203   0.579  image/Mmux_rgb11 (rgb_0_OBUF)
-     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+     FDRE:C->Q            45   0.447   1.705  image/vsync_unit/v_count_reg_8 (image/vsync_unit/v_count_reg_8)
+     LUT3:I0->O            1   0.205   0.808  image/vsync_unit/video_on_SW0 (N133)
+     LUT6:I3->O            2   0.205   0.721  image/vsync_unit/video_on (image/video_on)
+     LUT2:I0->O            6   0.203   0.744  image/Mmux_rgb31 (rgb_2_OBUF)
+     OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
-    Total                      7.448ns (3.629ns logic, 3.819ns route)
-                                       (48.7% logic, 51.3% route)
+    Total                      7.609ns (3.631ns logic, 3.978ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gen_clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              4.638ns (Levels of Logic = 1)
+  Source:            kb/LED_10 (FF)
+  Destination:       LED<10> (PAD)
+  Source Clock:      gen_clk rising
+
+  Data Path: kb/LED_10 to LED<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             61   0.447   1.620  kb/LED_10 (kb/LED_10)
+     OBUF:I->O                 2.571          LED_10_OBUF (LED<10>)
+    ----------------------------------------
+    Total                      4.638ns (3.018ns logic, 1.620ns route)
+                                       (65.1% logic, 34.9% route)
 
 =========================================================================
 
@@ -762,32 +1228,35 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock gen_clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-gen_clk        |    1.913|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock vgaClk/divcounter_0
 -------------------+---------+---------+---------+---------+
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-vgaClk/divcounter_0|    7.731|         |         |         |
+gen_clk            |    5.618|         |         |         |
+keyclk/divcounter_0|    3.995|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock keyclk/divcounter_0
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+gen_clk            |   15.398|         |         |         |
+keyclk/divcounter_0|   12.785|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.72 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.76 secs
  
 --> 
 
-Total memory usage is 269240 kilobytes
+
+Total memory usage is 409896 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  173 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :  287 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 
