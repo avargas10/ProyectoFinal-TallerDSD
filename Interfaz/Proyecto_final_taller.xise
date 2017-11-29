@@ -17,7 +17,7 @@
   <files>
     <file xil_pn:name="Main.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="11"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="12"/>
     </file>
     <file xil_pn:name="main_test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="23"/>
@@ -26,14 +26,6 @@
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="23"/>
     </file>
     <file xil_pn:name="Main.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
-    </file>
-    <file xil_pn:name="Score.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="68"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
-    </file>
-    <file xil_pn:name="FSM.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="70"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
     <file xil_pn:name="remote_sources/_/_/Keyboard/Altera_UP_PS2_Command_Out.v" xil_pn:type="FILE_VERILOG">
@@ -46,7 +38,7 @@
     </file>
     <file xil_pn:name="remote_sources/_/_/Keyboard/KeyboarController.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="69"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
     </file>
     <file xil_pn:name="remote_sources/_/_/Keyboard/PS2_Controller.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="70"/>
@@ -54,7 +46,11 @@
     </file>
     <file xil_pn:name="Divisor_CLK_50.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="71"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
+    </file>
+    <file xil_pn:name="write.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="72"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
   </files>
 

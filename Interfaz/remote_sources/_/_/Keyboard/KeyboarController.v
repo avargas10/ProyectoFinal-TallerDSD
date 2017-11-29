@@ -41,6 +41,7 @@ module KeyboarController(
 	initial begin
 		the_command = 8'hFF;
 		send_command = 1'b0;
+		LED <= 16;
 	end
 	
 	PS2_Controller PS2_Keyboard_Controller (
@@ -56,10 +57,12 @@ module KeyboarController(
     .received_data_en(received_data_en)
     );
 	 
+
+	 
 	 always @(posedge clk) begin
 		if(Reset) begin
 			previous_word <= 0;
-			LED <= 0;
+			LED <= 16;
 		end
 		else begin
 			case (received_data)
@@ -68,85 +71,85 @@ module KeyboarController(
 				
 				8'h70: begin
 					if(previous_word == 8'hF0) begin
-						LED[0] <= ~LED[0];
+						LED <= 0;
 					end
 				end
 				
 				8'h69: begin
 					if(previous_word == 8'hF0) begin
-						LED[1] <= ~LED[1];
+						LED <= 1;
 					end
 				end
 				
 				8'h72: begin
 					if(previous_word == 8'hF0) begin
-						LED[2] <= ~LED[2];
+						LED <= 2;
 					end
 				end
 				
 				8'h7A: begin
 					if(previous_word == 8'hF0) begin
-						LED[3] <= ~LED[3];
+						LED <= 3;
 					end
 				end
 				
 				8'h6B: begin
 					if(previous_word == 8'hF0) begin
-						LED[4] <= ~LED[4];
+						LED <= 4;
 					end
 				end
 				
 				8'h73: begin
 					if(previous_word == 8'hF0) begin
-						LED[5] <= ~LED[5];
+						LED <= 5;
 					end
 				end
 				
 				8'h74: begin
 					if(previous_word == 8'hF0) begin
-						LED[6] <= ~LED[6];
+						LED <= 6;
 					end					
 				end
 				
 				8'h6C: begin
 					if(previous_word == 8'hF0) begin
-						LED[7] <= ~LED[7];
+						LED <= 7;
 					end					
 				end
 				
 				8'h75: begin
 					if(previous_word == 8'hF0) begin
-						LED[8] <= ~LED[8];
+						LED <= 8;
 					end					
 				end
 				
 				8'h7D: begin
 					if(previous_word == 8'hF0) begin
-						LED[9] <= ~LED[9];
+						LED <= 9;
 					end					
 				end
 				
 				8'h79: begin //+
 					if(previous_word == 8'hF0) begin
-						LED[10] <= ~LED[10];
+						LED <= 10;
 					end					
 				end
 				
 				8'h7B: begin //-
 					if(previous_word == 8'hF0) begin
-						LED[11] <= ~LED[11];
+						LED <= 11;
 					end					
 				end
 				
 				8'h7C: begin //*
 					if(previous_word == 8'hF0) begin
-						LED[12] <= ~LED[12];
+						LED <= 12;
 					end					
 				end
 				
 				8'hE05A: begin //=
 					if(previous_word == 8'hF0) begin
-						LED[13] <= ~LED[13];
+						LED <= 13;
 					end					
 				end
 				

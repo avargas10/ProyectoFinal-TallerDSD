@@ -21,6 +21,9 @@ module Main(
 	 wire w_col,finish;
 	 wire [4:0] w_score;
 	 wire Reset1;
+	 wire [31:0]data;
+	 wire [31:0]address;
+	 wire enable;
 	 
 
 	 Divisor_Clk_50 keyclk(.clk_in(gen_clk),.div_frec(CLK_50));
@@ -38,7 +41,10 @@ module Main(
 		.clk_ps2(CLK_50),
 		.PS2CLOCK(PS2CLK),
 		.PS2DATA(PS2DATA)
-	);
+		);
+	 
+	 write w(.clk(gen_clk),.num(LED),.data(data),.address(address),.enable(enable));
+	
 	
 	 //signal declaration
     reg [8:0] rgb_reg;

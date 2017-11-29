@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 28 18:05:23 2017
+// Written by: Map P.20131013 on Wed Nov 29 04:04:01 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -31,10 +31,8 @@ COMP "PS2DATA" LOCATE = SITE "J13" LEVEL 1;
 TIMEGRP sys_clk_pin = BEL "keyclk/divcounter_0" BEL "kb/previous_word_7" BEL
         "kb/previous_word_6" BEL "kb/previous_word_5" BEL "kb/previous_word_4"
         BEL "kb/previous_word_3" BEL "kb/previous_word_2" BEL
-        "kb/previous_word_1" BEL "kb/previous_word_0" BEL "kb/LED_13" BEL
-        "kb/LED_12" BEL "kb/LED_11" BEL "kb/LED_10" BEL "kb/LED_9" BEL
-        "kb/LED_8" BEL "kb/LED_7" BEL "kb/LED_6" BEL "kb/LED_5" BEL "kb/LED_4"
-        BEL "kb/LED_3" BEL "kb/LED_2" BEL "kb/LED_1" BEL "kb/LED_0" BEL
+        "kb/previous_word_1" BEL "kb/previous_word_0" BEL "kb/LED_4" BEL
+        "kb/LED_3" BEL "kb/LED_2" BEL "kb/LED_1" BEL "kb/LED_0" BEL
         "gen_clk_BUFGP/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 25 MHz HIGH 50%;
 SCHEMATIC END;

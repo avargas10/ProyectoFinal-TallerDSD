@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-27T20:34:09</DateModified>
+  <DateModified>2017-11-29T03:34:01</DateModified>
   <ModuleName>Main</ModuleName>
-  <SummaryTimeStamp>2017-11-27T20:25:21</SummaryTimeStamp>
-  <SavedFilePath>/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/iseconfig/Main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2017-11-29T02:59:46</SummaryTimeStamp>
+  <SavedFilePath>/home/victor/Escritorio/Interfaz/iseconfig/Main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/victor/Escritorio/Interfaz/</ImplementationReportsDirectory>
   <DateInitialized>2017-10-04T18:53:38</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

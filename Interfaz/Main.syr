@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: Main.prj
@@ -108,18 +108,20 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Data_In.v" into library work
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/Altera_UP_PS2_Data_In.v" into library work
 Parsing module <Altera_UP_PS2_Data_In>.
-Analyzing Verilog file "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Command_Out.v" into library work
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/Altera_UP_PS2_Command_Out.v" into library work
 Parsing module <Altera_UP_PS2_Command_Out>.
-Analyzing Verilog file "/home/victor/Escritorio/Keyboard/PS2_Controller.v" into library work
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/PS2_Controller.v" into library work
 Parsing module <PS2_Controller>.
-Analyzing Verilog file "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v" into library work
-Parsing module <Divisor_Clk_50>.
-Analyzing Verilog file "/home/victor/Escritorio/Keyboard/KeyboarController.v" into library work
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/write.v" into library work
+Parsing module <write>.
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" into library work
 Parsing module <KeyboarController>.
-WARNING:HDLCompiler:568 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 147: Constant value is truncated to fit in <8> bits.
-Analyzing Verilog file "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" into library work
+WARNING:HDLCompiler:568 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" Line 150: Constant value is truncated to fit in <8> bits.
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/Divisor_CLK_50.v" into library work
+Parsing module <Divisor_Clk_50>.
+Analyzing Verilog file "/home/victor/Escritorio/Interfaz/Main.v" into library work
 Parsing verilog file "VGA.v" included at line 1.
 Parsing verilog file "vga_sync.v" included at line 1.
 Parsing module <vga_sync>.
@@ -135,25 +137,25 @@ Parsing module <Main>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 26: Port reset is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Port reset is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 28: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/Interfaz/Main.v" Line 29: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/Interfaz/Main.v" Line 30: Port reset is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/victor/Escritorio/Interfaz/Main.v" Line 31: Port reset is not connected to this instance
 
 Elaborating module <Main>.
 
 Elaborating module <Divisor_Clk_50>.
-WARNING:HDLCompiler:413 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/victor/Escritorio/Interfaz/Divisor_CLK_50.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <Divisor_de_frecuencia>.
 WARNING:HDLCompiler:413 - "Divisor_de_frecuencia.v" Line 43: Result of 24-bit expression is truncated to fit in 23-bit target.
-WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Assignment to clk_1HZ ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/Main.v" Line 30: Assignment to clk_1HZ ignored, since the identifier is never used
 
 Elaborating module <Divisor_vga_Clk>.
 WARNING:HDLCompiler:413 - "Divisor_vga_Clk.v" Line 42: Result of 2-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <Divisor_1Hz>.
 WARNING:HDLCompiler:413 - "Divisor_1Hz.v" Line 39: Result of 32-bit expression is truncated to fit in 27-bit target.
-WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 29: Assignment to clkPer ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/Main.v" Line 32: Assignment to clkPer ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "VGA.v" Line 36: Port reset is not connected to this instance
 
 Elaborating module <VGA>.
@@ -162,31 +164,36 @@ Elaborating module <vga_sync>.
 WARNING:HDLCompiler:413 - "vga_sync.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:552 - "VGA.v" Line 36: Input port reset is not connected on this instance
-WARNING:HDLCompiler:189 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 31: Size mismatch in connection of port <result>. Formal port size is 9-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/victor/Escritorio/Interfaz/Main.v" Line 34: Size mismatch in connection of port <result>. Formal port size is 9-bit while actual signal size is 32-bit.
 
 Elaborating module <KeyboarController>.
-WARNING:HDLCompiler:872 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 41: Using initial value of the_command since it is never assigned
+WARNING:HDLCompiler:872 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" Line 41: Using initial value of the_command since it is never assigned
 
 Elaborating module <PS2_Controller>.
 
 Elaborating module <Altera_UP_PS2_Data_In>.
 
 Elaborating module <Altera_UP_PS2_Command_Out>.
-WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 53: Assignment to command_sent ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 54: Assignment to error_communication_timed_out ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" Line 56: Assignment to received_data_en ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 26: Input port reset is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 27: Input port reset is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" Line 28: Input port reset is not connected on this instance
-WARNING:Xst:2972 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 27. All outputs of instance <div> of block <Divisor_de_frecuencia> are unconnected in block <Main>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 29. All outputs of instance <divPer> of block <Divisor_1Hz> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" Line 54: Assignment to command_sent ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" Line 55: Assignment to error_communication_timed_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" Line 57: Assignment to received_data_en ignored, since the identifier is never used
+
+Elaborating module <write>.
+WARNING:HDLCompiler:189 - "/home/victor/Escritorio/Interfaz/Main.v" Line 46: Size mismatch in connection of port <num>. Formal port size is 32-bit while actual signal size is 14-bit.
+WARNING:HDLCompiler:1127 - "/home/victor/Escritorio/Interfaz/Main.v" Line 46: Assignment to data ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/Interfaz/Main.v" Line 29: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/Interfaz/Main.v" Line 30: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/victor/Escritorio/Interfaz/Main.v" Line 31: Input port reset is not connected on this instance
+WARNING:Xst:2972 - "/home/victor/Escritorio/Interfaz/Main.v" line 30. All outputs of instance <div> of block <Divisor_de_frecuencia> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/victor/Escritorio/Interfaz/Main.v" line 32. All outputs of instance <divPer> of block <Divisor_1Hz> are unconnected in block <Main>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/victor/Escritorio/Interfaz/Main.v" line 46. All outputs of instance <w> of block <write> are unconnected in block <Main>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Main>.
-    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/Main.v".
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'keyclk', is tied to GND.
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'div', is tied to GND.
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vgaClk', is tied to GND.
@@ -195,14 +202,17 @@ WARNING:Xst:647 - Input <bDer> is never used. This port will be preserved and le
 WARNING:Xst:647 - Input <bIzq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bCen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <bR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 27: Output port <div_frec> of the instance <div> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Main.v" line 29: Output port <div_frec> of the instance <divPer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/Main.v" line 30: Output port <div_frec> of the instance <div> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/Main.v" line 32: Output port <div_frec> of the instance <divPer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/Main.v" line 46: Output port <data> of the instance <w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/Main.v" line 46: Output port <address> of the instance <w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/Main.v" line 46: Output port <enable> of the instance <w> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Main> synthesized.
 
 Synthesizing Unit <Divisor_Clk_50>.
-    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_CLK_50.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/Divisor_CLK_50.v".
     Found 1-bit register for signal <divcounter>.
     Found 1-bit adder for signal <divcounter[0]_PWR_2_o_add_0_OUT<0>> created at line 42.
     Summary:
@@ -211,7 +221,7 @@ Synthesizing Unit <Divisor_Clk_50>.
 Unit <Divisor_Clk_50> synthesized.
 
 Synthesizing Unit <Divisor_vga_Clk>.
-    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/Divisor_vga_Clk.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/Divisor_vga_Clk.v".
     Found 1-bit register for signal <divcounter>.
     Found 1-bit adder for signal <divcounter[0]_PWR_4_o_add_0_OUT<0>> created at line 42.
     Summary:
@@ -220,13 +230,14 @@ Synthesizing Unit <Divisor_vga_Clk>.
 Unit <Divisor_vga_Clk> synthesized.
 
 Synthesizing Unit <VGA>.
-    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/VGA.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/VGA.v".
 WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vsync_unit', is tied to GND.
-INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/VGA.v" line 36: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/VGA.v" line 36: Output port <p_tick> of the instance <vsync_unit> is unconnected or connected to loadless signal.
     Found 9-bit register for signal <rgb_reg>.
     Found 1-bit register for signal <r1>.
-    Found 9-bit 12-to-1 multiplexer for signal <_n3275> created at line 463.
-    Found 9-bit 12-to-1 multiplexer for signal <GND_6_o_GND_6_o_mux_3092_OUT> created at line 552.
+    Found 9-bit 12-to-1 multiplexer for signal <_n3345> created at line 236.
+    Found 9-bit 12-to-1 multiplexer for signal <_n3348> created at line 463.
+    Found 9-bit 12-to-1 multiplexer for signal <GND_6_o_GND_6_o_mux_3106_OUT> created at line 552.
     Found 10-bit comparator lessequal for signal <n0000> created at line 42
     Found 10-bit comparator lessequal for signal <n0003> created at line 43
     Found 10-bit comparator lessequal for signal <n0007> created at line 44
@@ -316,21 +327,21 @@ INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz
     Found 11-bit comparator greater for signal <n1070> created at line 195
     Found 11-bit comparator greater for signal <n1073> created at line 195
     Found 11-bit comparator lessequal for signal <n1078> created at line 195
-    Found 11-bit comparator greater for signal <n1248> created at line 384
-    Found 11-bit comparator greater for signal <n1258> created at line 386
-    Found 11-bit comparator greater for signal <n1262> created at line 387
-    Found 11-bit comparator greater for signal <n1266> created at line 387
-    Found 10-bit comparator greater for signal <n1273> created at line 388
-    Found 11-bit comparator greater for signal <n1276> created at line 388
-    Found 11-bit comparator greater for signal <n1286> created at line 389
-    Found 11-bit comparator greater for signal <n1290> created at line 389
-    Found 11-bit comparator lessequal for signal <n1320> created at line 405
-    Found 11-bit comparator lessequal for signal <n1330> created at line 410
-    Found 11-bit comparator lessequal for signal <n1352> created at line 439
-    Found 11-bit comparator lessequal for signal <n1409> created at line 536
-    Found 11-bit comparator lessequal for signal <n1425> created at line 538
-    Found 10-bit comparator lessequal for signal <n1434> created at line 539
-    Found 11-bit comparator lessequal for signal <n1437> created at line 539
+    Found 11-bit comparator greater for signal <n1258> created at line 384
+    Found 11-bit comparator greater for signal <n1268> created at line 386
+    Found 11-bit comparator greater for signal <n1272> created at line 387
+    Found 11-bit comparator greater for signal <n1276> created at line 387
+    Found 10-bit comparator greater for signal <n1283> created at line 388
+    Found 11-bit comparator greater for signal <n1286> created at line 388
+    Found 11-bit comparator greater for signal <n1296> created at line 389
+    Found 11-bit comparator greater for signal <n1300> created at line 389
+    Found 11-bit comparator lessequal for signal <n1331> created at line 405
+    Found 11-bit comparator lessequal for signal <n1341> created at line 410
+    Found 11-bit comparator lessequal for signal <n1365> created at line 439
+    Found 11-bit comparator lessequal for signal <n1423> created at line 536
+    Found 11-bit comparator lessequal for signal <n1439> created at line 538
+    Found 10-bit comparator lessequal for signal <n1448> created at line 539
+    Found 11-bit comparator lessequal for signal <n1451> created at line 539
     WARNING:Xst:2404 -  FFs/Latches <ax<1:4>> (without init value) have a constant value of 0 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ax<4:7>> (without init value) have a constant value of 1 in block <VGA>.
     WARNING:Xst:2404 -  FFs/Latches <ax<7:8>> (without init value) have a constant value of 0 in block <VGA>.
@@ -520,11 +531,11 @@ INFO:Xst:3210 - "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz
     Summary:
 	inferred  10 D-type flip-flop(s).
 	inferred 104 Comparator(s).
-	inferred 334 Multiplexer(s).
+	inferred 325 Multiplexer(s).
 Unit <VGA> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "/home/victor/Escritorio/ProyectoFinal-TallerDSD-master/Interfaz/vga_sync.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/vga_sync.v".
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
     Found 1-bit register for signal <v_sync_reg>.
@@ -596,32 +607,19 @@ Synthesizing Unit <mod_9u_4u>.
 Unit <mod_9u_4u> synthesized.
 
 Synthesizing Unit <KeyboarController>.
-    Related source file is "/home/victor/Escritorio/Keyboard/KeyboarController.v".
-INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <command_was_sent> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <error_communication_timed_out> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/victor/Escritorio/Keyboard/KeyboarController.v" line 46: Output port <received_data_en> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <LED<13>>.
-    Found 1-bit register for signal <LED<12>>.
-    Found 1-bit register for signal <LED<11>>.
-    Found 1-bit register for signal <LED<10>>.
-    Found 1-bit register for signal <LED<9>>.
-    Found 1-bit register for signal <LED<8>>.
-    Found 1-bit register for signal <LED<7>>.
-    Found 1-bit register for signal <LED<6>>.
-    Found 1-bit register for signal <LED<5>>.
-    Found 1-bit register for signal <LED<4>>.
-    Found 1-bit register for signal <LED<3>>.
-    Found 1-bit register for signal <LED<2>>.
-    Found 1-bit register for signal <LED<1>>.
-    Found 1-bit register for signal <LED<0>>.
+    Related source file is "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v".
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" line 47: Output port <command_was_sent> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" line 47: Output port <error_communication_timed_out> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/KeyboarController.v" line 47: Output port <received_data_en> of the instance <PS2_Keyboard_Controller> is unconnected or connected to loadless signal.
+    Found 14-bit register for signal <LED>.
     Found 8-bit register for signal <previous_word>.
     Summary:
 	inferred  22 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
+	inferred  15 Multiplexer(s).
 Unit <KeyboarController> synthesized.
 
 Synthesizing Unit <PS2_Controller>.
-    Related source file is "/home/victor/Escritorio/Keyboard/PS2_Controller.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/PS2_Controller.v".
         INITIALIZE_MOUSE = 0
     Found 1-bit register for signal <last_ps2_clk>.
     Found 1-bit register for signal <ps2_clk_reg>.
@@ -649,7 +647,7 @@ INFO:Xst:1799 - State 100 is never reached in FSM <s_ps2_transceiver>.
 Unit <PS2_Controller> synthesized.
 
 Synthesizing Unit <Altera_UP_PS2_Data_In>.
-    Related source file is "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Data_In.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/Altera_UP_PS2_Data_In.v".
 WARNING:Xst:647 - Input <ps2_clk_negedge> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit register for signal <data_count>.
     Found 8-bit register for signal <data_shift_reg>.
@@ -678,7 +676,7 @@ WARNING:Xst:647 - Input <ps2_clk_negedge> is never used. This port will be prese
 Unit <Altera_UP_PS2_Data_In> synthesized.
 
 Synthesizing Unit <Altera_UP_PS2_Command_Out>.
-    Related source file is "/home/victor/Escritorio/Keyboard/Altera_UP_PS2_Command_Out.v".
+    Related source file is "/home/victor/Escritorio/Interfaz/remote_sources/_/_/Keyboard/Altera_UP_PS2_Command_Out.v".
         CLOCK_CYCLES_FOR_101US = 5050
         NUMBER_OF_BITS_FOR_101US = 13
         COUNTER_INCREMENT_FOR_101US = 13'b0000000000001
@@ -764,15 +762,16 @@ Macro Statistics
  12-bit comparator lessequal                           : 2
  32-bit comparator greater                             : 16
  9-bit comparator lessequal                            : 12
-# Multiplexers                                         : 476
- 1-bit 2-to-1 multiplexer                              : 134
+# Multiplexers                                         : 468
+ 1-bit 2-to-1 multiplexer                              : 120
  1-bit 9-to-1 multiplexer                              : 1
  13-bit 2-to-1 multiplexer                             : 1
+ 14-bit 2-to-1 multiplexer                             : 15
  17-bit 2-to-1 multiplexer                             : 1
  20-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 3
- 9-bit 12-to-1 multiplexer                             : 2
- 9-bit 2-to-1 multiplexer                              : 333
+ 9-bit 12-to-1 multiplexer                             : 3
+ 9-bit 2-to-1 multiplexer                              : 323
 # Tristates                                            : 2
  1-bit tristate buffer                                 : 2
 # FSMs                                                 : 3
@@ -834,12 +833,13 @@ Macro Statistics
  12-bit comparator lessequal                           : 2
  32-bit comparator greater                             : 16
  9-bit comparator lessequal                            : 12
-# Multiplexers                                         : 471
- 1-bit 2-to-1 multiplexer                              : 134
+# Multiplexers                                         : 463
+ 1-bit 2-to-1 multiplexer                              : 120
  1-bit 9-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 15
  4-bit 2-to-1 multiplexer                              : 1
- 9-bit 12-to-1 multiplexer                             : 2
- 9-bit 2-to-1 multiplexer                              : 333
+ 9-bit 12-to-1 multiplexer                             : 3
+ 9-bit 2-to-1 multiplexer                              : 323
 # FSMs                                                 : 3
 # Xors                                                 : 1
  1-bit xor8                                            : 1
@@ -956,6 +956,15 @@ WARNING:Xst:2677 - Node <transfer_counter_17> of sequential type is unconnected 
 WARNING:Xst:1710 - FF/Latch <rgb_reg_8> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <Main> ...
+WARNING:Xst:1293 - FF/Latch <kb/LED_13> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_12> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_11> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_10> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_9> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_8> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_7> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_6> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <kb/LED_5> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <Altera_UP_PS2_Data_In> ...
 
@@ -967,18 +976,27 @@ INFO:Xst:2261 - The FF/Latch <image/rgb_reg_7> in Unit <Main> is equivalent to t
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 12.
-FlipFlop image/vsync_unit/h_count_reg_0 has been replicated 6 time(s)
-FlipFlop image/vsync_unit/h_count_reg_1 has been replicated 9 time(s)
-FlipFlop image/vsync_unit/h_count_reg_2 has been replicated 12 time(s)
-FlipFlop image/vsync_unit/h_count_reg_3 has been replicated 9 time(s)
-FlipFlop image/vsync_unit/h_count_reg_4 has been replicated 10 time(s)
-FlipFlop image/vsync_unit/h_count_reg_5 has been replicated 7 time(s)
-FlipFlop image/vsync_unit/h_count_reg_6 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 33.
+FlipFlop image/vsync_unit/h_count_reg_0 has been replicated 2 time(s)
+FlipFlop image/vsync_unit/h_count_reg_1 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/h_count_reg_2 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/h_count_reg_3 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/h_count_reg_4 has been replicated 7 time(s)
+FlipFlop image/vsync_unit/h_count_reg_5 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/h_count_reg_6 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/h_count_reg_7 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/h_count_reg_8 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/h_count_reg_9 has been replicated 4 time(s)
 FlipFlop image/vsync_unit/v_count_reg_0 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_1 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_2 has been replicated 3 time(s)
-FlipFlop image/vsync_unit/v_count_reg_4 has been replicated 1 time(s)
+FlipFlop image/vsync_unit/v_count_reg_1 has been replicated 6 time(s)
+FlipFlop image/vsync_unit/v_count_reg_2 has been replicated 8 time(s)
+FlipFlop image/vsync_unit/v_count_reg_3 has been replicated 8 time(s)
+FlipFlop image/vsync_unit/v_count_reg_4 has been replicated 6 time(s)
+FlipFlop image/vsync_unit/v_count_reg_5 has been replicated 6 time(s)
+FlipFlop image/vsync_unit/v_count_reg_6 has been replicated 4 time(s)
+FlipFlop image/vsync_unit/v_count_reg_7 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/v_count_reg_8 has been replicated 5 time(s)
+FlipFlop image/vsync_unit/v_count_reg_9 has been replicated 5 time(s)
 
 Final Macro Processing ...
 
@@ -986,8 +1004,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 141
- Flip-Flops                                            : 141
+# Registers                                            : 170
+ Flip-Flops                                            : 170
 
 =========================================================================
 
@@ -1010,23 +1028,23 @@ Top Level Output File Name         : Main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1069
+# BELS                             : 5060
 #      GND                         : 1
-#      INV                         : 4
+#      INV                         : 3
 #      LUT1                        : 18
-#      LUT2                        : 23
-#      LUT3                        : 51
-#      LUT4                        : 86
-#      LUT5                        : 228
-#      LUT6                        : 550
-#      MUXCY                       : 18
-#      MUXF7                       : 69
+#      LUT2                        : 56
+#      LUT3                        : 86
+#      LUT4                        : 312
+#      LUT5                        : 866
+#      LUT6                        : 3423
+#      MUXCY                       : 29
+#      MUXF7                       : 245
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 141
-#      FD                          : 3
-#      FDR                         : 31
-#      FDRE                        : 104
+# FlipFlops/Latches                : 170
+#      FD                          : 8
+#      FDR                         : 17
+#      FDRE                        : 142
 #      FDS                         : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -1042,15 +1060,15 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             141  out of  18224     0%  
- Number of Slice LUTs:                  960  out of   9112    10%  
-    Number used as Logic:               960  out of   9112    10%  
+ Number of Slice Registers:             170  out of  18224     0%  
+ Number of Slice LUTs:                 4764  out of   9112    52%  
+    Number used as Logic:              4764  out of   9112    52%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1038
-   Number with an unused Flip Flop:     897  out of   1038    86%  
-   Number with an unused LUT:            78  out of   1038     7%  
-   Number of fully used LUT-FF pairs:    63  out of   1038     6%  
+ Number of LUT Flip Flop pairs used:   4902
+   Number with an unused Flip Flop:    4732  out of   4902    96%  
+   Number with an unused LUT:           138  out of   4902     2%  
+   Number of fully used LUT-FF pairs:    32  out of   4902     0%  
    Number of unique control sets:        15
 
 IO Utilization: 
@@ -1081,8 +1099,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-gen_clk                            | BUFGP                  | 23    |
-keyclk/divcounter_0                | BUFG                   | 118   |
+gen_clk                            | BUFGP                  | 14    |
+keyclk/divcounter_0                | BUFG                   | 156   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1093,9 +1111,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 12.785ns (Maximum Frequency: 78.215MHz)
+   Minimum period: 21.298ns (Maximum Frequency: 46.952MHz)
    Minimum input arrival time before clock: 1.903ns
-   Maximum output required time after clock: 7.609ns
+   Maximum output required time after clock: 6.863ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1104,63 +1122,70 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'gen_clk'
-  Clock period: 5.618ns (frequency: 177.998MHz)
-  Total number of paths / destination ports: 215 / 15
+  Clock period: 4.319ns (frequency: 231.508MHz)
+  Total number of paths / destination ports: 78 / 6
 -------------------------------------------------------------------------
-Delay:               5.618ns (Levels of Logic = 5)
+Delay:               4.319ns (Levels of Logic = 4)
   Source:            kb/previous_word_3 (FF)
-  Destination:       kb/LED_4 (FF)
+  Destination:       kb/LED_3 (FF)
   Source Clock:      gen_clk rising
   Destination Clock: gen_clk rising
 
-  Data Path: kb/previous_word_3 to kb/LED_4
+  Data Path: kb/previous_word_3 to kb/LED_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              1   0.447   0.808  kb/previous_word_3 (kb/previous_word_3)
-     LUT3:I0->O            1   0.205   0.684  kb/previous_word[7]_PWR_11_o_equal_2_o<7>_SW0 (N3)
-     LUT6:I4->O            4   0.203   0.684  kb/previous_word[7]_PWR_11_o_equal_2_o<7> (kb/previous_word[7]_PWR_11_o_equal_2_o)
-     LUT4:I3->O            4   0.205   0.912  kb/received_data[7]_LED[13]_select_31_OUT<6>111 (kb/received_data[7]_LED[13]_select_31_OUT<6>11)
-     LUT5:I2->O            2   0.205   0.961  kb/received_data[7]_LED[13]_select_31_OUT<12>111 (kb/received_data[7]_LED[13]_select_31_OUT<12>11)
-     LUT6:I1->O            1   0.203   0.000  kb/received_data[7]_LED[13]_select_31_OUT<9>1 (kb/received_data[7]_LED[13]_select_31_OUT<4>)
-     FDR:D                     0.102          kb/LED_4
+     LUT3:I0->O            1   0.205   0.580  kb/previous_word[7]_PWR_11_o_equal_2_o<7>_SW0 (N3)
+     LUT6:I5->O            4   0.205   0.684  kb/previous_word[7]_PWR_11_o_equal_2_o<7> (kb/previous_word[7]_PWR_11_o_equal_2_o)
+     LUT6:I5->O            3   0.205   0.879  kb/received_data[7]_LED[13]_select_45_OUT<3>211 (kb/received_data[7]_LED[13]_select_45_OUT<3>21)
+     LUT6:I3->O            1   0.205   0.000  kb/Mmux_received_data[7]_GND_10_o_mux_47_OUT83 (kb/received_data[7]_GND_10_o_mux_47_OUT<3>)
+     FD:D                      0.102          kb/LED_3
     ----------------------------------------
-    Total                      5.618ns (1.570ns logic, 4.048ns route)
-                                       (27.9% logic, 72.1% route)
+    Total                      4.319ns (1.369ns logic, 2.951ns route)
+                                       (31.7% logic, 68.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'keyclk/divcounter_0'
-  Clock period: 12.785ns (frequency: 78.215MHz)
-  Total number of paths / destination ports: 122004 / 334
+  Clock period: 21.298ns (frequency: 46.952MHz)
+  Total number of paths / destination ports: 442603487 / 448
 -------------------------------------------------------------------------
-Delay:               12.785ns (Levels of Logic = 13)
-  Source:            image/vsync_unit/h_count_reg_3_1 (FF)
+Delay:               21.298ns (Levels of Logic = 21)
+  Source:            image/vsync_unit/v_count_reg_4_1 (FF)
   Destination:       image/rgb_reg_7 (FF)
   Source Clock:      keyclk/divcounter_0 rising
   Destination Clock: keyclk/divcounter_0 rising
 
-  Data Path: image/vsync_unit/h_count_reg_3_1 to image/rgb_reg_7
+  Data Path: image/vsync_unit/v_count_reg_4_1 to image/rgb_reg_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            15   0.447   1.229  image/vsync_unit/h_count_reg_3_1 (image/vsync_unit/h_count_reg_3_1)
-     LUT5:I1->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_2305_OUT<6>2671 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd529)
-     LUT6:I4->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22621 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22620)
-     LUT5:I3->O            1   0.203   0.808  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22623 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22622)
-     LUT6:I3->O            1   0.205   0.580  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22628 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22627)
-     LUT5:I4->O            1   0.205   0.580  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22629 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>22628)
-     LUT6:I5->O            2   0.205   0.617  image/GND_6_o_GND_6_o_mux_2305_OUT<6>22630 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd330)
-     LUT6:I5->O            2   0.205   0.864  image/GND_6_o_GND_6_o_mux_2305_OUT<6>169 (image/GND_6_o_GND_6_o_mux_2305_OUT<6>_bdd1)
-     LUT6:I2->O            1   0.203   0.580  image/GND_6_o_GND_6_o_mux_2367_OUT<2>21 (image/GND_6_o_GND_6_o_mux_2367_OUT<2>2)
-     LUT5:I4->O            2   0.205   0.617  image/GND_6_o_GND_6_o_mux_2826_OUT<7>35 (image/GND_6_o_GND_6_o_mux_2826_OUT<7>_bdd4)
-     LUT6:I5->O            9   0.205   0.830  image/GND_6_o_GND_6_o_mux_2826_OUT<7> (image/Mmux_GND_6_o_GND_6_o_mux_3092_OUT_5_f77)
-     LUT6:I5->O            1   0.205   0.827  image/GND_6_o_GND_6_o_mux_3093_OUT<7>2 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>2)
-     LUT6:I2->O            1   0.203   0.684  image/GND_6_o_GND_6_o_mux_3093_OUT<7>5 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>5)
-     LUT6:I4->O            1   0.203   0.000  image/GND_6_o_GND_6_o_mux_3093_OUT<7>15 (image/GND_6_o_GND_6_o_mux_3093_OUT<7>)
+     FDRE:C->Q             3   0.447   0.879  image/vsync_unit/v_count_reg_4_1 (image/vsync_unit/v_count_reg_4_1)
+     LUT3:I0->O           10   0.205   0.857  image/y[9]_GND_6_o_LessThan_8_o21 (image/y[9]_GND_6_o_LessThan_8_o2)
+     LUT6:I5->O           17   0.205   1.028  image/n085711_1 (image/n085711)
+     LUT2:I1->O            3   0.205   0.898  image/BUS_0276_GND_6_o_AND_346_o1_SW0 (N462)
+     LUT6:I2->O           10   0.203   0.857  image/Mmux_GND_6_o_GND_6_o_mux_2318_OUT1211_1 (image/Mmux_GND_6_o_GND_6_o_mux_2318_OUT1211)
+     LUT6:I5->O            8   0.205   0.803  image/GND_6_o_GND_6_o_AND_19_o11 (image/GND_6_o_GND_6_o_AND_19_o_mmx_out1)
+     LUT6:I5->O            7   0.205   0.774  image/GND_6_o_GND_6_o_AND_322_o112 (image/GND_6_o_GND_6_o_AND_322_o_mmx_out1)
+     LUT6:I5->O            7   0.205   0.774  image/GND_6_o_GND_6_o_AND_205_o311 (image/GND_6_o_GND_6_o_AND_205_o31)
+     LUT6:I5->O           15   0.205   0.982  image/GND_6_o_GND_6_o_AND_319_o11 (image/GND_6_o_GND_6_o_AND_319_o_mmx_out)
+     LUT6:I5->O            4   0.205   0.788  image/GND_6_o_GND_6_o_AND_289_o11 (image/GND_6_o_GND_6_o_AND_289_o_mmx_out1)
+     LUT6:I4->O            7   0.203   0.773  image/ix[9]_GND_6_o_AND_313_o1142 (image/ix[9]_GND_6_o_AND_313_o1141)
+     MUXF7:S->O            2   0.148   0.721  image/fx[9]_GND_6_o_AND_199_o121_SW0 (N1735)
+     LUT6:I4->O           14   0.203   0.958  image/fx[9]_GND_6_o_AND_199_o122 (image/fx[9]_GND_6_o_AND_199_o_mmx_out1)
+     LUT6:I5->O            3   0.205   0.651  image/BUS_0103_GND_6_o_AND_136_o1558 (image/BUS_0103_GND_6_o_AND_136_o_mmx_out2)
+     LUT6:I5->O            5   0.205   0.715  image/BUS_0043_GND_6_o_AND_64_o11121 (image/BUS_0043_GND_6_o_AND_64_o1112)
+     LUT6:I5->O            1   0.205   0.827  image/BUS_0040_GND_6_o_AND_61_o124_SW0 (N1197)
+     LUT6:I2->O            2   0.203   0.616  image/BUS_0040_GND_6_o_AND_61_o124 (image/BUS_0040_GND_6_o_AND_61_o_mmx_out1)
+     MUXF7:S->O            1   0.148   0.827  image/GND_6_o_GND_6_o_mux_1166_OUT<2>33_SW1 (N2655)
+     LUT6:I2->O            1   0.203   0.580  image/GND_6_o_GND_6_o_mux_1166_OUT<2>34 (image/GND_6_o_GND_6_o_mux_1166_OUT<2>34)
+     LUT6:I5->O            1   0.205   0.684  image/GND_6_o_GND_6_o_mux_1166_OUT<2>35 (image/GND_6_o_GND_6_o_mux_1166_OUT<2>)
+     LUT6:I4->O            1   0.203   0.580  image/Mmux__n3345_77 (image/Mmux__n3345_77)
+     LUT5:I4->O            1   0.205   0.000  image/Mmux_GND_6_o_GND_6_o_mux_3107_OUT81 (image/GND_6_o_GND_6_o_mux_3107_OUT<7>)
      FD:D                      0.102          image/rgb_reg_7
     ----------------------------------------
-    Total                     12.785ns (3.202ns logic, 9.583ns route)
-                                       (25.0% logic, 75.0% route)
+    Total                     21.298ns (4.728ns logic, 16.570ns route)
+                                       (22.2% logic, 77.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'keyclk/divcounter_0'
@@ -1175,7 +1200,7 @@ Offset:              1.903ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.579  PS2DATA_IOBUF (N140)
+     IOBUF:IO->O           1   1.222   0.579  PS2DATA_IOBUF (N300)
      FDS:D                     0.102          kb/PS2_Keyboard_Controller/ps2_data_reg
     ----------------------------------------
     Total                      1.903ns (1.324ns logic, 0.579ns route)
@@ -1185,42 +1210,42 @@ Offset:              1.903ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'keyclk/divcounter_0'
   Total number of paths / destination ports: 74 / 10
 -------------------------------------------------------------------------
-Offset:              7.609ns (Levels of Logic = 4)
-  Source:            image/vsync_unit/v_count_reg_8 (FF)
+Offset:              6.863ns (Levels of Logic = 4)
+  Source:            image/vsync_unit/v_count_reg_6_3 (FF)
   Destination:       rgb<7> (PAD)
   Source Clock:      keyclk/divcounter_0 rising
 
-  Data Path: image/vsync_unit/v_count_reg_8 to rgb<7>
+  Data Path: image/vsync_unit/v_count_reg_6_3 to rgb<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            45   0.447   1.705  image/vsync_unit/v_count_reg_8 (image/vsync_unit/v_count_reg_8)
-     LUT3:I0->O            1   0.205   0.808  image/vsync_unit/video_on_SW0 (N133)
-     LUT6:I3->O            2   0.205   0.721  image/vsync_unit/video_on (image/video_on)
+     FDRE:C->Q            15   0.447   1.086  image/vsync_unit/v_count_reg_6_3 (image/vsync_unit/v_count_reg_6_3)
+     LUT3:I1->O            4   0.203   0.684  image/GND_6_o_GND_6_o_AND_121_o1131 (image/GND_6_o_GND_6_o_AND_121_o113)
+     LUT6:I5->O            2   0.205   0.721  image/vsync_unit/video_on (image/video_on)
      LUT2:I0->O            6   0.203   0.744  image/Mmux_rgb31 (rgb_2_OBUF)
      OBUF:I->O                 2.571          rgb_2_OBUF (rgb<2>)
     ----------------------------------------
-    Total                      7.609ns (3.631ns logic, 3.978ns route)
-                                       (47.7% logic, 52.3% route)
+    Total                      6.863ns (3.629ns logic, 3.234ns route)
+                                       (52.9% logic, 47.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'gen_clk'
-  Total number of paths / destination ports: 14 / 14
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              4.638ns (Levels of Logic = 1)
-  Source:            kb/LED_10 (FF)
-  Destination:       LED<10> (PAD)
+Offset:              4.210ns (Levels of Logic = 1)
+  Source:            kb/LED_4 (FF)
+  Destination:       LED<4> (PAD)
   Source Clock:      gen_clk rising
 
-  Data Path: kb/LED_10 to LED<10>
+  Data Path: kb/LED_4 to LED<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             61   0.447   1.620  kb/LED_10 (kb/LED_10)
-     OBUF:I->O                 2.571          LED_10_OBUF (LED<10>)
+     FD:C->Q              25   0.447   1.192  kb/LED_4 (kb/LED_4)
+     OBUF:I->O                 2.571          LED_4_OBUF (LED<4>)
     ----------------------------------------
-    Total                      4.638ns (3.018ns logic, 1.620ns route)
-                                       (65.1% logic, 34.9% route)
+    Total                      4.210ns (3.018ns logic, 1.192ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 
@@ -1232,8 +1257,8 @@ Clock to Setup on destination clock gen_clk
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-gen_clk            |    5.618|         |         |         |
-keyclk/divcounter_0|    3.995|         |         |         |
+gen_clk            |    4.319|         |         |         |
+keyclk/divcounter_0|    3.814|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock keyclk/divcounter_0
@@ -1241,22 +1266,22 @@ Clock to Setup on destination clock keyclk/divcounter_0
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-gen_clk            |   15.398|         |         |         |
-keyclk/divcounter_0|   12.785|         |         |         |
+gen_clk            |    9.472|         |         |         |
+keyclk/divcounter_0|   21.298|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 23.76 secs
+Total REAL time to Xst completion: 84.00 secs
+Total CPU time to Xst completion: 83.68 secs
  
 --> 
 
 
-Total memory usage is 409896 kilobytes
+Total memory usage is 463596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  287 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :  299 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
 

@@ -212,7 +212,7 @@ module VGA(
 				nx<=330;
 				ny<=70;
 				
-				if (num [0]) //cero
+				if (num == 0) //cero
 				begin
 						if(x>=nx & x<=nx+30 & y>=ny & y<=ny+5)rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -233,7 +233,7 @@ module VGA(
 				else if (x>=jx+45 & x<=jx+50 & y>=jy-20 & y<=jy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [1]) //uno
+				else if (num == 1) //uno
 				begin
 						if(x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
 				else if (x>=nx+25 & x<=nx+30 & y>=ny+25 & y<=ny+50) rgb_reg<=8'b00000011;//c
@@ -246,7 +246,7 @@ module VGA(
 				else if (x>=ax+45 & x<=ax+50 & y>=ay-20 & y<=ay+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [2]) //dos
+				else if (num == 2) //dos
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -265,7 +265,7 @@ module VGA(
 				else if (x>=bx+45 & x<=bx+50 & y>=by-20 & y<=by+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [3]) //tres
+				else if (num == 3) //tres
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -284,7 +284,7 @@ module VGA(
 				else if (x>=cx+45 & x<=cx+50 & y>=cy-20 & y<=cy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [4]) //cuatro
+				else if (num == 4) //cuatro
 				begin
 						if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
 				else if (x>=nx+25 & x<=nx+30 & y>=ny+25 & y<=ny+50) rgb_reg<=8'b00000011;//c
@@ -301,7 +301,7 @@ module VGA(
 				else if (x>=dx+45 & x<=dx+50 & y>=dy-20 & y<=dy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [5]) //cinco
+				else if (num == 5) //cinco
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny+25 & y<=ny+50) rgb_reg<=8'b00000011;//c
@@ -320,7 +320,7 @@ module VGA(
 				else if (x>=ex+45 & x<=ex+50 & y>=ey-20 & y<=ey+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [6]) //seis
+				else if (num == 6) //seis
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny+25 & y<=ny+50) rgb_reg<=8'b00000011;//c
@@ -341,7 +341,7 @@ module VGA(
 				else if (x>=fx+45 & x<=fx+50 & y>=fy-20 & y<=fy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [7]) //siete
+				else if (num == 7) //siete
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -356,7 +356,7 @@ module VGA(
 				else if (x>=gx+45 & x<=gx+50 & y>=gy-20 & y<=gy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [8]) //ocho
+				else if (num == 8) //ocho
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 ) rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -379,7 +379,7 @@ module VGA(
 				else if (x>=hx+45 & x<=hx+50 & y>=hy-20 & y<=hy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [9]) //nueve
+				else if (num == 9) //nueve
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny    & y<=ny+5 )rgb_reg<=8'b00000011;//a
 				else if (x>=nx+25 & x<=nx+30 & y>=ny    & y<=ny+25) rgb_reg<=8'b00000011;//b
@@ -400,7 +400,7 @@ module VGA(
 				else if (x>=ix+45 & x<=ix+50 & y>=iy-20 & y<=iy+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				if (num [10]) //+
+				if (num == 10) //+
 				begin
 						if(x>=nx+10 & x<=nx+20 & y>=ny+10 & y<=ny+25)
 						begin
@@ -419,7 +419,7 @@ module VGA(
 				else if (x>=mx+45 & x<=mx+50 & y>=my-20 & y<=my+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [11]) //-
+				else if (num == 11) //-
 				begin
 						if(x>=nx    & x<=nx+30 & y>=ny+25 & y<=ny+30)
 						begin
@@ -434,7 +434,7 @@ module VGA(
 				else if (x>=lx+45 & x<=lx+50 & y>=ly-20 & y<=ly+70) rgb_reg<=8'b00000011;//borde
 				end
 				
-				else if (num [12]) //*
+				else if (num == 12) //*
 				begin
 						if (x>=nx+10    & x<=nx+15 & y>=ny+25 & y<=ny+30)
 						begin
@@ -453,7 +453,7 @@ module VGA(
 /*resultados*/	
 				tx<=290;
 				ty<=70;
-				if (num[13])// =
+				if (num == 13)// =
 				begin
 /*numero 1*/
 				if (result/10 == 0) //cero
