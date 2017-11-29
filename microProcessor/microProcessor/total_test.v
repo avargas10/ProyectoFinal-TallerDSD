@@ -29,28 +29,40 @@ module total_test;
 	reg reset;
 
 	// Outputs
-	wire [31:0] ReadData;
+	wire [31:0] WriteData,DataAdr;
+	wire MemWrite;
 	// Instantiate the Unit Under Test (UUT)
 	topLevelModule uut (
 		.clk(clk), 
 		.reset(reset),
-		.ReadData(ReadData)
-		
+		.WriteData(WriteData),
+		.DataAdr(DataAdr),
+		.MemWrite(MemWrite)		
 	);
 
-	initial begin
-		// Initialize Inputs
-		reset <= 1; # 22; reset <= 0;
-        
-		// Add stimulus here
-
+	initial
+		begin
+			reset <= 1; # 22; reset <= 0;
+		end
+// generate clock to sequence tests
+always
+	begin
+		clk <= 1; # 5; clk <= 0; # 5;
 	end
 	
-	always 
+// check that 7 gets written to address 0x64
+// at end of program
+always @(negedge clk)
 		begin
-				#20 clk=5;
-				#20 clk=0;
-			end	
-      
+		if(MemWrite) begin
+			if(DataAdr === 100 & WriteData === 7) begin
+					$display("Simulation succeeded");
+					$stop;
+				end else if (DataAdr !== 96) begin
+					$display("Simulation failed");
+					$stop;
+				end
+			end
+		end
 endmodule
 

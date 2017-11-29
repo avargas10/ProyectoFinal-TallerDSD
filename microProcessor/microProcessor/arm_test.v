@@ -52,7 +52,7 @@ module arm_test;
 		// Initialize Inputs
 		clk = 0;
 		reset = 0;
-		Instr = 32'hE0855004;
+		Instr = 32'h0A00000C;
 		ReadData = 0;
 		reset <= 1; # 22; reset <= 0;
 		// Wait 100 ns for global reset to finish

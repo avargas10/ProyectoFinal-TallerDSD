@@ -19,11 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
  module topLevelModule(input  clk, reset,
-							  output [31:0] ReadData);	
+							  output wire [31:0] WriteData,DataAdr,
+							  output wire MemWrite);	
 		
-		wire [31:0]  Instr, ReadData, WriteData;
-		wire [31:0]  DataAdr,PC;
-		wire MemWrite;					
+		wire [31:0]  Instr, ReadData,rtd,td,ta;
+		wire [31:0]  PC;		
+		wire te;
 		// instantiate processor and memories
 		Instruction_MEM imem (
 			.a(PC), 
@@ -41,10 +42,14 @@
 		.ReadData(ReadData)
 	);
 		data_mem dmem (
-			.clk(clk), 
-			.we(MemWrite), 
-			.a(DataAdr), 
-			.wd(WriteData), 
-			.rd(ReadData)
-		);
+		.clk(clk), 
+		.we(MemWrite), 
+		.te(te), 
+		.a(DataAdr), 
+		.ta(ta), 
+		.wd(WriteData), 
+		.td(td), 
+		.rd(ReadData), 
+		.rtd(rtd)
+	);
 endmodule 

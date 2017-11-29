@@ -75,19 +75,23 @@ module dataPath_test;
 		RegSrc = 0;
 		RegWrite = 1;
 		ImmSrc = 0;
-		ALUSrc = 1;
+		ALUSrc = 0;
 		ALUControl = 0;
 		MemtoReg = 0;
 		PCSrc = 0;
-		Instr = 32'h034084E2;
+		Instr = 32'hE2802005;
 		ReadData = 0;
-		
-		
+		reset <= 1; # 22; reset <= 0;
+		#100
+		clk = 1;
+		#100;
+		clk=0;
 	end
-			always
-					begin
-						clk <= 1; # 5; clk <= 0; # 5;
-					end
-      
+			
+		always
+			begin
+				
+				
+			end	
 endmodule
 

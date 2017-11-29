@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Instruction_MEM(input  [31:0] a,
+	module Instruction_MEM(input  [31:0] a,
 							 output reg [31:0] rd);
 				reg [31:0] RAM[63:0];
 				reg [7:0] offset;
@@ -28,6 +28,12 @@ module Instruction_MEM(input  [31:0] a,
 						begin
 							RAM[offset] = 0;
 						end
+						/*RAM[0]=32'hE2811001;
+						RAM[1]=32'hE351000F;
+						RAM[3]=32'h1AFFFFFB;
+						RAM[4]=32'hE0812000;*/
+						
+						
 						RAM[0]=32'hE04F000F;
 						RAM[1]=32'hE2802005;
 						RAM[2]=32'hE280300C;

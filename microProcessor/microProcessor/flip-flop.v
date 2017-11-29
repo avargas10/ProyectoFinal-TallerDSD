@@ -18,14 +18,31 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module flipflop#(
-		parameter WIDTH=8)(
-		input clk,reset,
-		input [WIDTH-1:0] d,
-		output reg [WIDTH-1:0] q
+module flipflop#(parameter WIDTH=8)
+(	 input clk,	
+	 input reset,
+    input [WIDTH-1:0] d,
+    output reg [WIDTH-1:0] q
     );
-	
-	always@(posedge clk, posedge reset)
-		if(reset) q<=0;
-		else q<=d;
+	 
+	 initial begin
+		q = -4;
+		$display("set");
+	 end
+	 
+	 always @(posedge clk, posedge reset)
+		begin
+			if(reset)
+				begin
+				q <= 0;
+				$display("reset");
+				end
+			else
+				begin
+				q <= d;
+				$display("change");
+				end
+		end
+
+
 endmodule

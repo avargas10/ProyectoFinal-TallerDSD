@@ -27,13 +27,13 @@ module flipflopr_Test;
 	// Inputs
 	reg clk;
 	reg reset;
-	reg [7:0] d;
+	reg [31:0] d;
 
 	// Outputs
-	wire [7:0] q;
+	wire [31:0] q;
 
 	// Instantiate the Unit Under Test (UUT)
-	flipflop uut (
+	flipflop#(32) uut (
 		.clk(clk), 
 		.reset(reset), 
 		.d(d), 
@@ -44,14 +44,18 @@ module flipflopr_Test;
 		// Initialize Inputs
 		clk = 0;
 		reset = 0;
-		d = 0;
-
+		d = 12;
+		reset <= 1; # 22; reset <= 0;
 		// Wait 100 ns for global reset to finish
-		#100;
-        
 		// Add stimulus here
+		#100;
+    end
 
-	end
+		always
+			begin
+				#20 clk=5;
+				#20 clk=0;
+			end
       
 endmodule
 

@@ -1,0 +1,3 @@
+verilog isim_temp "flip-flop.v"
+verilog isim_temp "flipflopr_Test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

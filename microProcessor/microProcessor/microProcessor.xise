@@ -199,17 +199,17 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="160"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="160"/>
     </file>
-    <file xil_pn:name="dmem_test.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="161"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="161"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="161"/>
-    </file>
     <file xil_pn:name="total_test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="20"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="171"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="171"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="171"/>
+    </file>
+    <file xil_pn:name="dmem_test.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="275"/>
+      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="275"/>
+      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="275"/>
     </file>
   </files>
 

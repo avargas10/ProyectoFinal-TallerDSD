@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module data_mem(input  clk, we,
-		input  [31:0] a, wd,
-		output reg [31:0] rd);	
+module data_mem(input  clk, we,te,
+		input  [31:0] a,ta, wd,td,
+		output reg [31:0] rd,rtd);	
 	 reg[31:0] RAM[63:0];
 	 reg [7:0] offset;
 	 initial begin
@@ -32,11 +32,19 @@ module data_mem(input  clk, we,
 			begin
 				rd = RAM[a/4];
 			end
+		always@*
+			begin
+				rtd = RAM[ta/4];
+			end
 		always@(posedge clk)
 			begin 
 				if(we)
 					begin
 						RAM[a/4]<=wd;
+					end
+				if(td)
+					begin
+						RAM[ta/4]<=td;
 					end
 			end
 endmodule

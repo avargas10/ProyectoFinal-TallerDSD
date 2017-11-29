@@ -54,6 +54,7 @@ module principalDecoder(
 				InmSrc = 0;
 				RegSrc =0;
 				ALUOp = 1;				
+				MemtoReg=0;
 			end
 		 else 
 			begin
@@ -64,6 +65,7 @@ module principalDecoder(
 				InmSrc = 0;
 				RegSrc =0;
 				ALUOp = 1;
+				MemtoReg=0;
 			end
 	 1: if(L)
 			begin

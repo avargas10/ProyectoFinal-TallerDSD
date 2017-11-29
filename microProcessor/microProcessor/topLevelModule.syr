@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Reading design: topLevelModule.prj
 
@@ -143,7 +143,6 @@ Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microP
 Parsing module <ARM>.
 Analyzing Verilog file "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" into library work
 Parsing module <topLevelModule>.
-WARNING:HDLCompiler:751 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 24: Redeclaration of ansi port ReadData is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -152,7 +151,7 @@ WARNING:HDLCompiler:751 - "C:\Users\Andres Vargas\Documents\Verilog Projects\mic
 Elaborating module <topLevelModule>.
 
 Elaborating module <Instruction_MEM>.
-WARNING:HDLCompiler:91 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\Instruction_mem.v" Line 57: Signal <RAM> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\Instruction_mem.v" Line 63: Signal <RAM> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <ARM>.
 
@@ -177,6 +176,9 @@ Elaborating module <dataPath>.
 Elaborating module <Mux(WIDTH=32)>.
 
 Elaborating module <flipflop(WIDTH=32)>.
+"C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flip-flop.v" Line 30. $display set
+"C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flip-flop.v" Line 38. $display reset
+"C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\flip-flop.v" Line 43. $display change
 
 Elaborating module <adder(WIDTH=32)>.
 
@@ -189,6 +191,9 @@ Elaborating module <InmExtension>.
 Elaborating module <ALU>.
 
 Elaborating module <data_mem>.
+WARNING:HDLCompiler:1127 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 53: Assignment to rtd ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 25: Net <td[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" Line 27: Net <te> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -196,6 +201,10 @@ Elaborating module <data_mem>.
 
 Synthesizing Unit <topLevelModule>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v".
+INFO:Xst:3210 - "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\topLevelModule.v" line 44: Output port <rtd> of the instance <dmem> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <td> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ta> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <te> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <topLevelModule> synthesized.
@@ -238,9 +247,8 @@ WARNING:Xst:737 - Found 1-bit latch for signal <MemWR>. Latches may be generated
 WARNING:Xst:737 - Found 1-bit latch for signal <InmSrc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <InmSrc<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <RegSrc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <MemtoReg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   8 Latch(s).
+	inferred   7 Latch(s).
 	inferred   3 Multiplexer(s).
 Unit <principalDecoder> synthesized.
 
@@ -350,9 +358,110 @@ Synthesizing Unit <data_mem>.
     Related source file is "C:\Users\Andres Vargas\Documents\Verilog Projects\microProcessor\microProcessor\data_mem.v".
 WARNING:Xst:647 - Input <a<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <a<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 64x32-bit single-port RAM <Mram_RAM> for signal <RAM>.
+WARNING:Xst:647 - Input <ta<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ta<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <te> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 64x32-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 1-bit register for signal <RAM_ff_2016>.
+    Found 1-bit register for signal <RAM_ff_2017>.
+    Found 1-bit register for signal <RAM_ff_2018>.
+    Found 1-bit register for signal <RAM_ff_2019>.
+    Found 1-bit register for signal <RAM_ff_2020>.
+    Found 1-bit register for signal <RAM_ff_2021>.
+    Found 1-bit register for signal <RAM_ff_2022>.
+    Found 1-bit register for signal <RAM_ff_2023>.
+    Found 1-bit register for signal <RAM_ff_2024>.
+    Found 1-bit register for signal <RAM_ff_2025>.
+    Found 1-bit register for signal <RAM_ff_2026>.
+    Found 1-bit register for signal <RAM_ff_2027>.
+    Found 1-bit register for signal <RAM_ff_2028>.
+    Found 1-bit register for signal <RAM_ff_2029>.
+    Found 1-bit register for signal <RAM_ff_2030>.
+    Found 1-bit register for signal <RAM_ff_2031>.
+    Found 1-bit register for signal <RAM_ff_2032>.
+    Found 1-bit register for signal <RAM_ff_2033>.
+    Found 1-bit register for signal <RAM_ff_2034>.
+    Found 1-bit register for signal <RAM_ff_2035>.
+    Found 1-bit register for signal <RAM_ff_2036>.
+    Found 1-bit register for signal <RAM_ff_2037>.
+    Found 1-bit register for signal <RAM_ff_2038>.
+    Found 1-bit register for signal <RAM_ff_2039>.
+    Found 1-bit register for signal <RAM_ff_2040>.
+    Found 1-bit register for signal <RAM_ff_2041>.
+    Found 1-bit register for signal <RAM_ff_2042>.
+    Found 1-bit register for signal <RAM_ff_2043>.
+    Found 1-bit register for signal <RAM_ff_2044>.
+    Found 1-bit register for signal <RAM_ff_2045>.
+    Found 1-bit register for signal <RAM_ff_2046>.
+    Found 1-bit register for signal <RAM_ff_2047>.
+    Found 1-bit tristate buffer for signal <RAM_trst_2016> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2016> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2017> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2017> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2018> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2018> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2019> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2019> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2020> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2020> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2021> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2021> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2022> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2022> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2023> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2023> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2024> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2024> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2025> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2025> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2026> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2026> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2027> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2027> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2028> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2028> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2029> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2029> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2030> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2030> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2031> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2031> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2032> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2032> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2033> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2033> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2034> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2034> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2035> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2035> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2036> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2036> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2037> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2037> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2038> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2038> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2039> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2039> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2040> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2040> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2041> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2041> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2042> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2042> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2043> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2043> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2044> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2044> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2045> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2045> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2046> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2046> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2047> created at line 21
+    Found 1-bit tristate buffer for signal <RAM_trst_2047> created at line 21
     Summary:
 	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred  64 Tristate(s).
 Unit <data_mem> synthesized.
 
 =========================================================================
@@ -361,16 +470,16 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 4
  15x32-bit dual-port RAM                               : 2
- 64x32-bit single-port RAM                             : 1
+ 64x32-bit dual-port RAM                               : 1
  64x32-bit single-port Read Only RAM                   : 1
 # Adders/Subtractors                                   : 3
  32-bit adder                                          : 2
  33-bit addsub                                         : 1
-# Registers                                            : 3
+# Registers                                            : 4
  2-bit register                                        : 2
- 32-bit register                                       : 1
-# Latches                                              : 11
- 1-bit latch                                           : 11
+ 32-bit register                                       : 2
+# Latches                                              : 10
+ 1-bit latch                                           : 10
 # Comparators                                          : 1
  1-bit comparator equal                                : 1
 # Multiplexers                                         : 17
@@ -381,6 +490,8 @@ Macro Statistics
  32-bit 3-to-1 multiplexer                             : 1
  33-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 64
+ 1-bit tristate buffer                                 : 64
 
 =========================================================================
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -416,6 +527,13 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs eit
     |     addrA          | connected to signal <a>             |          |
     |     diA            | connected to signal <wd>            |          |
     |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     weB            | connected to signal <GND>           | high     |
+    |     addrB          | connected to signal <GND>           |          |
+    |     diB            | connected to signal <GND>           |          |
     -----------------------------------------------------------------------
 Unit <data_mem> synthesized (advanced).
 
@@ -460,13 +578,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 4
  15x32-bit dual-port distributed RAM                   : 2
- 64x32-bit single-port distributed RAM                 : 1
+ 64x32-bit dual-port distributed RAM                   : 1
  64x32-bit single-port distributed Read Only RAM       : 1
 # Adders/Subtractors                                   : 3
  32-bit adder                                          : 2
  33-bit addsub                                         : 1
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 68
+ Flip-Flops                                            : 68
 # Comparators                                          : 1
  1-bit comparator equal                                : 1
 # Multiplexers                                         : 16
@@ -484,6 +602,63 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:2261 - The FF/Latch <RegSrc_1> in Unit <principalDecoder> is equivalent to the following FF/Latch, which will be removed : <MemWR> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    q_31 in unit <flipflop>
+    q_30 in unit <flipflop>
+    q_29 in unit <flipflop>
+    q_28 in unit <flipflop>
+    q_27 in unit <flipflop>
+    q_26 in unit <flipflop>
+    q_25 in unit <flipflop>
+    q_24 in unit <flipflop>
+    q_23 in unit <flipflop>
+    q_22 in unit <flipflop>
+    q_21 in unit <flipflop>
+    q_20 in unit <flipflop>
+    q_19 in unit <flipflop>
+    q_18 in unit <flipflop>
+    q_17 in unit <flipflop>
+    q_16 in unit <flipflop>
+    q_15 in unit <flipflop>
+    q_14 in unit <flipflop>
+    q_13 in unit <flipflop>
+    q_12 in unit <flipflop>
+    q_11 in unit <flipflop>
+    q_10 in unit <flipflop>
+    q_9 in unit <flipflop>
+    q_8 in unit <flipflop>
+    q_7 in unit <flipflop>
+    q_6 in unit <flipflop>
+    q_5 in unit <flipflop>
+    q_4 in unit <flipflop>
+    q_3 in unit <flipflop>
+    q_2 in unit <flipflop>
+
+WARNING:Xst:2042 - Unit data_mem: 32 internal tristates are replaced by logic (pull-up yes): RAM_trst_2016, RAM_trst_2017, RAM_trst_2018, RAM_trst_2019, RAM_trst_2020, RAM_trst_2021, RAM_trst_2022, RAM_trst_2023, RAM_trst_2024, RAM_trst_2025, RAM_trst_2026, RAM_trst_2027, RAM_trst_2028, RAM_trst_2029, RAM_trst_2030, RAM_trst_2031, RAM_trst_2032, RAM_trst_2033, RAM_trst_2034, RAM_trst_2035, RAM_trst_2036, RAM_trst_2037, RAM_trst_2038, RAM_trst_2039, RAM_trst_2040, RAM_trst_2041, RAM_trst_2042, RAM_trst_2043, RAM_trst_2044, RAM_trst_2045, RAM_trst_2046, RAM_trst_2047.
+
+Optimizing unit <flipflop> ...
 
 Optimizing unit <topLevelModule> ...
 
@@ -498,11 +673,46 @@ Optimizing unit <conditionals> ...
 Optimizing unit <principalDecoder> ...
 
 Optimizing unit <decode_alu> ...
-WARNING:Xst:2677 - Node <uut/controller/deco/decoMain/InmSrc_0> of sequential type is unconnected in block <topLevelModule>.
+
+Optimizing unit <data_mem> ...
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2016_31> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2017_30> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2018_29> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2019_28> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2020_27> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2021_26> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2022_25> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2023_24> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2024_23> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2025_22> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2026_21> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2027_20> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2028_19> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2029_18> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2030_17> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2031_16> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2032_15> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2033_14> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2034_13> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2035_12> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2036_11> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2037_10> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2038_9> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2039_8> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2040_7> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2041_6> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2042_5> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2043_4> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2044_3> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2045_2> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2046_1> of sequential type is unconnected in block <topLevelModule>.
+WARNING:Xst:2677 - Node <dmem/RAM_ff_2047_0> of sequential type is unconnected in block <topLevelModule>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block topLevelModule, actual ratio is 4.
+Found area constraint ratio of 100 (+ 5) on block topLevelModule, actual ratio is 46.
+WARNING:Xst:1426 - The value init of the FF/Latch uut/data/ffPc/q_31_LD hinder the constant cleaning in the block topLevelModule.
+   You should achieve better results by setting this init to 0.
 
 Final Macro Processing ...
 
@@ -510,8 +720,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 2114
+ Flip-Flops                                            : 2114
 
 =========================================================================
 
@@ -534,34 +744,36 @@ Top Level Output File Name         : topLevelModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 562
+# BELS                             : 5875
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 2
 #      LUT1                        : 58
-#      LUT2                        : 11
-#      LUT3                        : 74
-#      LUT4                        : 12
-#      LUT5                        : 120
-#      LUT6                        : 98
+#      LUT2                        : 69
+#      LUT3                        : 2516
+#      LUT4                        : 205
+#      LUT5                        : 183
+#      LUT6                        : 2623
 #      MUXCY                       : 90
-#      MUXF7                       : 1
+#      MUXF7                       : 34
 #      VCC                         : 1
 #      XORCY                       : 93
-# FlipFlops/Latches                : 45
+# FlipFlops/Latches                : 2124
+#      FD                          : 30
 #      FDC                         : 32
 #      FDCE                        : 4
-#      LD                          : 6
+#      FDE                         : 2048
+#      LD                          : 7
 #      LDC                         : 2
 #      LDE                         : 1
-# RAMS                             : 46
+# RAMS                             : 14
 #      RAM16X1D                    : 4
 #      RAM32M                      : 10
-#      RAM64X1S                    : 32
-# Clock Buffers                    : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 33
+# IO Buffers                       : 66
 #      IBUF                        : 1
-#      OBUF                        : 32
+#      OBUF                        : 65
 
 Device utilization summary:
 ---------------------------
@@ -570,25 +782,25 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              45  out of  18224     0%  
- Number of Slice LUTs:                  456  out of   9112     5%  
-    Number used as Logic:               376  out of   9112     4%  
-    Number used as Memory:               80  out of   2176     3%  
-       Number used as RAM:               80
+ Number of Slice Registers:            2124  out of  18224    11%  
+ Number of Slice LUTs:                 5704  out of   9112    62%  
+    Number used as Logic:              5656  out of   9112    62%  
+    Number used as Memory:               48  out of   2176     2%  
+       Number used as RAM:               48
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    456
-   Number with an unused Flip Flop:     411  out of    456    90%  
-   Number with an unused LUT:             0  out of    456     0%  
-   Number of fully used LUT-FF pairs:    45  out of    456     9%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:   5712
+   Number with an unused Flip Flop:    3588  out of   5712    62%  
+   Number with an unused LUT:             8  out of   5712     0%  
+   Number of fully used LUT-FF pairs:  2116  out of   5712    37%  
+   Number of unique control sets:        27
 
 IO Utilization: 
- Number of IOs:                          34
- Number of bonded IOBs:                  34  out of    232    14%  
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of    232    28%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -611,13 +823,13 @@ Clock Information:
 ---------------------------------------------------------------------------------+--------------------------------------------------+-------+
 Clock Signal                                                                     | Clock buffer(FF name)                            | Load  |
 ---------------------------------------------------------------------------------+--------------------------------------------------+-------+
-clk                                                                              | BUFGP                                            | 82    |
-uut/controller/deco/decoMain/_n0033<4>(uut/controller/deco/decoMain/_n0033<4>1:O)| NONE(*)(uut/controller/deco/decoMain/RegSrc_1)   | 5     |
-uut/controller/deco/decoMain/_n0033<1>(uut/controller/deco/decoMain/_n0033<1>1:O)| NONE(*)(uut/controller/deco/decoMain/MemtoReg)   | 1     |
+clk                                                                              | BUFGP                                            | 2128  |
+uut/controller/deco/decoMain/_n0031<2>(uut/controller/deco/decoMain/_n0031<2>1:O)| NONE(*)(uut/controller/deco/decoMain/RegSrc_1)   | 6     |
 uut/controller/deco/aluMain/_n0048(uut/controller/deco/aluMain/out1:O)           | NONE(*)(uut/controller/deco/aluMain/ALUControl_1)| 2     |
 uut/controller/deco/decoMain/ALUOp                                               | NONE(uut/controller/deco/aluMain/NoWrite)        | 1     |
+reset                                                                            | IBUF+BUFG                                        | 1     |
 ---------------------------------------------------------------------------------+--------------------------------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
+(*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -630,9 +842,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 10.648ns (Maximum Frequency: 93.918MHz)
+   Minimum period: 15.612ns (Maximum Frequency: 64.053MHz)
    Minimum input arrival time before clock: 3.000ns
-   Maximum output required time after clock: 12.115ns
+   Maximum output required time after clock: 15.645ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -641,33 +853,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 10.648ns (frequency: 93.918MHz)
-  Total number of paths / destination ports: 1665577 / 446
+  Clock period: 15.612ns (frequency: 64.053MHz)
+  Total number of paths / destination ports: 53928671 / 4316
 -------------------------------------------------------------------------
-Delay:               10.648ns (Levels of Logic = 9)
-  Source:            uut/data/ffPc/q_7 (FF)
-  Destination:       uut/data/regFile/Mram_registers15 (RAM)
+Delay:               15.612ns (Levels of Logic = 15)
+  Source:            uut/data/ffPc/q_7_P_7 (FF)
+  Destination:       dmem/RAM_FF_1535 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: uut/data/ffPc/q_7 to uut/data/regFile/Mram_registers15
+  Data Path: uut/data/ffPc/q_7_P_7 to dmem/RAM_FF_1535
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             25   0.447   1.557  uut/data/ffPc/q_7 (uut/data/ffPc/q_7)
+     FD:C->Q               1   0.447   0.684  uut/data/ffPc/q_7_P_7 (uut/data/ffPc/q_7_P_7)
+     LUT3:I1->O           25   0.203   1.557  uut/data/ffPc/q_71 (uut/data/ffPc/q_7)
      LUT6:I0->O           27   0.203   1.468  imem/Mram_RAM151 (Instr<15>)
-     LUT4:I0->O           10   0.203   0.857  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
-     LUT6:I5->O            5   0.205   0.715  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_1 (uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>)
-     LUT3:I2->O            2   0.205   0.617  uut/data/regFile/Mmux_rd2301 (WriteData<7>)
-     LUT6:I5->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<7> (uut/data/mainALU/Mmux_tmp1_rs_lut<7>)
-     XORCY:LI->O           2   0.136   0.617  uut/data/mainALU/Mmux_tmp1_rs_xor<7> (uut/data/mainALU/Mmux_tmp1_split<7>)
-     LUT5:I4->O           17   0.205   1.027  uut/data/mainALU/Mmux_tmp3311_1 (uut/data/mainALU/Mmux_tmp3311)
-     RAM64X1S:A5->O        3   0.205   0.651  dmem/Mram_RAM1 (ReadData_0_OBUF)
-     LUT3:I2->O            2   0.205   0.616  uut/data/WBMux/Mmux_y110 (uut/data/Result<0>)
-     RAM32M:DIA0               0.303          uut/data/regFile/Mram_registers2
+     LUT4:I0->O           14   0.203   0.958  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
+     LUT6:I5->O           67   0.205   1.660  uut/data/regFile/Mmux_rd2231 (WriteData_2_OBUF)
+     LUT5:I4->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<2> (uut/data/mainALU/Mmux_tmp1_rs_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<2> (uut/data/mainALU/Mmux_tmp1_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<3> (uut/data/mainALU/Mmux_tmp1_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<4> (uut/data/mainALU/Mmux_tmp1_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<5> (uut/data/mainALU/Mmux_tmp1_rs_cy<5>)
+     XORCY:CI->O           3   0.180   0.651  uut/data/mainALU/Mmux_tmp1_rs_xor<6> (uut/data/mainALU/Mmux_tmp1_split<6>)
+     LUT5:I4->O          342   0.205   2.303  uut/data/mainALU/Mmux_tmp3301 (DataAdr_6_OBUF)
+     LUT3:I0->O          256   0.205   2.067  dmem/inst_LPM_DECODE1221 (dmem/inst_LPM_DECODE122)
+     LUT6:I5->O            1   0.205   0.580  dmem/RAM_DATAEQN_5111 (dmem/RAM_DataEqn_511)
+     LUT3:I2->O            1   0.205   0.684  dmem/RAM_FF_511_dpot (dmem/RAM_FF_511_dpot)
+     LUT3:I1->O            1   0.203   0.000  dmem/RAM_FF_511_dpot1 (dmem/RAM_FF_511_dpot1)
+     FDE:D                     0.102          dmem/RAM_FF_511
     ----------------------------------------
-    Total                     10.648ns (2.522ns logic, 8.126ns route)
-                                       (23.7% logic, 76.3% route)
+    Total                     15.612ns (3.000ns logic, 12.612ns route)
+                                       (19.2% logic, 80.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -675,10 +893,10 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              3.000ns (Levels of Logic = 1)
   Source:            reset (PAD)
-  Destination:       uut/data/ffPc/q_31 (FF)
+  Destination:       uut/data/ffPc/q_1 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to uut/data/ffPc/q_31
+  Data Path: reset to uut/data/ffPc/q_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -689,93 +907,141 @@ Offset:              3.000ns (Levels of Logic = 1)
                                        (55.1% logic, 44.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 192000 / 32
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
+  Total number of paths / destination ports: 212786 / 65
 -------------------------------------------------------------------------
-Offset:              12.115ns (Levels of Logic = 9)
-  Source:            uut/data/ffPc/q_7 (FF)
-  Destination:       ReadData<31> (PAD)
-  Source Clock:      clk rising
+Offset:              15.645ns (Levels of Logic = 26)
+  Source:            uut/data/ffPc/q_31_LD (LATCH)
+  Destination:       DataAdr<31> (PAD)
+  Source Clock:      reset falling
 
-  Data Path: uut/data/ffPc/q_7 to ReadData<31>
+  Data Path: uut/data/ffPc/q_31_LD to DataAdr<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             25   0.447   1.557  uut/data/ffPc/q_7 (uut/data/ffPc/q_7)
+     LD:G->Q              31   0.498   1.506  uut/data/ffPc/q_31_LD (uut/data/ffPc/q_31_LD)
+     LUT3:I0->O           25   0.205   1.557  uut/data/ffPc/q_71 (uut/data/ffPc/q_7)
      LUT6:I0->O           27   0.203   1.468  imem/Mram_RAM151 (Instr<15>)
-     LUT4:I0->O           10   0.203   0.857  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
-     LUT6:I5->O            5   0.205   0.715  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_1 (uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>)
-     LUT3:I2->O            2   0.205   0.617  uut/data/regFile/Mmux_rd2301 (WriteData<7>)
-     LUT6:I5->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<7> (uut/data/mainALU/Mmux_tmp1_rs_lut<7>)
-     XORCY:LI->O           2   0.136   0.617  uut/data/mainALU/Mmux_tmp1_rs_xor<7> (uut/data/mainALU/Mmux_tmp1_split<7>)
-     LUT5:I4->O           18   0.205   1.049  uut/data/mainALU/Mmux_tmp3311 (DataAdr<7>)
-     RAM64X1S:A5->O        3   0.205   0.650  dmem/Mram_RAM2 (ReadData_1_OBUF)
-     OBUF:I->O                 2.571          ReadData_1_OBUF (ReadData<1>)
+     LUT4:I0->O           14   0.203   0.958  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
+     LUT6:I5->O          247   0.205   2.066  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3> (uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o)
+     LUT3:I2->O           58   0.205   1.601  uut/data/regFile/Mmux_rd261 (WriteData_14_OBUF)
+     LUT6:I5->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<14> (uut/data/mainALU/Mmux_tmp1_rs_lut<14>)
+     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<14> (uut/data/mainALU/Mmux_tmp1_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<15> (uut/data/mainALU/Mmux_tmp1_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<16> (uut/data/mainALU/Mmux_tmp1_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<17> (uut/data/mainALU/Mmux_tmp1_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<18> (uut/data/mainALU/Mmux_tmp1_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<19> (uut/data/mainALU/Mmux_tmp1_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<20> (uut/data/mainALU/Mmux_tmp1_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<21> (uut/data/mainALU/Mmux_tmp1_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<22> (uut/data/mainALU/Mmux_tmp1_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<23> (uut/data/mainALU/Mmux_tmp1_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<24> (uut/data/mainALU/Mmux_tmp1_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<25> (uut/data/mainALU/Mmux_tmp1_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<26> (uut/data/mainALU/Mmux_tmp1_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<27> (uut/data/mainALU/Mmux_tmp1_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<28> (uut/data/mainALU/Mmux_tmp1_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<29> (uut/data/mainALU/Mmux_tmp1_rs_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<30> (uut/data/mainALU/Mmux_tmp1_rs_cy<30>)
+     XORCY:CI->O           4   0.180   0.684  uut/data/mainALU/Mmux_tmp1_rs_xor<31> (uut/data/mainALU/Mmux_tmp1_split<31>)
+     LUT5:I4->O            3   0.205   0.650  uut/data/mainALU/Mmux_tmp3251 (DataAdr_31_OBUF)
+     OBUF:I->O                 2.571          DataAdr_31_OBUF (DataAdr<31>)
     ----------------------------------------
-    Total                     12.115ns (4.585ns logic, 7.530ns route)
-                                       (37.8% logic, 62.2% route)
+    Total                     15.645ns (5.156ns logic, 10.489ns route)
+                                       (33.0% logic, 67.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 427546 / 65
+-------------------------------------------------------------------------
+Offset:              14.770ns (Levels of Logic = 26)
+  Source:            uut/data/ffPc/q_7_P_7 (FF)
+  Destination:       DataAdr<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uut/data/ffPc/q_7_P_7 to DataAdr<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.684  uut/data/ffPc/q_7_P_7 (uut/data/ffPc/q_7_P_7)
+     LUT3:I1->O           25   0.203   1.557  uut/data/ffPc/q_71 (uut/data/ffPc/q_7)
+     LUT6:I0->O           27   0.203   1.468  imem/Mram_RAM151 (Instr<15>)
+     LUT4:I0->O           14   0.203   0.958  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3>_SW0 (N2)
+     LUT6:I5->O          247   0.205   2.066  uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o<3> (uut/data/regFile/ra2[3]_PWR_30_o_equal_6_o)
+     LUT3:I2->O           58   0.205   1.601  uut/data/regFile/Mmux_rd261 (WriteData_14_OBUF)
+     LUT6:I5->O            1   0.205   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<14> (uut/data/mainALU/Mmux_tmp1_rs_lut<14>)
+     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<14> (uut/data/mainALU/Mmux_tmp1_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<15> (uut/data/mainALU/Mmux_tmp1_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<16> (uut/data/mainALU/Mmux_tmp1_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<17> (uut/data/mainALU/Mmux_tmp1_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<18> (uut/data/mainALU/Mmux_tmp1_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<19> (uut/data/mainALU/Mmux_tmp1_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<20> (uut/data/mainALU/Mmux_tmp1_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<21> (uut/data/mainALU/Mmux_tmp1_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<22> (uut/data/mainALU/Mmux_tmp1_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<23> (uut/data/mainALU/Mmux_tmp1_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<24> (uut/data/mainALU/Mmux_tmp1_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<25> (uut/data/mainALU/Mmux_tmp1_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<26> (uut/data/mainALU/Mmux_tmp1_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<27> (uut/data/mainALU/Mmux_tmp1_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<28> (uut/data/mainALU/Mmux_tmp1_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<29> (uut/data/mainALU/Mmux_tmp1_rs_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<30> (uut/data/mainALU/Mmux_tmp1_rs_cy<30>)
+     XORCY:CI->O           4   0.180   0.684  uut/data/mainALU/Mmux_tmp1_rs_xor<31> (uut/data/mainALU/Mmux_tmp1_split<31>)
+     LUT5:I4->O            3   0.205   0.650  uut/data/mainALU/Mmux_tmp3251 (DataAdr_31_OBUF)
+     OBUF:I->O                 2.571          DataAdr_31_OBUF (DataAdr<31>)
+    ----------------------------------------
+    Total                     14.770ns (5.103ns logic, 9.667ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/controller/deco/decoMain/_n0031<2>'
+  Total number of paths / destination ports: 3631 / 65
+-------------------------------------------------------------------------
+Offset:              11.665ns (Levels of Logic = 7)
+  Source:            uut/controller/deco/decoMain/InmSrc_1 (LATCH)
+  Destination:       DataAdr<3> (PAD)
+  Source Clock:      uut/controller/deco/decoMain/_n0031<2> falling
+
+  Data Path: uut/controller/deco/decoMain/InmSrc_1 to DataAdr<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              91   0.498   2.162  uut/controller/deco/decoMain/InmSrc_1 (uut/controller/deco/decoMain/InmSrc_1)
+     LUT5:I0->O           30   0.203   1.264  uut/data/regFile/Mmux_rd11111 (uut/data/regFile/Mmux_rd1111)
+     LUT5:I4->O            6   0.205   0.849  uut/data/regFile/Mmux_rd1231 (uut/data/SrcA<2>)
+     LUT5:I3->O            1   0.203   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<2> (uut/data/mainALU/Mmux_tmp1_rs_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<2> (uut/data/mainALU/Mmux_tmp1_rs_cy<2>)
+     XORCY:CI->O           2   0.180   0.617  uut/data/mainALU/Mmux_tmp1_rs_xor<3> (uut/data/mainALU/Mmux_tmp1_split<3>)
+     LUT5:I4->O         2371   0.205   2.536  uut/data/mainALU/Mmux_tmp3271 (DataAdr_3_OBUF)
+     OBUF:I->O                 2.571          DataAdr_3_OBUF (DataAdr<3>)
+    ----------------------------------------
+    Total                     11.665ns (4.237ns logic, 7.428ns route)
+                                       (36.3% logic, 63.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/controller/deco/aluMain/_n0048'
-  Total number of paths / destination ports: 1632 / 32
+  Total number of paths / destination ports: 624 / 32
 -------------------------------------------------------------------------
-Offset:              8.581ns (Levels of Logic = 12)
+Offset:              9.354ns (Levels of Logic = 6)
   Source:            uut/controller/deco/aluMain/ALUControl_0 (LATCH)
-  Destination:       ReadData<31> (PAD)
+  Destination:       DataAdr<2> (PAD)
   Source Clock:      uut/controller/deco/aluMain/_n0048 falling
 
-  Data Path: uut/controller/deco/aluMain/ALUControl_0 to ReadData<31>
+  Data Path: uut/controller/deco/aluMain/ALUControl_0 to DataAdr<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q             81   0.498   2.116  uut/controller/deco/aluMain/ALUControl_0 (uut/controller/deco/aluMain/ALUControl_0)
+     LDC:G->Q            106   0.498   2.258  uut/controller/deco/aluMain/ALUControl_0 (uut/controller/deco/aluMain/ALUControl_0)
      LUT6:I0->O            1   0.203   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<0> (uut/data/mainALU/Mmux_tmp1_rs_lut<0>)
      MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<0> (uut/data/mainALU/Mmux_tmp1_rs_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<1> (uut/data/mainALU/Mmux_tmp1_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<2> (uut/data/mainALU/Mmux_tmp1_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<3> (uut/data/mainALU/Mmux_tmp1_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<4> (uut/data/mainALU/Mmux_tmp1_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<5> (uut/data/mainALU/Mmux_tmp1_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<6> (uut/data/mainALU/Mmux_tmp1_rs_cy<6>)
-     XORCY:CI->O           2   0.180   0.617  uut/data/mainALU/Mmux_tmp1_rs_xor<7> (uut/data/mainALU/Mmux_tmp1_split<7>)
-     LUT5:I4->O           18   0.205   1.049  uut/data/mainALU/Mmux_tmp3311 (DataAdr<7>)
-     RAM64X1S:A5->O        3   0.205   0.650  dmem/Mram_RAM2 (ReadData_1_OBUF)
-     OBUF:I->O                 2.571          ReadData_1_OBUF (ReadData<1>)
+     XORCY:CI->O           5   0.180   0.715  uut/data/mainALU/Mmux_tmp1_rs_xor<2> (uut/data/mainALU/Mmux_tmp1_split<2>)
+     LUT5:I4->O         2363   0.205   2.534  uut/data/mainALU/Mmux_tmp3231 (DataAdr_2_OBUF)
+     OBUF:I->O                 2.571          DataAdr_2_OBUF (DataAdr<2>)
     ----------------------------------------
-    Total                      8.581ns (4.148ns logic, 4.433ns route)
-                                       (48.3% logic, 51.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/controller/deco/decoMain/_n0033<4>'
-  Total number of paths / destination ports: 7968 / 32
--------------------------------------------------------------------------
-Offset:              10.728ns (Levels of Logic = 14)
-  Source:            uut/controller/deco/decoMain/InmSrc_1 (LATCH)
-  Destination:       ReadData<31> (PAD)
-  Source Clock:      uut/controller/deco/decoMain/_n0033<4> falling
-
-  Data Path: uut/controller/deco/decoMain/InmSrc_1 to ReadData<31>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q             103   0.498   2.230  uut/controller/deco/decoMain/InmSrc_1 (uut/controller/deco/decoMain/InmSrc_1)
-     LUT5:I0->O            8   0.203   0.907  uut/data/regFile/Mmux_rd11111_1 (uut/data/regFile/Mmux_rd11111)
-     LUT5:I3->O            2   0.203   0.721  uut/data/regFile/Mmux_rd111 (uut/data/SrcA<0>)
-     LUT6:I4->O            1   0.203   0.000  uut/data/mainALU/Mmux_tmp1_rs_lut<0> (uut/data/mainALU/Mmux_tmp1_rs_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<0> (uut/data/mainALU/Mmux_tmp1_rs_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<1> (uut/data/mainALU/Mmux_tmp1_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<2> (uut/data/mainALU/Mmux_tmp1_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<3> (uut/data/mainALU/Mmux_tmp1_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<4> (uut/data/mainALU/Mmux_tmp1_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<5> (uut/data/mainALU/Mmux_tmp1_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  uut/data/mainALU/Mmux_tmp1_rs_cy<6> (uut/data/mainALU/Mmux_tmp1_rs_cy<6>)
-     XORCY:CI->O           2   0.180   0.617  uut/data/mainALU/Mmux_tmp1_rs_xor<7> (uut/data/mainALU/Mmux_tmp1_split<7>)
-     LUT5:I4->O           18   0.205   1.049  uut/data/mainALU/Mmux_tmp3311 (DataAdr<7>)
-     RAM64X1S:A5->O        3   0.205   0.650  dmem/Mram_RAM2 (ReadData_1_OBUF)
-     OBUF:I->O                 2.571          ReadData_1_OBUF (ReadData<1>)
-    ----------------------------------------
-    Total                     10.728ns (4.554ns logic, 6.174ns route)
-                                       (42.5% logic, 57.5% route)
+    Total                      9.354ns (3.848ns logic, 5.506ns route)
+                                       (41.1% logic, 58.9% route)
 
 =========================================================================
 
@@ -787,11 +1053,11 @@ Clock to Setup on destination clock clk
                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------+---------+---------+---------+---------+
-clk                                   |   10.648|         |         |         |
-uut/controller/deco/aluMain/_n0048    |         |    7.221|         |         |
+clk                                   |   15.612|         |         |         |
+reset                                 |         |   16.487|         |         |
+uut/controller/deco/aluMain/_n0048    |         |   10.816|         |         |
 uut/controller/deco/decoMain/ALUOp    |         |    2.906|         |         |
-uut/controller/deco/decoMain/_n0033<1>|         |    3.491|         |         |
-uut/controller/deco/decoMain/_n0033<4>|         |    9.260|         |         |
+uut/controller/deco/decoMain/_n0031<2>|         |   13.203|         |         |
 --------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock uut/controller/deco/aluMain/_n0048
@@ -799,8 +1065,9 @@ Clock to Setup on destination clock uut/controller/deco/aluMain/_n0048
                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------+---------+---------+---------+---------+
-clk                                   |         |         |    3.644|         |
-uut/controller/deco/decoMain/_n0033<4>|         |         |    2.433|         |
+clk                                   |         |         |    4.551|         |
+reset                                 |         |         |    5.426|         |
+uut/controller/deco/decoMain/_n0031<2>|         |         |    2.433|         |
 --------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock uut/controller/deco/decoMain/ALUOp
@@ -808,36 +1075,30 @@ Clock to Setup on destination clock uut/controller/deco/decoMain/ALUOp
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    4.705|         |
+clk            |         |         |    5.612|         |
+reset          |         |         |    6.488|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock uut/controller/deco/decoMain/_n0033<1>
+Clock to Setup on destination clock uut/controller/deco/decoMain/_n0031<2>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.357|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock uut/controller/deco/decoMain/_n0033<4>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    3.479|         |
+clk            |         |         |    4.337|         |
+reset          |         |         |    5.212|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.85 secs
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.65 secs
  
 --> 
 
-Total memory usage is 246580 kilobytes
+Total memory usage is 287796 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   22 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :   63 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

@@ -22,14 +22,12 @@ Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microP
 Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/data_mem.v" into library work
 Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/ARM.v" into library work
 Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v" into library work
-WARNING:HDLCompiler:751 - "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v" Line 24: Redeclaration of ansi port ReadData is not allowed
 Analyzing Verilog file "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/topLevelModule.v" Line 39: Size mismatch in connection of port <ALUResult>. Formal port size is 32-bit while actual signal size is 1-bit.
 Completed static elaboration
-Fuse Memory Usage: 159600 KB
-Fuse CPU Usage: 452 ms
+Fuse Memory Usage: 159792 KB
+Fuse CPU Usage: 359 ms
 Compiling module Instruction_MEM
 Compiling module principalDecoder
 Compiling module decode_alu
@@ -53,8 +51,8 @@ Compiling module topLevelModule
 Compiling module total_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 3 sub-compilation(s) to finish...
+Waiting for 15 sub-compilation(s) to finish...
 Compiled 22 Verilog Units
 Built simulation executable C:/Users/Andres Vargas/Documents/Verilog Projects/microProcessor/microProcessor/total_test_isim_beh.exe
-Fuse Memory Usage: 165072 KB
-Fuse CPU Usage: 686 ms
+Fuse Memory Usage: 164240 KB
+Fuse CPU Usage: 609 ms
