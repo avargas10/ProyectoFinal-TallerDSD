@@ -28,13 +28,41 @@
 						begin
 							RAM[offset] = 0;
 						end
+						//calculator code
+						RAM[0]=32'hE2801000;
+						RAM[1]=32'hE2802000; 
+						RAM[2]=32'hE2804000;
+						RAM[3]=32'hE2807000;
+						RAM[4]=32'hE2806000;
+						RAM[5]=32'hE5967000;
+						RAM[6]=32'hE5961004; 
+						RAM[7]=32'hE5962008;
+						RAM[8]=32'hE357000A;
+
+						RAM[10]=32'hAA000000;
+						RAM[11]=32'hE2805000;
+						RAM[12]=32'hE0578002;
+						RAM[13]=32'hB2857001;
+						RAM[14]=32'hE0477002;
+						RAM[15]=32'hE5837054;
+						RAM[16]=32'hE5902060;
+						RAM[17]=32'hE08FF000;
+						RAM[18]=32'hE280200E;
+						RAM[19]=32'hEA000001;
+						RAM[20]=32'hE280200D;
+						RAM[21]=32'hE280200A;
+						RAM[22]=32'hE5802064;
+						
+						//loop counter test
 						/*RAM[0]=32'hE2811001;
 						RAM[1]=32'hE351000F;
 						RAM[3]=32'h1AFFFFFB;
 						RAM[4]=32'hE0812000;*/
 						
 						
-						RAM[0]=32'hE04F000F;
+						
+						//book test
+						/*RAM[0]=32'hE04F000F;
 						RAM[1]=32'hE2802005;
 						RAM[2]=32'hE280300C;
 						RAM[3]=32'hE2437009;
@@ -56,7 +84,7 @@
 						RAM[19]=32'hEA000001;
 						RAM[20]=32'hE280200D;
 						RAM[21]=32'hE280200A;
-						RAM[22]=32'hE5802064;
+						RAM[22]=32'hE5802064;*/
 					end
 				always@(a)
 					begin
